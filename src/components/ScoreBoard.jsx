@@ -1,8 +1,8 @@
 function ScoreBoard({ score, answeredCount, totalQuestions }) {
   return (
-    <section className="scoreboard" aria-label="Pontuacao atual">
+    <section className="scoreboard" aria-label="Pontuação atual">
       <p>
-        Pontuacao: <strong>{score}</strong>
+        Pontuação: <strong>{score}</strong>
       </p>
       <p>
         Respondidas:{" "}

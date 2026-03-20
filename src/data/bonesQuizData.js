@@ -1,242 +1,272 @@
 export const bonesQuizData = [
   {
     id: 1,
-    boneName: "Femur",
+    boneName: "Fêmur",
     visualReference: {
+      view: "front",
       region: "coxa",
-      hint: "Osso longo na coxa, entre quadril e joelho.",
-      marker: { x: 120, y: 302, r: 16 },
+      hint: "Estrutura longa na coxa, entre quadril e joelho.",
+      marker: { x: 72, y: 281, r: 10 },
+      landmark: "Terço médio da coxa, entre a pelve e o joelho.",
+      quickTip: "Compare com a perna: aqui o eixo ósseo é mais robusto.",
     },
-    options: ["Femur", "Tibia", "Fibula", "Ulna", "Clavicula"],
-    correctAnswer: "Femur",
+    options: ["Fêmur", "Tíbia", "Fíbula", "Ulna", "Clavícula"],
+    correctAnswer: "Fêmur",
     explanation: {
-      name: "Femur",
+      name: "Fêmur",
       location:
-        "Fica na coxa e conecta a pelve ao joelho. Sua extremidade proximal articula com o acetabulo e a distal com tibia e patela.",
+        "Fica na coxa e conecta a pelve ao joelho. Sua extremidade proximal articula com o acetábulo e a distal com a tíbia e patela.",
       function:
-        "Suporta grande parte do peso corporal e transmite forcas durante marcha, corrida e salto.",
+        "Suporta grande parte do peso corporal e transmite forças durante marcha, corrida e salto.",
       characteristics:
-        "E o osso mais longo e resistente do corpo. Possui cabeca femoral, colo, trocanter maior e menor, alem de condilos distais.",
+        "É o osso mais longo e resistente do corpo. Possui cabeça femoral, colo, trocânter maior e menor, além de côndilos distais.",
       relations:
-        "Relaciona-se com acetabulo, ligamentos do quadril, musculos da coxa e articulacao do joelho.",
+        "Relaciona-se com o acetábulo, ligamentos do quadril, músculos da coxa e articulação do joelho.",
       memoryTips:
-        "Associe femur a forca e sustentacao. Pense nele como a principal coluna ossea do membro inferior.",
+        "Associe o fêmur à força e sustentação. Pense nele como a principal coluna óssea do membro inferior.",
     },
   },
   {
     id: 2,
-    boneName: "Umero",
+    boneName: "Úmero",
     visualReference: {
-      region: "braco",
-      hint: "Osso longo do braco, entre ombro e cotovelo.",
-      marker: { x: 72, y: 176, r: 14 },
+      view: "front",
+      region: "braço",
+      hint: "Estrutura longa entre ombro e cotovelo.",
+      marker: { x: 45, y: 140, r: 9 },
+      landmark: "Segmento central do braço.",
+      quickTip: "No braço existe um único osso longo principal.",
     },
-    options: ["Umero", "Radio", "Escapula", "Clavicula", "Femur"],
-    correctAnswer: "Umero",
+    options: ["Úmero", "Rádio", "Escápula", "Clavícula", "Fêmur"],
+    correctAnswer: "Úmero",
     explanation: {
-      name: "Umero",
+      name: "Úmero",
       location:
-        "Localiza-se no braco, entre a escapula (ombro) e os ossos do antebraco (radio e ulna).",
+        "Localiza-se no braço, entre a escápula (ombro) e os ossos do antebraço (rádio e ulna).",
       function:
-        "Permite movimentos amplos do membro superior e atua como alavanca para musculos do ombro e do braco.",
+        "Permite movimentos amplos do membro superior e atua como alavanca para músculos do ombro e do braço.",
       characteristics:
-        "Tem cabeca umeral proximal, tuberculos para insercao muscular e troclea/capitelo distal para articulacao do cotovelo.",
+        "Tem cabeça umeral proximal, tubérculos para inserção muscular e tróclea/capítulo distal para articulação do cotovelo.",
       relations:
-        "Articula-se com a cavidade glenoidal da escapula e com radio e ulna no cotovelo.",
+        "Articula-se com a cavidade glenoidal da escápula e com rádio e ulna no cotovelo.",
       memoryTips:
-        "Lembre de umero como osso unico do braco. Braco tem um, antebraco tem dois.",
+        "Lembre do úmero como osso único do braço. Braço tem um, antebraço tem dois.",
     },
   },
   {
     id: 3,
-    boneName: "Tibia",
+    boneName: "Tíbia",
     visualReference: {
+      view: "front",
       region: "perna medial",
-      hint: "Osso principal da perna, abaixo do joelho e voltado para a linha media.",
-      marker: { x: 110, y: 372, r: 14 },
+      hint: "Estrutura da canela, abaixo do joelho e mais medial.",
+      marker: { x: 122, y: 396, r: 9 },
+      landmark: "Região da canela, medial, abaixo da patela.",
+      quickTip: "Procure o osso mais espesso da perna.",
     },
-    options: ["Fibula", "Patela", "Tibia", "Femur", "Talus"],
-    correctAnswer: "Tibia",
+    options: ["Fíbula", "Patela", "Tíbia", "Fêmur", "Tálus"],
+    correctAnswer: "Tíbia",
     explanation: {
-      name: "Tibia",
+      name: "Tíbia",
       location:
-        "Fica na perna, em posicao medial, entre joelho e tornozelo. E palpavel na canela.",
+        "Fica na perna, em posição medial, entre joelho e tornozelo. É palpável na canela.",
       function:
-        "Suporta a maior parte do peso transmitido pelo femur e participa da estabilidade da marcha.",
+        "Suporta a maior parte do peso transmitido pelo fêmur e participa da estabilidade da marcha.",
       characteristics:
-        "Possui planalto tibial proximal, tuberosidade tibial e maleolo medial distal.",
+        "Possui planalto tibial proximal, tuberosidade tibial e maléolo medial distal.",
       relations:
-        "Articula-se com femur e fibula proximalmente e com talus no tornozelo.",
+        "Articula-se com fêmur e fíbula proximalmente e com tálus no tornozelo.",
       memoryTips:
-        "Pense em tibia como osso da canela e principal suporte da perna abaixo do joelho.",
+        "Pense na tíbia como osso da canela e principal suporte da perna abaixo do joelho.",
     },
   },
   {
     id: 4,
-    boneName: "Radio",
+    boneName: "Rádio",
     visualReference: {
-      region: "antebraco lateral",
-      hint: "Osso lateral do antebraco no lado do polegar.",
-      marker: { x: 64, y: 252, r: 12 },
+      view: "side",
+      region: "antebraço lateral",
+      hint: "Estrutura do antebraço no lado do polegar.",
+      marker: { x: 432, y: 214, r: 8 },
+      landmark: "Antebraço na face lateral (lado do polegar).",
+      quickTip: "Participa fortemente da rotação do antebraço.",
     },
-    options: ["Ulna", "Escafode", "Radio", "Umero", "Clavicula"],
-    correctAnswer: "Radio",
+    options: ["Ulna", "Escafoide", "Rádio", "Úmero", "Clavícula"],
+    correctAnswer: "Rádio",
     explanation: {
-      name: "Radio",
+      name: "Rádio",
       location:
-        "Localiza-se no antebraco, lateralmente quando a palma esta voltada para frente, no lado do polegar.",
+        "Localiza-se no antebraço, lateralmente quando a palma está voltada para frente, no lado do polegar.",
       function:
-        "Participa dos movimentos de pronacao e supinacao, alem de transmitir carga da mao para o cotovelo.",
+        "Participa dos movimentos de pronação e supinação, além de transmitir carga da mão para o cotovelo.",
       characteristics:
-        "Tem cabeca radial proximal e extremidade distal alargada que participa do punho.",
+        "Tem cabeça radial proximal e extremidade distal alargada que participa do punho.",
       relations:
-        "Relaciona-se com ulna, umero e ossos do carpo, especialmente escafode e semilunar.",
+        "Relaciona-se com a ulna, úmero e ossos do carpo, especialmente escafoide e semilunar.",
       memoryTips:
-        "Radio gira sobre a ulna nos movimentos de rotacao do antebraco.",
+        "O rádio gira sobre a ulna nos movimentos de rotação do antebraço.",
     },
   },
   {
     id: 5,
-    boneName: "Clavicula",
+    boneName: "Clavícula",
     visualReference: {
+      view: "front",
       region: "cintura escapular anterior",
-      hint: "Osso em formato de S acima do torax, na base do pescoco.",
-      marker: { x: 118, y: 110, r: 12 },
+      hint: "Estrutura curva acima do tórax, na base do pescoço.",
+      marker: { x: 128, y: 103, r: 8 },
+      landmark: "Haste óssea transversal na base do pescoço.",
+      quickTip: "Pense na haste que conecta tronco e ombro na frente.",
     },
-    options: ["Escapula", "Esterno", "Clavicula", "Costela", "Umero"],
-    correctAnswer: "Clavicula",
+    options: ["Escápula", "Esterno", "Clavícula", "Costela", "Úmero"],
+    correctAnswer: "Clavícula",
     explanation: {
-      name: "Clavicula",
+      name: "Clavícula",
       location:
-        "Fica entre o manubrio do esterno e o acromio da escapula, na porcao superior do torax.",
+        "Fica entre o manúbrio do esterno e o acrômio da escápula, na porção superior do tórax.",
       function:
-        "Mantem o ombro afastado do tronco e ajuda a transferir forca do membro superior para o esqueleto axial.",
+        "Mantém o ombro afastado do tronco e ajuda a transferir força do membro superior para o esqueleto axial.",
       characteristics:
-        "E um osso longo com curvatura em S, subcutaneo e facilmente palpavel.",
+        "É um osso longo com curvatura em S, subcutâneo e facilmente palpável.",
       relations:
-        "Conecta-se ao esterno medialmente e a escapula lateralmente na articulacao acromioclavicular.",
+        "Conecta-se ao esterno medialmente e à escápula lateralmente na articulação acromioclavicular.",
       memoryTips:
-        "A clavicula funciona como uma haste que sustenta a cintura escapular na frente do torax.",
+        "A clavícula funciona como uma haste que sustenta a cintura escapular na frente do tórax.",
     },
   },
   {
     id: 6,
-    boneName: "Escapula",
+    boneName: "Escápula",
     visualReference: {
+      view: "back",
       region: "dorso superior",
-      hint: "Osso plano da parte posterior do ombro.",
-      marker: { x: 92, y: 136, r: 13 },
+      hint: "Estrutura plana da parte posterior do ombro.",
+      marker: { x: 307, y: 114, r: 10 },
+      landmark: "Região superolateral das costas, atrás do tórax.",
+      quickTip: "Serve de base para o deslizamento da cintura escapular.",
     },
-    options: ["Escapula", "Clavicula", "Esterno", "Umero", "Atlas"],
-    correctAnswer: "Escapula",
+    options: ["Escápula", "Clavícula", "Esterno", "Úmero", "Atlas"],
+    correctAnswer: "Escápula",
     explanation: {
-      name: "Escapula",
+      name: "Escápula",
       location:
-        "Situada na parede posterior do torax, entre a segunda e a setima costela, em cada lado.",
+        "Situada na parede posterior do tórax, entre a segunda e a sétima costela, em cada lado.",
       function:
-        "Serve de base para movimentos do ombro e de insercao para varios musculos do membro superior.",
+        "Serve de base para movimentos do ombro e de inserção para vários músculos do membro superior.",
       characteristics:
-        "Osso plano triangular com espinha da escapula, acromio, processo coracoide e cavidade glenoidal.",
+        "Osso plano triangular com espinha da escápula, acrômio, processo coracoide e cavidade glenoidal.",
       relations:
-        "Articula-se com clavicula e umero. Desliza sobre a parede toracica com forte controle muscular.",
+        "Articula-se com a clavícula e o úmero. Desliza sobre a parede torácica com forte controle muscular.",
       memoryTips:
-        "Visualize a escapula como uma placa triangular nas costas que guia a mecanica do ombro.",
+        "Visualize a escápula como uma placa triangular nas costas que guia a mecânica do ombro.",
     },
   },
   {
     id: 7,
-    boneName: "Mandibula",
+    boneName: "Mandíbula",
     visualReference: {
+      view: "side",
       region: "face inferior",
-      hint: "Osso da arcada inferior e unico movel do cranio.",
-      marker: { x: 120, y: 62, r: 12 },
+      hint: "Estrutura da arcada inferior e porção móvel da face.",
+      marker: { x: 414, y: 73, r: 8 },
+      landmark: "Arcada inferior e contorno do queixo.",
+      quickTip: "Observe a porção óssea que se move na mastigação.",
     },
-    options: ["Maxila", "Mandibula", "Zigomatico", "Frontal", "Temporal"],
-    correctAnswer: "Mandibula",
+    options: ["Maxila", "Mandíbula", "Zigomático", "Frontal", "Temporal"],
+    correctAnswer: "Mandíbula",
     explanation: {
-      name: "Mandibula",
+      name: "Mandíbula",
       location:
-        "Fica na porcao inferior da face e forma o contorno do queixo e da arcada dentaria inferior.",
+        "Fica na porção inferior da face e forma o contorno do queixo e da arcada dentária inferior.",
       function:
-        "Permite mastigacao, fala e abertura/fechamento da boca por meio da articulacao temporomandibular.",
+        "Permite mastigação, fala e abertura/fechamento da boca por meio da articulação temporomandibular.",
       characteristics:
         "Tem corpo horizontal e ramos verticais, com processos condilar e coronoide.",
       relations:
-        "Relaciona-se com osso temporal na ATM, dentes inferiores e musculos da mastigacao.",
+        "Relaciona-se com o osso temporal na ATM, dentes inferiores e músculos da mastigação.",
       memoryTips:
-        "Lembre que a mandibula e o principal osso movel do cranio em atividades como falar e mastigar.",
+        "Lembre que a mandíbula é o principal osso móvel do crânio em atividades como falar e mastigar.",
     },
   },
   {
     id: 8,
     boneName: "Esterno",
     visualReference: {
-      region: "linha media toracica",
-      hint: "Osso plano central do torax, na frente do peito.",
-      marker: { x: 120, y: 156, r: 13 },
+      view: "front",
+      region: "linha média torácica",
+      hint: "Estrutura plana central do tórax, na frente do peito.",
+      marker: { x: 97, y: 122, r: 9 },
+      landmark: "Linha média do tórax anterior, entre as clavículas.",
+      quickTip: "Use como eixo central para orientar o tórax anterior.",
     },
-    options: ["Esterno", "Clavicula", "Escapula", "Costela", "Vertebra toracica"],
+    options: ["Esterno", "Clavícula", "Escápula", "Costela", "Vértebra torácica"],
     correctAnswer: "Esterno",
     explanation: {
       name: "Esterno",
       location:
-        "Fica na linha media anterior do torax, composto por manubrio, corpo e processo xifoide.",
+        "Fica na linha média anterior do tórax, composto por manúbrio, corpo e processo xifoide.",
       function:
-        "Protege estruturas vitais como coracao e grandes vasos, alem de participar da caixa toracica.",
+        "Protege estruturas vitais como coração e grandes vasos, além de participar da caixa torácica.",
       characteristics:
-        "Osso plano alongado, com incisuras para claviculas e cartilagens costais.",
+        "Osso plano alongado, com incisuras para clavículas e cartilagens costais.",
       relations:
-        "Conecta-se a claviculas e costelas por meio de cartilagens, formando parte do gradil costal.",
+        "Conecta-se a clavículas e costelas por meio de cartilagens, formando parte do gradil costal.",
       memoryTips:
-        "Pense no esterno como escudo central do torax e ponto de referencia para contagem de costelas.",
+        "Pense no esterno como o escudo central do tórax e ponto de referência para contagem de costelas.",
     },
   },
   {
     id: 9,
     boneName: "Patela",
     visualReference: {
+      view: "front",
       region: "joelho anterior",
-      hint: "Osso sesamoide na frente do joelho.",
-      marker: { x: 112, y: 344, r: 11 },
+      hint: "Estrutura pequena na frente do joelho.",
+      marker: { x: 127, y: 330, r: 8 },
+      landmark: "Face anterior do joelho, sobre o tendão patelar.",
+      quickTip: "Atua como polia mecânica para a extensão do joelho.",
     },
-    options: ["Patela", "Tibia", "Femur", "Fibula", "Talus"],
+    options: ["Patela", "Tíbia", "Fêmur", "Fíbula", "Tálus"],
     correctAnswer: "Patela",
     explanation: {
       name: "Patela",
       location:
-        "Localiza-se anteriormente ao joelho, inserida no tendao do quadriceps e ligada a tibia pelo ligamento patelar.",
+        "Localiza-se anteriormente ao joelho, inserida no tendão do quadríceps e ligada à tíbia pelo ligamento patelar.",
       function:
-        "Aumenta a eficiencia mecanica do quadriceps e protege a face anterior da articulacao do joelho.",
+        "Aumenta a eficiência mecânica do quadríceps e protege a face anterior da articulação do joelho.",
       characteristics:
-        "E o maior osso sesamoide do corpo e possui face articular posterior para deslizamento no femur.",
+        "É o maior osso sesamoide do corpo e possui face articular posterior para deslizamento no fêmur.",
       relations:
-        "Relaciona-se com tendao do quadriceps, ligamento patelar e superficie patelar femoral.",
+        "Relaciona-se com o tendão do quadríceps, ligamento patelar e superfície patelar femoral.",
       memoryTips:
-        "Visualize a patela como uma polia anterior do joelho que melhora a extensao da perna.",
+        "Visualize a patela como uma polia anterior do joelho que melhora a extensão da perna.",
     },
   },
   {
     id: 10,
-    boneName: "Osso Iliaco",
+    boneName: "Osso Ilíaco",
     visualReference: {
+      view: "front",
       region: "quadril",
-      hint: "Porcao ampla da pelve lateral, acima do acetabulo.",
-      marker: { x: 124, y: 242, r: 14 },
+      hint: "Porção ampla da pelve lateral, acima da articulação do quadril.",
+      marker: { x: 123, y: 209, r: 10 },
+      landmark: "Porção superior e lateral da pelve, acima da articulação do quadril.",
+      quickTip: "Observe a borda óssea alta da cintura pélvica.",
     },
-    options: ["Sacro", "Osso Iliaco", "Pubis", "Femur", "Esterno"],
-    correctAnswer: "Osso Iliaco",
+    options: ["Sacro", "Osso Ilíaco", "Púbis", "Fêmur", "Esterno"],
+    correctAnswer: "Osso Ilíaco",
     explanation: {
-      name: "Osso Iliaco",
+      name: "Osso Ilíaco",
       location:
-        "Compõe a porcao superior e lateral do osso do quadril, formando parte da pelve.",
+        "Compõe a porção superior e lateral do osso do quadril, formando parte da pelve.",
       function:
-        "Distribui carga entre coluna e membros inferiores e oferece ampla area de insercao muscular.",
+        "Distribui a carga entre coluna e membros inferiores e oferece ampla área de inserção muscular.",
       characteristics:
-        "Inclui asa do ilio, crista iliaca e parte do acetabulo onde a cabeca do femur se encaixa.",
+        "Inclui asa do ílio, crista ilíaca e parte do acetábulo onde a cabeça do fêmur se encaixa.",
       relations:
-        "Relaciona-se com sacro na articulacao sacroiliaca, com pubis/isquio e com o femur no quadril.",
+        "Relaciona-se com o sacro na articulação sacroilíaca, com púbis/ísquio e com o fêmur no quadril.",
       memoryTips:
-        "Associe crista iliaca ao ponto osseo palpavel na cintura, util para orientar anatomia da pelve.",
+        "Associe a crista ilíaca ao ponto ósseo palpável na cintura, útil para orientar a anatomia da pelve.",
     },
   },
 ];

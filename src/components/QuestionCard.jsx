@@ -16,11 +16,11 @@ function QuestionCard({
     <article className="question-card">
       <div className="question-header">
         <span className="chip">
-          Questao {questionNumber}/{totalQuestions}
+          Questão {questionNumber}/{totalQuestions}
         </span>
-        <h2>Qual osso esta destacado?</h2>
+        <h2>Qual osso está destacado?</h2>
         <p className="question-helper">
-          Observe a referencia visual e escolha apenas uma alternativa.
+          Observe a referência visual e escolha apenas uma alternativa.
         </p>
       </div>
 

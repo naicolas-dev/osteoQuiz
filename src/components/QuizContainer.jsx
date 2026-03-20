@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { bonesQuizData } from "../data/bonesQuizData";
 import { shuffleArray } from "../utils/shuffle";
 import FeedbackPanel from "./FeedbackPanel";
@@ -15,7 +15,7 @@ function QuizContainer() {
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
 
-  const questions = useMemo(() => bonesQuizData, []);
+  const [questions, setQuestions] = useState(() => shuffleArray([...bonesQuizData]));
   const totalQuestions = questions.length;
   const currentQuestion = questions[currentIndex];
 
@@ -56,12 +56,14 @@ function QuizContainer() {
   };
 
   const handleRestart = () => {
+    const newQuestions = shuffleArray([...bonesQuizData]);
+    setQuestions(newQuestions);
     setCurrentIndex(0);
     setSelectedOption(null);
     setHasAnswered(false);
     setScore(0);
     setIsFinished(false);
-    setShuffledOptions(shuffleArray(questions[0].options));
+    setShuffledOptions(shuffleArray(newQuestions[0].options));
   };
 
   if (isFinished) {
@@ -117,7 +119,7 @@ function QuizContainer() {
         >
           {currentIndex === totalQuestions - 1
             ? "Finalizar quiz"
-            : "Proxima pergunta"}
+            : "Próxima pergunta"}
         </button>
       </div>
     </section>

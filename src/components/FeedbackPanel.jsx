@@ -11,29 +11,29 @@ function FeedbackPanel({ question, selectedOption, isCorrect }) {
           Sua resposta: <strong>{selectedOption}</strong>
         </p>
         <p className="feedback-correct-answer">
-          Resposta certa: <strong>{correctAnswer}</strong>
+          Resposta correta: <strong>{correctAnswer}</strong>
         </p>
       </div>
 
       <div className="explanation-block">
-        <h3>Explicacao didatica</h3>
+        <h3>Explicação didática</h3>
         <p>
           <strong>Nome do osso:</strong> {explanation.name}
         </p>
         <p>
-          <strong>Localizacao anatomica:</strong> {explanation.location}
+          <strong>Localização anatômica:</strong> {explanation.location}
         </p>
         <p>
-          <strong>Funcao:</strong> {explanation.function}
+          <strong>Função:</strong> {explanation.function}
         </p>
         <p>
-          <strong>Principais caracteristicas:</strong> {explanation.characteristics}
+          <strong>Principais características:</strong> {explanation.characteristics}
         </p>
         <p>
-          <strong>Relacoes com outras estruturas:</strong> {explanation.relations}
+          <strong>Relações com outras estruturas:</strong> {explanation.relations}
         </p>
         <p>
-          <strong>Dica de memorizacao:</strong> {explanation.memoryTips}
+          <strong>Dica de memorização:</strong> {explanation.memoryTips}
         </p>
       </div>
     </section>

@@ -1,55 +1,99 @@
+import skeletonImage from "../assets/esqueleto.png";
+
+const MARKER_BASE = {
+  width: 500,
+  height: 500,
+};
+
+const VIEW_CONFIG = {
+  front: {
+    label: "Frontal",
+    left: (22 / MARKER_BASE.width) * 100,
+    width: ((175 - 22) / MARKER_BASE.width) * 100,
+    tagLeft: 20,
+  },
+  back: {
+    label: "Costas",
+    left: (201 / MARKER_BASE.width) * 100,
+    width: ((354 - 201) / MARKER_BASE.width) * 100,
+    tagLeft: 56,
+  },
+  side: {
+    label: "Lateral",
+    left: (395 / MARKER_BASE.width) * 100,
+    width: ((459 - 395) / MARKER_BASE.width) * 100,
+    tagLeft: 86,
+  },
+};
+
 function BoneVisual({ visualReference }) {
-  const { hint, marker } = visualReference;
+  const { hint, marker, view = "front", landmark, quickTip } = visualReference;
+  const activeView = VIEW_CONFIG[view] ?? VIEW_CONFIG.front;
+  const markerXPercent = (marker.x / MARKER_BASE.width) * 100;
+  const markerYPercent = (marker.y / MARKER_BASE.height) * 100;
+  const markerSizePercent = (marker.r * 2 / MARKER_BASE.width) * 100;
+  const markerGlowSizePercent = ((marker.r + 14) * 2 / MARKER_BASE.width) * 100;
 
   return (
     <section className="bone-visual-card">
       <div className="bone-visual-header">
-        <h3>Referencia visual</h3>
+        <h3>Referência visual</h3>
         <p>{hint}</p>
+        <p className="bone-visual-meta">
+          <span className="bone-view-badge">Vista: {activeView.label}</span>
+          {landmark ? <span>Marco: {landmark}</span> : null}
+        </p>
+        {quickTip ? (
+          <p className="bone-visual-tip">
+            <strong>Dica:</strong> {quickTip}
+          </p>
+        ) : null}
       </div>
 
-      <svg
-        className="bone-visual-svg"
-        viewBox="0 0 240 420"
-        role="img"
-        aria-label="Figura anatomica simplificada com ponto em destaque"
-      >
-        <rect x="0" y="0" width="240" height="420" rx="20" fill="url(#bg)" />
-        <defs>
-          <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#f9fff9" />
-            <stop offset="100%" stopColor="#ecf5ef" />
-          </linearGradient>
-        </defs>
-
-        <g opacity="0.92" fill="#c8d7cf" stroke="#9fb2a8" strokeWidth="2">
-          <circle cx="120" cy="46" r="22" />
-          <rect x="104" y="70" width="32" height="88" rx="14" />
-          <rect x="78" y="88" width="26" height="86" rx="12" />
-          <rect x="136" y="88" width="26" height="86" rx="12" />
-          <rect x="84" y="158" width="72" height="108" rx="22" />
-          <rect x="88" y="264" width="24" height="126" rx="12" />
-          <rect x="128" y="264" width="24" height="126" rx="12" />
-        </g>
-
-        <g>
-          <circle
-            cx={marker.x}
-            cy={marker.y}
-            r={marker.r + 8}
-            fill="#ffcfa4"
-            opacity="0.55"
-          />
-          <circle
-            cx={marker.x}
-            cy={marker.y}
-            r={marker.r}
-            fill="#f97316"
-            stroke="#9a3412"
-            strokeWidth="2"
-          />
-        </g>
-      </svg>
+      <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque">
+        <img
+          className="bone-visual-image"
+          src={skeletonImage}
+          alt="Esqueleto humano com vistas frontal, costas e lateral"
+          loading="lazy"
+        />
+        <span
+          className="bone-view-focus"
+          style={{
+            left: `${activeView.left}%`,
+            width: `${activeView.width}%`,
+          }}
+        />
+        <span className="bone-view-separator" style={{ left: "37.6%" }} />
+        <span className="bone-view-separator" style={{ left: "74.8%" }} />
+        {Object.entries(VIEW_CONFIG).map(([key, config]) => (
+          <span
+            key={key}
+            className={`bone-view-tag ${view === key ? "is-active" : ""}`}
+            style={{ left: `${config.tagLeft}%` }}
+          >
+            {config.label}
+          </span>
+        ))}
+        <span
+          className="bone-marker-glow"
+          style={{
+            left: `${markerXPercent}%`,
+            top: `${markerYPercent}%`,
+            width: `${markerGlowSizePercent}%`,
+            height: `${markerGlowSizePercent}%`,
+          }}
+        />
+        <span
+          className="bone-marker-dot"
+          style={{
+            left: `${markerXPercent}%`,
+            top: `${markerYPercent}%`,
+            width: `${markerSizePercent}%`,
+            height: `${markerSizePercent}%`,
+          }}
+        />
+      </div>
     </section>
   );
 }

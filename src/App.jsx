@@ -8,7 +8,7 @@ function App() {
         <h1>Quiz de Ossos do Corpo Humano</h1>
         <p className="subtitle">
           Identifique o osso destacado, receba feedback imediato e revise os
-          pontos mais importantes para memorizacao.
+          pontos mais importantes para memorização.
         </p>
       </header>
       <main>
