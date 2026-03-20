@@ -6,8 +6,10 @@ import ProgressBar from "./ProgressBar";
 import QuestionCard from "./QuestionCard";
 import ResultScreen from "./ResultScreen";
 import ScoreBoard from "./ScoreBoard";
+import Swal from "sweetalert2";
+import { IoArrowBack } from "react-icons/io5";
 
-function QuizContainer() {
+function QuizContainer({ quizMode, onRestartApp }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
@@ -15,7 +17,14 @@ function QuizContainer() {
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
 
-  const [questions, setQuestions] = useState(() => shuffleArray([...bonesQuizData]));
+  const getQuestionsByMode = () => {
+    if (quizMode === "cranio") {
+      return bonesQuizData.filter((bone) => bone.category === "cranio");
+    }
+    return bonesQuizData;
+  };
+
+  const [questions, setQuestions] = useState(() => shuffleArray([...getQuestionsByMode()]));
   const totalQuestions = questions.length;
   const currentQuestion = questions[currentIndex];
 
@@ -59,14 +68,65 @@ function QuizContainer() {
   };
 
   const handleRestart = () => {
-    const newQuestions = shuffleArray([...bonesQuizData]);
+    const newQuestions = shuffleArray([...getQuestionsByMode()]);
     setQuestions(newQuestions);
     setCurrentIndex(0);
     setSelectedOption(null);
     setHasAnswered(false);
     setScore(0);
     setIsFinished(false);
-    setShuffledOptions(shuffleArray(newQuestions[0].options));
+    setShuffledOptions(shuffleArray(newQuestions.length > 0 ? newQuestions[0].options : []));
+  };
+
+  const handleExit = () => {
+    Swal.fire({
+      title: "Encerrar Quiz?",
+      html: `
+        <div class="bone-break-container">
+          <div class="bone-part bone-left">
+            <svg viewBox="0 0 100 40">
+              <path d="M10,20 Q10,5 25,10 Q35,15 35,20 Q35,25 25,30 Q10,35 10,20 Z" fill="#7bc6a4" stroke="#151c19" stroke-width="1.5"/>
+              <path d="M30,20 L60,20 L65,12 L50,15 L60,20 Z" fill="#7bc6a4" />
+              <rect x="25" y="14" width="30" height="12" fill="#7bc6a4" />
+              <path d="M55,14 L60,18 L55,22 L60,26 L55,26 Z" fill="#7bc6a4" stroke="#151c19" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="bone-part bone-right">
+            <svg viewBox="0 0 100 40">
+              <path d="M90,20 Q90,5 75,10 Q65,15 65,20 Q65,25 75,30 Q90,35 90,20 Z" fill="#7bc6a4" stroke="#151c19" stroke-width="1.5"/>
+              <rect x="45" y="14" width="30" height="12" fill="#7bc6a4" />
+              <path d="M45,14 L40,18 L45,22 L40,26 L45,26 Z" fill="#7bc6a4" stroke="#151c19" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="bone-fragment frag-1"></div>
+          <div class="bone-fragment frag-2"></div>
+          <div class="bone-fragment frag-3"></div>
+        </div>
+        <p style="margin-top: 1.5rem; color: #b7c8be;">
+          Você voltará para a tela inicial e seu progresso atual será perdido.
+        </p>
+      `,
+      showCancelButton: true,
+      background: "#1b2420",
+      color: "#eaf4ee",
+      confirmButtonColor: "#d96c6c",
+      cancelButtonColor: "#2a3832",
+      confirmButtonText: "Sim, sair",
+      cancelButtonText: "Continuar no Quiz",
+      reverseButtons: true,
+      customClass: {
+        confirmButton: "swal-btn swal-confirm-btn",
+        cancelButton: "swal-btn swal-cancel-btn",
+        popup: "swal-custom-popup",
+      },
+      buttonsStyling: false,
+      heightAuto: false,
+      backdrop: `rgba(15, 20, 18, 0.8)`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        onRestartApp();
+      }
+    });
   };
 
   if (isFinished) {
@@ -116,6 +176,9 @@ function QuizContainer() {
       )}
 
       <div className="actions-row">
+        <button className="text-button exit-quiz-button" onClick={handleExit}>
+          <IoArrowBack /> Sair do Quiz
+        </button>
         {!hasAnswered ? (
           <button
             className="primary-button"
