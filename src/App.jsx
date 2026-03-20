@@ -1,8 +1,19 @@
 import { useState } from "react";
 import QuizContainer from "./components/QuizContainer";
+import RegionSelectionScreen from "./components/RegionSelectionScreen";
 
 function App() {
-  const [isQuizStarted, setIsQuizStarted] = useState(false);
+  const [appState, setAppState] = useState("welcome"); // "welcome" | "region-selection" | "quiz"
+  const [quizMode, setQuizMode] = useState("all"); // "all" | "cranio"
+
+  const handleStartQuiz = () => {
+    setAppState("region-selection");
+  };
+
+  const handleModeSelection = (mode) => {
+    setQuizMode(mode);
+    setAppState("quiz");
+  };
 
   return (
     <div className="app-shell">
@@ -16,7 +27,7 @@ function App() {
       </header>
 
       <main>
-        {!isQuizStarted ? (
+        {appState === "welcome" && (
           <section className="welcome-screen">
             <h2>Pronto para testar seus conhecimentos?</h2>
             <p>
@@ -26,14 +37,20 @@ function App() {
             </p>
             <button
               className="primary-button start-button"
-              onClick={() => setIsQuizStarted(true)}
+              onClick={handleStartQuiz}
               type="button"
             >
-              Iniciar quiz
+              Iniciar
             </button>
           </section>
-        ) : (
-          <QuizContainer />
+        )}
+
+        {appState === "region-selection" && (
+          <RegionSelectionScreen onSelectMode={handleModeSelection} />
+        )}
+
+        {appState === "quiz" && (
+          <QuizContainer quizMode={quizMode} onRestartApp={() => setAppState("welcome")} />
         )}
       </main>
 
