@@ -17,15 +17,15 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
 
   const handleShare = async () => {
     if (!shareCardRef.current || isSharing) return;
-    
+
     setIsSharing(true);
     try {
       const canvas = await html2canvas(shareCardRef.current, {
-        scale: 2, 
+        scale: 2,
         useCORS: true,
         backgroundColor: "#1b2420",
       });
-      
+
       canvas.toBlob(async (blob) => {
         if (!blob) {
           setIsSharing(false);
@@ -53,8 +53,8 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
           link.click();
           URL.revokeObjectURL(link.href);
 
-          await navigator.clipboard.writeText(`${shareText}\n${window.location.href}`).catch(() => {});
-          
+          await navigator.clipboard.writeText(`${shareText}\n${window.location.href}`).catch(() => { });
+
           Swal.fire({
             toast: true,
             position: "top-end",
@@ -98,13 +98,13 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
         </p>
         <p className="result-percentage">Aproveitamento: {percentage}%</p>
         <p className="result-message">{performanceMessage}</p>
-        
+
         <div className="result-actions">
           <button className="primary-button" onClick={onRestart} type="button" disabled={isSharing}>
             Reiniciar quiz
           </button>
           <button className="secondary-button share-button" onClick={handleShare} type="button" disabled={isSharing}>
-            {isSharing ? <FaSpinner className="spin-icon" /> : <FaShareAlt />} 
+            {isSharing ? <FaSpinner className="spin-icon" /> : <FaShareAlt />}
             {isSharing ? "Gerando..." : "Compartilhar"}
           </button>
         </div>
@@ -113,18 +113,21 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
       {/* Hidden Card for Web Share API rendering */}
       <div className="share-card-container" ref={shareCardRef}>
         <div className="share-card-content">
-           <p className="share-eyebrow">NutrikaBones - Quiz</p>
-           <h2 className="share-title">EU ACERTEI!</h2>
-           <div className="share-score-box">
-             <span className="share-number">{score}</span>
-             <span className="share-total">/ {totalQuestions}</span>
-           </div>
-           <p className="share-percentage">Aproveitamento: {percentage}%</p>
-           <p className="share-msg">{performanceMessage}</p>
-           <div className="share-footer">
-             <p>Consegue fazer melhor?</p>
-             <strong>Jogue agora!</strong>
-           </div>
+          <p className="share-eyebrow">OsteoQuiz - Anatomia Interativa</p>
+          <h2 className="share-title">EU ACERTEI!</h2>
+          <div className="share-score-box">
+            <span className="share-number">{score}</span>
+            <span className="share-total">/ {totalQuestions}</span>
+          </div>
+          <p className="share-percentage">Aproveitamento: {percentage}%</p>
+          <p className="share-msg">{performanceMessage}</p>
+          <div className="share-footer">
+            <p>Consegue fazer melhor?</p>
+            <strong>Jogue agora!</strong>
+            <span style={{ display: "block", marginTop: "0.5rem", fontSize: "0.85rem", opacity: 0.9 }}>
+              naicolas-dev.github.io/nutrikabones
+            </span>
+          </div>
         </div>
       </div>
     </>
