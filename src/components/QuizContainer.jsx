@@ -54,6 +54,36 @@ function QuizContainer({ quizMode, onRestartApp }) {
     }
   };
 
+  // Desktop keyboard shortcuts (pointer: fine = non-touch)
+  useEffect(() => {
+    const isDesktop = window.matchMedia("(pointer: fine)").matches;
+    if (!isDesktop || isFinished) return;
+
+    const handleKeyDown = (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+      
+      // 1-5: select option
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= 5 && !hasAnswered) {
+        const option = shuffledOptions[num - 1];
+        if (option) handleSelectOption(option);
+      }
+      
+      // Enter: confirm or go next
+      if (e.key === "Enter") {
+        if (!hasAnswered && selectedOption) {
+          handleConfirm();
+        } else if (hasAnswered) {
+          handleNext();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [shuffledOptions, selectedOption, hasAnswered, isFinished]);
+
+
   const handleNext = () => {
     if (!hasAnswered) {
       return;
