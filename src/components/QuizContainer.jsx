@@ -33,11 +33,14 @@ function QuizContainer() {
     if (hasAnswered || isFinished) {
       return;
     }
-
     setSelectedOption(option);
-    setHasAnswered(true);
+  };
 
-    if (option === currentQuestion.correctAnswer) {
+  const handleConfirm = () => {
+    if (!selectedOption || hasAnswered) return;
+    
+    setHasAnswered(true);
+    if (selectedOption === currentQuestion.correctAnswer) {
       setScore((prevScore) => prevScore + 1);
     }
   };
@@ -113,15 +116,24 @@ function QuizContainer() {
       )}
 
       <div className="actions-row">
-        <button
-          className="primary-button"
-          onClick={handleNext}
-          disabled={!hasAnswered}
-        >
-          {currentIndex === totalQuestions - 1
-            ? "Finalizar quiz"
-            : "Próxima pergunta"}
-        </button>
+        {!hasAnswered ? (
+          <button
+            className="primary-button"
+            onClick={handleConfirm}
+            disabled={!selectedOption}
+          >
+            Confirmar sua resposta
+          </button>
+        ) : (
+          <button
+            className="primary-button"
+            onClick={handleNext}
+          >
+            {currentIndex === totalQuestions - 1
+              ? "Finalizar quiz"
+              : "Próxima questão"}
+          </button>
+        )}
       </div>
     </section>
   );
