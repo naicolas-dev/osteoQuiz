@@ -125,9 +125,6 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
           <div className="share-footer">
             <p>Consegue fazer melhor?</p>
             <strong>Jogue agora!</strong>
-            <span style={{ display: "block", marginTop: "0.5rem", fontSize: "0.85rem", opacity: 0.9 }}>
-              osteoquiz-jade.vercel.app
-            </span>
           </div>
         </div>
       </div>
