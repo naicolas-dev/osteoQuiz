@@ -2,10 +2,10 @@ function ScoreBoard({ score, answeredCount, totalQuestions }) {
   return (
     <section className="scoreboard" aria-label="Pontuação atual">
       <p>
-        Pontuação: <strong>{score}</strong>
+        Questões corretas: <strong>{score}</strong>
       </p>
       <p>
-        Respondidas:{" "}
+        Questões respondidas:{" "}
         <strong>
           {answeredCount}/{totalQuestions}
         </strong>

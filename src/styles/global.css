@@ -659,6 +659,65 @@ p {
   }
 }
 
+.welcome-screen {
+  text-align: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(
+    165deg,
+    rgba(27, 36, 32, 0.95),
+    rgba(17, 23, 20, 0.98)
+  );
+  padding: 2.2rem 1.4rem;
+  animation: fade-in-up 220ms ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: var(--shadow-card);
+}
+
+.welcome-screen h2 {
+  font-size: clamp(1.4rem, 5.5vw, 2.1rem);
+  color: var(--text-main);
+}
+
+.welcome-screen p {
+  color: var(--text-secondary);
+  max-width: 50ch;
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
+.start-button {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  padding: 0.85rem 2rem;
+  min-width: 16rem;
+  border-radius: var(--radius-lg);
+}
+
+.app-footer {
+  margin-top: 1.8rem;
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 1px solid rgba(42, 56, 50, 0.6);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.app-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 150ms ease;
+}
+
+.app-footer a:hover {
+  color: #a8d5ba;
+  text-decoration: underline;
+}
+
 @media (min-width: 620px) {
   .app-shell {
     padding: 1.25rem 1rem 2rem;

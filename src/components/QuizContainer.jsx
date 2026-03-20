@@ -84,6 +84,7 @@ function QuizContainer() {
       <div className="quiz-topbar">
         <ProgressBar
           currentStep={currentIndex + 1}
+          answeredCount={answeredCount}
           totalSteps={totalQuestions}
         />
         <ScoreBoard
