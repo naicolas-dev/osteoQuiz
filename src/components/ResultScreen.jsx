@@ -20,6 +20,7 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
 
     setIsSharing(true);
     try {
+      const shareUrl = "https://osteoquiz-jade.vercel.app";
       const canvas = await html2canvas(shareCardRef.current, {
         scale: 2,
         useCORS: true,
@@ -125,7 +126,7 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
             <p>Consegue fazer melhor?</p>
             <strong>Jogue agora!</strong>
             <span style={{ display: "block", marginTop: "0.5rem", fontSize: "0.85rem", opacity: 0.9 }}>
-              naicolas-dev.github.io/nutrikabones
+              osteoquiz-jade.vercel.app
             </span>
           </div>
         </div>
