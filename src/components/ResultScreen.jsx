@@ -33,13 +33,13 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
           return;
         }
 
-        const file = new File([blob], "nutrikabones-resultado.png", { type: "image/png" });
-        const shareText = `Acabei de acertar ${score} de ${totalQuestions} questões (${percentage}%) no Quiz de Anatomia NutrikaBones! 🦴 Consegue fazer melhor?`;
+        const file = new File([blob], "osteoquiz-resultado.png", { type: "image/png" });
+        const shareText = `Acabei de acertar ${score} de ${totalQuestions} questões (${percentage}%) no Quiz de Anatomia OsteoQuiz! 🦴 Consegue fazer melhor? ${shareUrl}`;
 
         if (navigator.canShare && navigator.canShare({ files: [file] })) {
           try {
             await navigator.share({
-              title: "NutrikaBones - Quiz de Anatomia",
+              title: "OsteoQuiz - Quiz de Anatomia",
               text: shareText,
               files: [file],
             });
@@ -50,7 +50,7 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
           // Fallback to download and clipboard copy
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
-          link.download = "nutrikabones-resultado.png";
+          link.download = "osteoquiz-resultado.png";
           link.click();
           URL.revokeObjectURL(link.href);
 
