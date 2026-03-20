@@ -396,7 +396,7 @@ p {
   min-height: 3.5rem;
   border: 1px solid #33423c;
   border-radius: var(--radius-md);
-  background: rgba(15, 20, 18, 0.88);
+  background-color: rgba(15, 20, 18, 0.88);
   color: var(--text-main);
   padding: 0.78rem 0.78rem;
   display: flex;
@@ -415,7 +415,7 @@ p {
   .option-button:hover:not(:disabled) {
     transform: translateY(-1px);
     border-color: rgba(123, 198, 164, 0.6);
-    background: rgba(31, 42, 36, 0.82);
+    background-color: rgba(31, 42, 36, 0.82);
     box-shadow: 0 8px 16px rgba(6, 9, 8, 0.38);
   }
 }
@@ -447,13 +447,13 @@ p {
 
 .option-button.is-selected:not(:disabled) {
   border-color: rgba(123, 198, 164, 0.82);
-  background: rgba(123, 198, 164, 0.14);
+  background-color: rgba(123, 198, 164, 0.14);
   box-shadow: inset 0 0 0 1px rgba(123, 198, 164, 0.18);
 }
 
 .option-button.option-correct {
   border-color: rgba(105, 195, 125, 0.9);
-  background: rgba(105, 195, 125, 0.18);
+  background-color: rgba(105, 195, 125, 0.18);
 }
 
 .option-button.option-correct .option-label {
@@ -464,7 +464,7 @@ p {
 
 .option-button.option-wrong {
   border-color: rgba(217, 108, 108, 0.9);
-  background: rgba(217, 108, 108, 0.18);
+  background-color: rgba(217, 108, 108, 0.18);
 }
 
 .option-button.option-wrong .option-label {
@@ -475,7 +475,7 @@ p {
 
 .option-button:disabled:not(.option-correct):not(.option-wrong) {
   opacity: 0.76;
-  background: rgba(16, 21, 19, 0.9);
+  background-color: rgba(16, 21, 19, 0.9);
   cursor: not-allowed;
 }
 
@@ -572,7 +572,7 @@ p {
   min-height: 3.15rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-color: var(--primary);
   color: #102019;
   padding: 0.76rem 1rem;
   font-family: "Outfit", "DM Sans", sans-serif;
@@ -590,7 +590,7 @@ p {
 @media (hover: hover) and (pointer: fine) {
   .primary-button:hover:not(:disabled) {
     transform: translateY(-1px);
-    background: var(--primary-hover);
+    background-color: var(--primary-hover);
     box-shadow: 0 10px 20px rgba(11, 17, 14, 0.46);
   }
 }
