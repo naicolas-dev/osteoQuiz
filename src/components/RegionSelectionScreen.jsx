@@ -29,11 +29,6 @@ function RegionSelectionScreen({ onSelectMode }) {
           Esqueleto Completo
         </button>
       </div>
-      <div className="hotkey-hint">
-        <kbd>1</kbd> <span>Crânio</span>
-        <span style={{ margin: "0 0.5rem", opacity: 0.4 }}>·</span>
-        <kbd>2</kbd> <span>Esqueleto</span>
-      </div>
     </section>
   );
 }

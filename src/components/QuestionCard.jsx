@@ -1,7 +1,7 @@
 import BoneVisual from "./BoneVisual";
 import OptionButton from "./OptionButton";
 
-const OPTION_LABELS = ["1", "2", "3", "4", "5"];
+const OPTION_LABELS = ["A", "B", "C", "D", "E"];
 
 function QuestionCard({
   question,

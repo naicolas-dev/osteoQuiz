@@ -682,16 +682,16 @@ p {
 @media (pointer: fine) {
   .btn-keybadge {
     display: flex;
-    background: rgba(16, 32, 25, 0.85);
-    border: 1px solid rgba(123, 198, 164, 0.5);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.18);
     border-bottom-width: 2px;
     border-radius: 5px;
-    color: #102019;
+    color: #162219;
     font-family: "Outfit", monospace;
     font-size: 0.8rem;
     font-weight: 800;
     padding: 2px 7px;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
   }
 }
 
