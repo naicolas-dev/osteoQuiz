@@ -1,4 +1,4 @@
-function OptionButton({ label, option, status, disabled, isSelected, onSelect }) {
+function OptionButton({ label, keyHint, option, status, disabled, isSelected, onSelect }) {
   return (
     <button
       className={`option-button option-${status} ${isSelected ? "is-selected" : ""}`}
@@ -7,7 +7,10 @@ function OptionButton({ label, option, status, disabled, isSelected, onSelect })
       aria-pressed={isSelected}
       type="button"
     >
-      <span className="option-label">{label}</span>
+      <span className="option-label">
+        {keyHint && <kbd className="option-keyhint">{keyHint}</kbd>}
+        {label}
+      </span>
       <span className="option-text">{option}</span>
     </button>
   );

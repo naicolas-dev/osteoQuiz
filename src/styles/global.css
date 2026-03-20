@@ -609,6 +609,90 @@ p {
   font-size: 0.85rem;
   font-family: "Outfit", "DM Sans", sans-serif;
   font-weight: 700;
+  position: relative;
+}
+
+/* Keyboard hint badge inside option label - desktop only */
+.option-keyhint {
+  display: none;
+}
+
+@media (pointer: fine) {
+  .option-keyhint {
+    display: flex;
+    position: absolute;
+    top: -6px;
+    right: -7px;
+    background: rgba(15, 21, 18, 0.9);
+    border: 1px solid rgba(123, 198, 164, 0.5);
+    border-radius: 4px;
+    color: var(--primary);
+    font-size: 0.6rem;
+    font-family: "Outfit", monospace;
+    font-weight: 700;
+    padding: 1px 3px;
+    line-height: 1;
+    pointer-events: none;
+  }
+}
+
+/* Hotkey hint balloon - desktop only */
+.hotkey-hint {
+  display: none;
+}
+
+@media (pointer: fine) {
+  .hotkey-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1.2rem;
+    animation: fade-in-up 300ms ease-out;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  .hotkey-hint kbd {
+    background: rgba(31, 43, 37, 0.9);
+    border: 1px solid rgba(123, 198, 164, 0.4);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    color: var(--primary);
+    font-family: "Outfit", monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Region selection hotkey badge on buttons */
+.region-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  position: relative;
+}
+
+.btn-keybadge {
+  display: none;
+}
+
+@media (pointer: fine) {
+  .btn-keybadge {
+    display: flex;
+    background: rgba(16, 32, 25, 0.85);
+    border: 1px solid rgba(123, 198, 164, 0.5);
+    border-bottom-width: 2px;
+    border-radius: 5px;
+    color: #102019;
+    font-family: "Outfit", monospace;
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 2px 7px;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+  }
 }
 
 .option-text {

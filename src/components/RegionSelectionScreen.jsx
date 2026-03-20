@@ -11,23 +11,28 @@ function RegionSelectionScreen({ onSelectMode }) {
       </p>
       <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
         <button
-          className="primary-button"
+          className="primary-button region-btn"
           onClick={() => onSelectMode("cranio")}
           type="button"
-          style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 24px" }}
         >
-          <FaSkull size={24} />
-          1: Ossos do Crânio
+          <kbd className="btn-keybadge">1</kbd>
+          <FaSkull size={20} />
+          Ossos do Crânio
         </button>
         <button
-          className="primary-button"
+          className="primary-button region-btn"
           onClick={() => onSelectMode("all")}
           type="button"
-          style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 24px" }}
         >
-          <GiSkeleton size={24} />
-          2: Esqueleto Completo
+          <kbd className="btn-keybadge">2</kbd>
+          <GiSkeleton size={20} />
+          Esqueleto Completo
         </button>
+      </div>
+      <div className="hotkey-hint">
+        <kbd>1</kbd> <span>Crânio</span>
+        <span style={{ margin: "0 0.5rem", opacity: 0.4 }}>·</span>
+        <kbd>2</kbd> <span>Esqueleto</span>
       </div>
     </section>
   );

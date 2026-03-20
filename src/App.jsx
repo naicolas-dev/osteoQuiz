@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import QuizContainer from "./components/QuizContainer";
 import RegionSelectionScreen from "./components/RegionSelectionScreen";
 
 function App() {
   const [appState, setAppState] = useState("welcome"); // "welcome" | "region-selection" | "quiz"
   const [quizMode, setQuizMode] = useState("all"); // "all" | "cranio"
+
+  const isDesktop = () => window.matchMedia("(pointer: fine)").matches;
 
   const handleStartQuiz = () => {
     setAppState("region-selection");
@@ -14,6 +16,24 @@ function App() {
     setQuizMode(mode);
     setAppState("quiz");
   };
+
+  useEffect(() => {
+    if (!isDesktop()) return;
+
+    const handleKeyDown = (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+      if (appState === "welcome" && e.key === "Enter") {
+        handleStartQuiz();
+      } else if (appState === "region-selection") {
+        if (e.key === "1") handleModeSelection("cranio");
+        if (e.key === "2") handleModeSelection("all");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [appState]);
 
   return (
     <div className="app-shell">
@@ -42,6 +62,10 @@ function App() {
             >
               Iniciar
             </button>
+            <div className="hotkey-hint">
+              <kbd>Enter</kbd>
+              <span>para iniciar</span>
+            </div>
           </section>
         )}
 

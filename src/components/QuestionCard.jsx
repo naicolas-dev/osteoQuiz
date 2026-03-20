@@ -1,7 +1,7 @@
 import BoneVisual from "./BoneVisual";
 import OptionButton from "./OptionButton";
 
-const OPTION_LABELS = ["A", "B", "C", "D", "E"];
+const OPTION_LABELS = ["1", "2", "3", "4", "5"];
 
 function QuestionCard({
   question,
@@ -42,6 +42,7 @@ function QuestionCard({
             <OptionButton
               key={option}
               label={OPTION_LABELS[index]}
+              keyHint={index + 1}
               option={option}
               status={status}
               disabled={hasAnswered}
