@@ -27,8 +27,9 @@ const VIEW_CONFIG = {
 };
 
 function BoneVisual({ visualReference }) {
-  const { hint, marker, view = "front", landmark, quickTip } = visualReference;
-  const activeView = VIEW_CONFIG[view] ?? VIEW_CONFIG.front;
+  const { hint, marker, view = "front", landmark, quickTip, image } = visualReference;
+  const isSingle = view === "single" || !!image;
+  const activeView = isSingle ? null : (VIEW_CONFIG[view] ?? VIEW_CONFIG.front);
   const markerXPercent = (marker.x / MARKER_BASE.width) * 100;
   const markerYPercent = (marker.y / MARKER_BASE.height) * 100;
   const markerSizePercent = (marker.r * 2 / MARKER_BASE.width) * 100;
@@ -40,7 +41,7 @@ function BoneVisual({ visualReference }) {
         <h3>Referência visual</h3>
         <p>{hint}</p>
         <p className="bone-visual-meta">
-          <span className="bone-view-badge">Vista: {activeView.label}</span>
+          {activeView && <span className="bone-view-badge">Vista: {activeView.label}</span>}
           {landmark ? <span>Marco: {landmark}</span> : null}
         </p>
         {quickTip ? (
@@ -53,28 +54,32 @@ function BoneVisual({ visualReference }) {
       <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque">
         <img
           className="bone-visual-image"
-          src={skeletonImage}
-          alt="Esqueleto humano com vistas frontal, costas e lateral"
+          src={isSingle ? image : skeletonImage}
+          alt="Esqueleto anatômico"
           loading="lazy"
         />
-        <span
-          className="bone-view-focus"
-          style={{
-            left: `${activeView.left}%`,
-            width: `${activeView.width}%`,
-          }}
-        />
-        <span className="bone-view-separator" style={{ left: "37.6%" }} />
-        <span className="bone-view-separator" style={{ left: "74.8%" }} />
-        {Object.entries(VIEW_CONFIG).map(([key, config]) => (
-          <span
-            key={key}
-            className={`bone-view-tag ${view === key ? "is-active" : ""}`}
-            style={{ left: `${config.tagLeft}%` }}
-          >
-            {config.label}
-          </span>
-        ))}
+        {!isSingle && (
+          <>
+            <span
+              className="bone-view-focus"
+              style={{
+                left: `${activeView.left}%`,
+                width: `${activeView.width}%`,
+              }}
+            />
+            <span className="bone-view-separator" style={{ left: "37.6%" }} />
+            <span className="bone-view-separator" style={{ left: "74.8%" }} />
+            {Object.entries(VIEW_CONFIG).map(([key, config]) => (
+              <span
+                key={key}
+                className={`bone-view-tag ${view === key ? "is-active" : ""}`}
+                style={{ left: `${config.tagLeft}%` }}
+              >
+                {config.label}
+              </span>
+            ))}
+          </>
+        )}
         <span
           className="bone-marker-glow"
           style={{
