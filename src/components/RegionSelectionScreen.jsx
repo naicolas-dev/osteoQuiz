@@ -1,6 +1,8 @@
 import React from "react";
 import { FaSkull, FaBone } from "react-icons/fa";
 import { GiSkeleton } from "react-icons/gi";
+import { GiRaiseSkeleton } from "react-icons/gi";
+import { GiMorgueFeet } from "react-icons/gi";
 
 function RegionSelectionScreen({ onSelectMode }) {
   return (
@@ -17,7 +19,7 @@ function RegionSelectionScreen({ onSelectMode }) {
         >
           <kbd className="btn-keybadge">1</kbd>
           <FaSkull size={20} />
-          Ossos do Crânio e Garganta
+          Crânio e Garganta
         </button>
         <button
           className="primary-button region-btn"
@@ -34,7 +36,7 @@ function RegionSelectionScreen({ onSelectMode }) {
           type="button"
         >
           <kbd className="btn-keybadge">3</kbd>
-          <span className="option-label" style={{border: 'none', background: 'transparent', width: '20px', height: '20px', fontSize: '18px'}}>💪</span>
+          <GiRaiseSkeleton size={20} />
           Membros Superiores
         </button>
         <button
@@ -43,7 +45,7 @@ function RegionSelectionScreen({ onSelectMode }) {
           type="button"
         >
           <kbd className="btn-keybadge">4</kbd>
-          <span className="option-label" style={{border: 'none', background: 'transparent', width: '20px', height: '20px', fontSize: '18px'}}>🦵</span>
+          <GiMorgueFeet size={20} />
           Membros Inferiores
         </button>
         <button
@@ -53,7 +55,7 @@ function RegionSelectionScreen({ onSelectMode }) {
         >
           <kbd className="btn-keybadge">5</kbd>
           <GiSkeleton size={20} />
-          Esqueleto Completo
+          Todas as regiões
         </button>
       </div>
     </section>
