@@ -30,17 +30,9 @@ function BoneVisual({ visualReference }) {
   const { hint, marker, view = "front", landmark, quickTip, image, images } = visualReference;
   const isMultiple = Array.isArray(images) && images.length > 0;
 
-  const renderStage = (imgSrc, imgMarker, idx) => {
+  const renderStage = (imgSrc, idx) => {
     const isSingle = view === "single" || !!imgSrc;
     const activeView = isSingle ? null : (VIEW_CONFIG[view] ?? VIEW_CONFIG.front);
-    
-    let mX = 0, mY = 0, mS = 0, mG = 0;
-    if (imgMarker) {
-      mX = (imgMarker.x / MARKER_BASE.width) * 100;
-      mY = (imgMarker.y / MARKER_BASE.height) * 100;
-      mS = (imgMarker.r * 2 / MARKER_BASE.width) * 100;
-      mG = ((imgMarker.r + 14) * 2 / MARKER_BASE.width) * 100;
-    }
 
     return (
       <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque" key={idx || imgSrc}>
@@ -72,28 +64,6 @@ function BoneVisual({ visualReference }) {
             ))}
           </>
         )}
-        {imgMarker && (
-          <>
-            <span
-              className="bone-marker-glow"
-              style={{
-                left: `${mX}%`,
-                top: `${mY}%`,
-                width: `${mG}%`,
-                height: `${mG}%`,
-              }}
-            />
-            <span
-              className="bone-marker-dot"
-              style={{
-                left: `${mX}%`,
-                top: `${mY}%`,
-                width: `${mS}%`,
-                height: `${mS}%`,
-              }}
-            />
-          </>
-        )}
       </div>
     );
   }
@@ -118,10 +88,10 @@ function BoneVisual({ visualReference }) {
 
       {isMultiple ? (
         <div className="bone-visual-multiple-stage">
-          {images.map((imgData, i) => renderStage(imgData.image, imgData.marker, i))}
+          {images.map((imgData, i) => renderStage(imgData.image, i))}
         </div>
       ) : (
-        renderStage(image, marker, "single")
+        renderStage(image, "single")
       )}
     </section>
   );

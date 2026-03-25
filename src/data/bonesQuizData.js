@@ -522,6 +522,42 @@ export const bonesQuizData = [
 
   // --- NOVAS QUESTÕES: MEMBROS INFERIORES ---
   {
+    id: 57, category: "membros-inferiores", boneName: "Ílio",
+    visualReference: { 
+      images: [
+        { image: "/assets/membros-inferiores/ilio1.jpg" },
+        { image: "/assets/membros-inferiores/ilio2.jpg" }
+      ],
+      view: "single", region: "pelve superior", hint: "A parte mais alta e larga do osso do quadril.", landmark: "Asa do quadril", quickTip: "Forma a 'crista' onde você apoia as mãos na cintura"
+    },
+    options: ["Ílio", "Ísquio", "Púbis", "Sacro", "Fêmur"], correctAnswer: "Ílio",
+    explanation: { name: "Ílio", location: "Porção superior do osso do quadril", function: "Suporte principal da pelve e fixação de músculos abdominais e da perna", characteristics: "Possui a crista ilíaca facilmente palpável", relations: "Sacro, Ísquio, Púbis, Fêmur", memoryTips: "A grande asa lateral do quadril" }
+  },
+  {
+    id: 58, category: "membros-inferiores", boneName: "Ísquio",
+    visualReference: { 
+      images: [
+        { image: "/assets/membros-inferiores/isquio1.jpg" },
+        { image: "/assets/membros-inferiores/isquio2.jpg" }
+      ],
+      view: "single", region: "pelve posterior", hint: "A parte inferior e posterior do quadril.", landmark: "Base da pelve", quickTip: "É o osso forte sobre o qual sentamos"
+    },
+    options: ["Ísquio", "Ílio", "Púbis", "Cóccix", "Fêmur"], correctAnswer: "Ísquio",
+    explanation: { name: "Ísquio", location: "Porção posteroinferior do osso do quadril", function: "Suporta o peso do corpo quando estamos sentados", characteristics: "Apresenta a tuberosidade isquiática, bem robusta", relations: "Ílio, Púbis", memoryTips: "O 'osso duro' do bumbum" }
+  },
+  {
+    id: 59, category: "membros-inferiores", boneName: "Púbis",
+    visualReference: { 
+      images: [
+        { image: "/assets/membros-inferiores/pubis1.jpg" },
+        { image: "/assets/membros-inferiores/pubis2.jpg" }
+      ],
+      view: "single", region: "pelve anterior", hint: "A parte inferior e frontal do osso do quadril.", landmark: "Frente baixa do quadril", quickTip: "Se encontram no meio na sínfise púbica"
+    },
+    options: ["Púbis", "Ílio", "Ísquio", "Sacro", "Fêmur"], correctAnswer: "Púbis",
+    explanation: { name: "Púbis", location: "Porção anteroinferior do osso do quadril", function: "Protege bexiga e órgãos inferiores, formando arco", characteristics: "Forma os ramos púbicos que abraçam o forame obturado", relations: "Ílio, Ísquio e púbis oposto", memoryTips: "A ponte frontal da bacia" }
+  },
+  {
     id: 50, category: "membros-inferiores", boneName: "Fêmur",
     visualReference: { 
       images: [
