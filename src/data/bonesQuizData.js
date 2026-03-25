@@ -514,6 +514,112 @@ export const bonesQuizData = [
     visualReference: { image: "/assets/coluna-torax/vertebras-lombares.jpg", view: "single", region: "fundo das costas", hint: "As maiores vértebras da coluna.", marker: { x: 250, y: 250, r: 30 }, landmark: "Abaixo das costelas", quickTip: "Corpo vertebral grande e robusto" },
     options: ["Vértebras Lombares", "Vértebras Torácicas", "Vértebras Cervicais", "Sacro", "Cóccix"], correctAnswer: "Vértebras Lombares",
     explanation: { name: "Vértebras Lombares", location: "Parte inferior das costas", function: "Suportam o maior peso do corpo", characteristics: "5 vértebras grandes (L1 a L5)", relations: "Torácicas, sacro", memoryTips: "Lombar liga com lombalgia (dor no fundo das costas)" }
+  },
+
+  // --- NOVAS QUESTÕES: MEMBROS SUPERIORES ---
+  {
+    id: 42, category: "membros-superiores", boneName: "Clavícula",
+    visualReference: { image: "/assets/membros-superiores/clavicula.jpg", view: "single", region: "ombro", hint: "Osso longo em forma de 'S' na parte superior do peito.", marker: { x: 250, y: 250, r: 25 }, landmark: "Entre o esterno e o ombro", quickTip: "Pode ser sentida sob a pele na frente do pescoço" },
+    options: ["Clavícula", "Escápula", "Rádio", "Úmero", "Ulna"], correctAnswer: "Clavícula",
+    explanation: { name: "Clavícula", location: "Cintura escapular, superior ao tórax", function: "Atua como suporte e fixa o membro superior no tronco", characteristics: "Único osso longo horizontal", relations: "Articula-se com o esterno e a escápula", memoryTips: "A ponte do peito pro ombro" }
+  },
+  {
+    id: 43, category: "membros-superiores", boneName: "Escápula",
+    visualReference: { image: "/assets/membros-superiores/escapula.jpg", view: "single", region: "costas", hint: "Osso plano triangular nas costas.", marker: { x: 250, y: 250, r: 35 }, landmark: "Omoplata", quickTip: "Move-se quando você gira os ombros" },
+    options: ["Escápula", "Esterno", "Clavícula", "Ílio", "Úmero"], correctAnswer: "Escápula",
+    explanation: { name: "Escápula", location: "Parte posterior e superior do tórax", function: "Ancoragem de muitos músculos do ombro", characteristics: "Plana e triangular, forma a articulação do ombro com o úmero", relations: "Úmero, clavícula", memoryTips: "A 'asa' nas suas costas" }
+  },
+  {
+    id: 44, category: "membros-superiores", boneName: "Úmero",
+    visualReference: { 
+      images: [
+        { image: "/assets/membros-superiores/umero1.jpg", marker: { x: 250, y: 250, r: 30 } },
+        { image: "/assets/membros-superiores/umero2.jpg", marker: { x: 250, y: 250, r: 30 } }
+      ],
+      view: "single", region: "braço", hint: "O maior osso do membro superior.", landmark: "Do ombro ao cotovelo", quickTip: "A 'cabeça' dele encaixa na escápula"
+    },
+    options: ["Úmero", "Rádio", "Ulna", "Fêmur", "Tíbia"], correctAnswer: "Úmero",
+    explanation: { name: "Úmero", location: "Braço", function: "Sustentação do braço e inserção muscular de ombro e antebraço", characteristics: "Osso longo padrão", relations: "Escápula (acima), Rádio e Ulna (abaixo)", memoryTips: "Lembra humor, dor no 'nervinho' do cotovelo irrita o úmero" }
+  },
+  {
+    id: 45, category: "membros-superiores", boneName: "Rádio",
+    visualReference: { image: "/assets/membros-superiores/radio.jpg", view: "single", region: "antebraço", hint: "Osso lateral do antebraço.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado do polegar", quickTip: "Fique na posição anatômica, é o osso de fora" },
+    options: ["Rádio", "Ulna", "Fíbula", "Tíbia", "Carpo"], correctAnswer: "Rádio",
+    explanation: { name: "Rádio", location: "Antebraço (lado lateral)", function: "Permite as rotações da mão (pronação e supinação)", characteristics: "Mais curto e espesso perto da mão", relations: "Úmero, Ulna, Carpo", memoryTips: "A antena do rádio é o polegar" }
+  },
+  {
+    id: 46, category: "membros-superiores", boneName: "Ulna",
+    visualReference: { image: "/assets/membros-superiores/ulna.jpg", view: "single", region: "antebraço", hint: "Osso medial do antebraço.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado do dedo mindinho", quickTip: "Forma a ponta do cotovelo" },
+    options: ["Ulna", "Rádio", "Fêmur", "Fíbula", "Metacarpo"], correctAnswer: "Ulna",
+    explanation: { name: "Ulna", location: "Antebraço (lado medial)", function: "Estabiliza o antebraço", characteristics: "Mais grossa perto do cotovelo", relations: "Úmero, Rádio", memoryTips: "Ulna rima com mindinho (mentira, mas acompanham a mesma linha medial)" }
+  },
+  {
+    id: 47, category: "membros-superiores", boneName: "Ossos do Carpo",
+    visualReference: { image: "/assets/membros-superiores/ossos-carpo.png", view: "single", region: "punho", hint: "Grupo de 8 pequenos ossos no pulso.", marker: { x: 250, y: 250, r: 40 }, landmark: "Punho", quickTip: "Enfileirados em duas fileiras de quatro" },
+    options: ["Ossos do Carpo", "Ossos do Tarso", "Metacarpos", "Falanges", "Patela"], correctAnswer: "Ossos do Carpo",
+    explanation: { name: "Ossos do Carpo", location: "Punho", function: "Permitem os movimentos complexos e articulação do punho", characteristics: "Escafoide, Semilunar, Piramidal, Pisiforme, Trapézio, Trapezoide, Capitato e Hamato", relations: "Rádio, Ulna, Metacarpos", memoryTips: "Carpo = mão (tarso = pé)" }
+  },
+  {
+    id: 48, category: "membros-superiores", boneName: "Metacarpo",
+    visualReference: { image: "/assets/membros-superiores/metacarpo.jpg", view: "single", region: "mão", hint: "Cinco ossos que formam a palma da mão.", marker: { x: 250, y: 250, r: 35 }, landmark: "Palma e dorso da mão", quickTip: "Numerados de I a V, do polegar ao dedinho" },
+    options: ["Metacarpo", "Metatarso", "Falanges", "Carpo", "Ulna"], correctAnswer: "Metacarpo",
+    explanation: { name: "Osso Metacárpico", location: "Eixo principal da mão", function: "Apoio e estrutura para os dedos", characteristics: "Ossos longos miniaturizados em formato de ponte", relations: "Carpo e falanges", memoryTips: "'Meta' está além. Além do carpo." }
+  },
+  {
+    id: 49, category: "membros-superiores", boneName: "Falanges (Mão)",
+    visualReference: { image: "/assets/membros-superiores/falanges-mao.jpg", view: "single", region: "dedos da mão", hint: "Os ossinhos que formam os dedos.", marker: { x: 250, y: 250, r: 40 }, landmark: "Dedos da mão", quickTip: "Cada dedo tem três, exceto o polegar (que tem a proximal e distal)" },
+    options: ["Falanges", "Metacarpos", "Carpos", "Sesamoides", "Tubérculos"], correctAnswer: "Falanges",
+    explanation: { name: "Falanges da Mão", location: "Ponta dos dedos", function: "Movimentação fina e pegada", characteristics: "Proximais, médias e distais", relations: "Metacarpo", memoryTips: "Falam muito com a mão -> Falanges" }
+  },
+
+  // --- NOVAS QUESTÕES: MEMBROS INFERIORES ---
+  {
+    id: 50, category: "membros-inferiores", boneName: "Fêmur",
+    visualReference: { 
+      images: [
+        { image: "/assets/membros-inferiores/femur1.jpg", marker: { x: 250, y: 250, r: 35 } },
+        { image: "/assets/membros-inferiores/femur2.jpg", marker: { x: 250, y: 250, r: 35 } }
+      ],
+      view: "single", region: "coxa", hint: "O osso mais longo, mais forte e mais pesado do corpo humano.", landmark: "Coxa", quickTip: "Sua 'cabeça' encaixa no quadril"
+    },
+    options: ["Fêmur", "Tíbia", "Fíbula", "Úmero", "Rádio"], correctAnswer: "Fêmur",
+    explanation: { name: "Fêmur", location: "Coxa", function: "Sustenta grande parte do peso corporal e permite a locomoção", characteristics: "Maior e mais forte osso longo do corpo", relations: "Pelve (acima), Tíbia e Patela (abaixo)", memoryTips: "O gigante da coxa" }
+  },
+  {
+    id: 51, category: "membros-inferiores", boneName: "Patela",
+    visualReference: { image: "/assets/membros-inferiores/patela.jpeg", view: "single", region: "joelho", hint: "Osso pequeno e grosso localizado na frente da articulação do joelho.", marker: { x: 250, y: 250, r: 25 }, landmark: "Rótula do joelho", quickTip: "Também conhecida antigamente como rótula" },
+    options: ["Patela", "Tíbia", "Fíbula", "Carpal", "Falange"], correctAnswer: "Patela",
+    explanation: { name: "Patela", location: "Articulação do joelho (anterior)", function: "Aumenta a alavanca do tendão do quádriceps e protege o joelho", characteristics: "Maior osso sesamoide do corpo", relations: "Fêmur", memoryTips: "O 'escudinho' do joelho" }
+  },
+  {
+    id: 52, category: "membros-inferiores", boneName: "Tíbia",
+    visualReference: { image: "/assets/membros-inferiores/tibia.jpg", view: "single", region: "perna", hint: "O osso maior e mais medial da perna.", marker: { x: 250, y: 250, r: 30 }, landmark: "Canela", quickTip: "Segundo maior osso do corpo" },
+    options: ["Tíbia", "Fíbula", "Úmero", "Ulna", "Fêmur"], correctAnswer: "Tíbia",
+    explanation: { name: "Tíbia", location: "Perna (medial a anterior)", function: "Sustentação principal do peso na perna inferior", characteristics: "Osso longo, forma a 'canela'", relations: "Fêmur, Fíbula, Tálus", memoryTips: "A 'canela' que sofre jogando futebol" }
+  },
+  {
+    id: 53, category: "membros-inferiores", boneName: "Fíbula",
+    visualReference: { image: "/assets/membros-inferiores/fibula.jpg", view: "single", region: "perna", hint: "O osso longo e fino situado na parte lateral da perna.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado externo da perna", quickTip: "Não suporta o peso do corpo" },
+    options: ["Fíbula", "Tíbia", "Úmero", "Rádio", "Ulna"], correctAnswer: "Fíbula",
+    explanation: { name: "Fíbula", location: "Perna (lateral)", function: "Fixação muscular e estabilização do tornozelo", characteristics: "Osso longo e esbelto", relations: "Tíbia, Tálus", memoryTips: "Fina como a Fíbula" }
+  },
+  {
+    id: 54, category: "membros-inferiores", boneName: "Ossos do Tarso",
+    visualReference: { image: "/assets/membros-inferiores/ossos-tarso.jpg", view: "single", region: "tornozelo", hint: "Grupo de 7 ossos na região posterior do pé/tornozelo.", marker: { x: 250, y: 250, r: 35 }, landmark: "Tornozelo e calcanhar", quickTip: "Inclui o Calcâneo, o osso do calcanhar" },
+    options: ["Ossos do Tarso", "Ossos do Carpo", "Metatarsos", "Falanges", "Patela"], correctAnswer: "Ossos do Tarso",
+    explanation: { name: "Ossos do Tarso", location: "Tornozelo e parte posterior do pé", function: "Suporte de peso e flexibilidade do pé", characteristics: "Sete ossos irregulares robustos", relations: "Tíbia, Fíbula, Metatarsos", memoryTips: "Tarso = do pé (você pisava num 'tarsinho' ou 'toquinho' de chão)" }
+  },
+  {
+    id: 55, category: "membros-inferiores", boneName: "Metatarso",
+    visualReference: { image: "/assets/membros-inferiores/metatarso.jpg", view: "single", region: "pé", hint: "Grupo de cinco ossos compridos no pé.", marker: { x: 250, y: 250, r: 35 }, landmark: "Peito do pé", quickTip: "Numerados de I a V, começando pelo dedão" },
+    options: ["Metatarso", "Metacarpo", "Tarso", "Carpo", "Ulna"], correctAnswer: "Metatarso",
+    explanation: { name: "Metatarso", location: "Peito do pé", function: "Suporte e propulsão na marcha", characteristics: "Cinco ossos longos miniatura", relations: "Tarso e Falanges", memoryTips: "O 'caminho' até os dedos do pé" }
+  },
+  {
+    id: 56, category: "membros-inferiores", boneName: "Falanges (Pé)",
+    visualReference: { image: "/assets/membros-inferiores/falanges-pe.jpg", view: "single", region: "dedos do pé", hint: "Ossos que formam os dedos dos pés.", marker: { x: 250, y: 250, r: 30 }, landmark: "Dedos do pé", quickTip: "O dedão tem duas, os outros têm três" },
+    options: ["Falanges", "Metatarsos", "Tarsos", "Carpos", "Rádio"], correctAnswer: "Falanges",
+    explanation: { name: "Falanges do Pé", location: "Ponta dos dedos do pé", function: "Equilíbrio, aderência e flexibilidade", characteristics: "Proximais, médias e distais", relations: "Metatarso", memoryTips: "As mesmas dos dedos da mão, só que no pé" }
   }
 ];
 

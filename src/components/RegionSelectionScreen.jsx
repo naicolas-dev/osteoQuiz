@@ -30,10 +30,28 @@ function RegionSelectionScreen({ onSelectMode }) {
         </button>
         <button
           className="primary-button region-btn"
-          onClick={() => onSelectMode("all")}
+          onClick={() => onSelectMode("membros-superiores")}
           type="button"
         >
           <kbd className="btn-keybadge">3</kbd>
+          <span className="option-label" style={{border: 'none', background: 'transparent', width: '20px', height: '20px', fontSize: '18px'}}>💪</span>
+          Membros Superiores
+        </button>
+        <button
+          className="primary-button region-btn"
+          onClick={() => onSelectMode("membros-inferiores")}
+          type="button"
+        >
+          <kbd className="btn-keybadge">4</kbd>
+          <span className="option-label" style={{border: 'none', background: 'transparent', width: '20px', height: '20px', fontSize: '18px'}}>🦵</span>
+          Membros Inferiores
+        </button>
+        <button
+          className="primary-button region-btn"
+          onClick={() => onSelectMode("all")}
+          type="button"
+        >
+          <kbd className="btn-keybadge">5</kbd>
           <GiSkeleton size={20} />
           Esqueleto Completo
         </button>
