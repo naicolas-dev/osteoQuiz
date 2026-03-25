@@ -16,6 +16,7 @@ function QuizContainer({ quizMode, onRestartApp }) {
   const [score, setScore] = useState(0);
   const [shuffledOptions, setShuffledOptions] = useState([]);
   const [isFinished, setIsFinished] = useState(false);
+  const [showDevMenu, setShowDevMenu] = useState(false);
 
   const getQuestionsByMode = () => {
     if (quizMode === "cranio") {
@@ -82,6 +83,20 @@ function QuizContainer({ quizMode, onRestartApp }) {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [shuffledOptions, selectedOption, hasAnswered, isFinished]);
+
+  // Developer mode shortcut: Alt + D
+  useEffect(() => {
+    const handleDevShortcut = (e) => {
+      if (e.altKey && e.key.toLowerCase() === "d") {
+        setShowDevMenu((prev) => !prev);
+      }
+      if (e.key === "Escape") {
+        setShowDevMenu(false);
+      }
+    };
+    window.addEventListener("keydown", handleDevShortcut);
+    return () => window.removeEventListener("keydown", handleDevShortcut);
+  }, []);
 
 
   const handleNext = () => {
@@ -174,6 +189,33 @@ function QuizContainer({ quizMode, onRestartApp }) {
 
   return (
     <section className="quiz-shell" aria-live="polite">
+      {showDevMenu && (
+        <div className="dev-menu-overlay" onClick={() => setShowDevMenu(false)}>
+          <div className="dev-menu-content" onClick={(e) => e.stopPropagation()}>
+            <h3>Modo Desenvolvedor</h3>
+            <p>Selecione uma questão para pular:</p>
+            <div className="dev-menu-grid">
+              {questions.map((q, idx) => (
+                <button
+                  key={q.id}
+                  className={`dev-menu-item ${idx === currentIndex ? "active" : ""}`}
+                  onClick={() => {
+                    setCurrentIndex(idx);
+                    setShowDevMenu(false);
+                    setSelectedOption(null);
+                    setHasAnswered(false);
+                  }}
+                >
+                  {idx + 1}. {q.boneName}
+                </button>
+              ))}
+            </div>
+            <button className="dev-menu-close" onClick={() => setShowDevMenu(false)}>
+              Fechar (Esc)
+            </button>
+          </div>
+        </div>
+      )}
       <div className="quiz-topbar">
         <ProgressBar
           currentStep={currentIndex + 1}

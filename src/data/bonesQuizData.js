@@ -418,6 +418,28 @@ export const bonesQuizData = [
     visualReference: { image: "/assets/cranio/cranio-tras.jpg", view: "single", region: "cantos inferiores trás", hint: "Canto inferior externo pontudo que apoia lateral (mastoide) de costas.", marker: { x: 120, y: 400, r: 8 }, landmark: "Cantos pontudos da base inferior externa", quickTip: "Saliência que aparece quase para fora das laterais" },
     options: ["Temporal", "Esfenoide", "Parietal", "Mandíbula", "Occipital"], correctAnswer: "Temporal",
     explanation: { name: "Temporal", location: "Mastoide visto em segundo plano lateral-costal", function: "Muscultatura rotatória de pescoço ancorada no processo visto de trás", characteristics: "Irrelevante na vista costal além de seus processos inferiores mastoides", relations: "Occipital borda inferolateral", memoryTips: "Só dá pra ver um carocinho de lado nas costas" }
+  },
+  {
+    id: 34, category: "cranio", boneName: "Osso Hióideo",
+    visualReference: { 
+      image: "/assets/cranio/osso-hióideo.jpg", 
+      view: "single", 
+      region: "pescoço", 
+      hint: "Osso em forma de U na base da língua.", 
+      marker: { x: 250, y: 250, r: 15 }, 
+      landmark: "Base do pescoço, acima da laringe", 
+      quickTip: "Não se articula com nenhum outro osso" 
+    },
+    options: ["Osso Hióideo", "Atlas", "Áxis", "Vértebra Cervical", "Mandíbula"], 
+    correctAnswer: "Osso Hióideo",
+    explanation: { 
+      name: "Osso Hióideo", 
+      location: "Pescoço, entre a mandíbula e a laringe", 
+      function: "Sustenta a língua e serve de inserção para músculos que ajudam na deglutição e fala", 
+      characteristics: "Formato de ferradura ou U. É o único osso do corpo humano que não se articula com nenhum outro osso diretamente", 
+      relations: "Músculos supra-hióideos e infra-hióideos", 
+      memoryTips: "Osso 'solto' no pescoço" 
+    }
   }
 
 ];

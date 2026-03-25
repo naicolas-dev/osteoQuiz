@@ -7,7 +7,7 @@ function RegionSelectionScreen({ onSelectMode }) {
     <section className="welcome-screen">
       <h2>Escolha a Região</h2>
       <p>
-        Foque seus estudos na anatomia craniana ou teste seus conhecimentos no esqueleto inteiro.
+        Foque seus estudos na anatomia craniana e da garganta ou teste seus conhecimentos no esqueleto inteiro.
       </p>
       <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
         <button
@@ -17,7 +17,7 @@ function RegionSelectionScreen({ onSelectMode }) {
         >
           <kbd className="btn-keybadge">1</kbd>
           <FaSkull size={20} />
-          Ossos do Crânio
+          Ossos do Crânio e Garganta
         </button>
         <button
           className="primary-button region-btn"
