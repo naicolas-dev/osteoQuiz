@@ -27,7 +27,8 @@ function App() {
         handleStartQuiz();
       } else if (appState === "region-selection") {
         if (e.key === "1") handleModeSelection("cranio");
-        if (e.key === "2") handleModeSelection("all");
+        if (e.key === "2") handleModeSelection("coluna-torax");
+        if (e.key === "3") handleModeSelection("all");
       }
     };
 

@@ -19,10 +19,10 @@ function QuizContainer({ quizMode, onRestartApp }) {
   const [showDevMenu, setShowDevMenu] = useState(false);
 
   const getQuestionsByMode = () => {
-    if (quizMode === "cranio") {
-      return bonesQuizData.filter((bone) => bone.category === "cranio");
+    if (quizMode === "all") {
+      return bonesQuizData;
     }
-    return bonesQuizData;
+    return bonesQuizData.filter((bone) => bone.category === quizMode);
   };
 
   const [questions, setQuestions] = useState(() => shuffleArray([...getQuestionsByMode()]));

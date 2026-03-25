@@ -27,38 +27,30 @@ const VIEW_CONFIG = {
 };
 
 function BoneVisual({ visualReference }) {
-  const { hint, marker, view = "front", landmark, quickTip, image } = visualReference;
-  const isSingle = view === "single" || !!image;
-  const activeView = isSingle ? null : (VIEW_CONFIG[view] ?? VIEW_CONFIG.front);
-  const markerXPercent = (marker.x / MARKER_BASE.width) * 100;
-  const markerYPercent = (marker.y / MARKER_BASE.height) * 100;
-  const markerSizePercent = (marker.r * 2 / MARKER_BASE.width) * 100;
-  const markerGlowSizePercent = ((marker.r + 14) * 2 / MARKER_BASE.width) * 100;
+  const { hint, marker, view = "front", landmark, quickTip, image, images } = visualReference;
+  const isMultiple = Array.isArray(images) && images.length > 0;
 
-  return (
-    <section className="bone-visual-card">
-      <div className="bone-visual-header">
-        <h3>Referência visual</h3>
-        <p>{hint}</p>
-        <p className="bone-visual-meta">
-          {activeView && <span className="bone-view-badge">Vista: {activeView.label}</span>}
-          {landmark ? <span>Marco: {landmark}</span> : null}
-        </p>
-        {quickTip ? (
-          <p className="bone-visual-tip">
-            <strong>Dica:</strong> {quickTip}
-          </p>
-        ) : null}
-      </div>
+  const renderStage = (imgSrc, imgMarker, idx) => {
+    const isSingle = view === "single" || !!imgSrc;
+    const activeView = isSingle ? null : (VIEW_CONFIG[view] ?? VIEW_CONFIG.front);
+    
+    let mX = 0, mY = 0, mS = 0, mG = 0;
+    if (imgMarker) {
+      mX = (imgMarker.x / MARKER_BASE.width) * 100;
+      mY = (imgMarker.y / MARKER_BASE.height) * 100;
+      mS = (imgMarker.r * 2 / MARKER_BASE.width) * 100;
+      mG = ((imgMarker.r + 14) * 2 / MARKER_BASE.width) * 100;
+    }
 
-      <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque">
+    return (
+      <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque" key={idx || imgSrc}>
         <img
           className="bone-visual-image"
-          src={isSingle ? image : skeletonImage}
+          src={isSingle ? imgSrc : skeletonImage}
           alt="Esqueleto anatômico"
           loading="lazy"
         />
-        {!isSingle && (
+        {!isSingle && activeView && (
           <>
             <span
               className="bone-view-focus"
@@ -80,27 +72,60 @@ function BoneVisual({ visualReference }) {
             ))}
           </>
         )}
-        <span
-          className="bone-marker-glow"
-          style={{
-            left: `${markerXPercent}%`,
-            top: `${markerYPercent}%`,
-            width: `${markerGlowSizePercent}%`,
-            height: `${markerGlowSizePercent}%`,
-          }}
-        />
-        <span
-          className="bone-marker-dot"
-          style={{
-            left: `${markerXPercent}%`,
-            top: `${markerYPercent}%`,
-            width: `${markerSizePercent}%`,
-            height: `${markerSizePercent}%`,
-          }}
-        />
+        {imgMarker && (
+          <>
+            <span
+              className="bone-marker-glow"
+              style={{
+                left: `${mX}%`,
+                top: `${mY}%`,
+                width: `${mG}%`,
+                height: `${mG}%`,
+              }}
+            />
+            <span
+              className="bone-marker-dot"
+              style={{
+                left: `${mX}%`,
+                top: `${mY}%`,
+                width: `${mS}%`,
+                height: `${mS}%`,
+              }}
+            />
+          </>
+        )}
       </div>
+    );
+  }
+
+  return (
+    <section className="bone-visual-card">
+      <div className="bone-visual-header">
+        <h3>Referência visual</h3>
+        <p>{hint}</p>
+        <p className="bone-visual-meta">
+          {!isMultiple && (view === "front" || view === "back" || view === "side") && !image && (
+             <span className="bone-view-badge">Vista: {VIEW_CONFIG[view]?.label}</span>
+          )}
+          {landmark ? <span>Marco: {landmark}</span> : null}
+        </p>
+        {quickTip ? (
+          <p className="bone-visual-tip">
+            <strong>Dica:</strong> {quickTip}
+          </p>
+        ) : null}
+      </div>
+
+      {isMultiple ? (
+        <div className="bone-visual-multiple-stage">
+          {images.map((imgData, i) => renderStage(imgData.image, imgData.marker, i))}
+        </div>
+      ) : (
+        renderStage(image, marker, "single")
+      )}
     </section>
   );
 }
 
 export default BoneVisual;
+

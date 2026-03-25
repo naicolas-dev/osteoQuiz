@@ -440,6 +440,80 @@ export const bonesQuizData = [
       relations: "Músculos supra-hióideos e infra-hióideos", 
       memoryTips: "Osso 'solto' no pescoço" 
     }
-  }
+  },
 
+  // --- NOVAS QUESTÕES: COLUNA E TÓRAX ---
+  {
+    id: 35, category: "coluna-torax", boneName: "Cóccix",
+    visualReference: { 
+      images: [
+        { image: "/assets/coluna-torax/coccix1.jpg", marker: { x: 250, y: 250, r: 25 } },
+        { image: "/assets/coluna-torax/coccix2.jpg", marker: { x: 250, y: 250, r: 25 } }
+      ],
+      view: "single", 
+      region: "base da coluna", 
+      hint: "Porção terminal da coluna vertebral.", 
+      landmark: "Fim da coluna", 
+      quickTip: "Parece um bico de pássaro" 
+    },
+    options: ["Sacro", "Cóccix", "Ísquio", "Lombar", "Púbis"], correctAnswer: "Cóccix",
+    explanation: { name: "Cóccix", location: "Abaixo do sacro", function: "Inserção de ligamentos e músculos pélvicos", characteristics: "Composto por 3 a 5 pequenas vértebras fundidas", relations: "Articula-se superiormente com o sacro", memoryTips: "Osso do 'rabo'" }
+  },
+  {
+    id: 36, category: "coluna-torax", boneName: "Esterno",
+    visualReference: { 
+      images: [
+        { image: "/assets/coluna-torax/esterno1.jpg", marker: { x: 250, y: 250, r: 25 } },
+        { image: "/assets/coluna-torax/esterno2.jpg", marker: { x: 250, y: 250, r: 25 } }
+      ],
+      view: "single", 
+      region: "tórax anterior", 
+      hint: "Osso central do peito.", 
+      landmark: "Meio do peito", 
+      quickTip: "Tem formato de gravata ou espada" 
+    },
+    options: ["Esterno", "Escápula", "Manúbrio", "Clavícula", "Costela"], correctAnswer: "Esterno",
+    explanation: { name: "Esterno", location: "Linha média anterior do tórax", function: "Protege o coração e grandes tubos", characteristics: "Osso plano com manúbrio, corpo e processo xifoide", relations: "Costelas e clavículas", memoryTips: "Escudo do peito" }
+  },
+  {
+    id: 37, category: "coluna-torax", boneName: "Sacro",
+    visualReference: { 
+      images: [
+        { image: "/assets/coluna-torax/sacro1.jpg", marker: { x: 250, y: 250, r: 35 } },
+        { image: "/assets/coluna-torax/sacro2.jpg", marker: { x: 250, y: 250, r: 35 } }
+      ],
+      view: "single", 
+      region: "base da coluna", 
+      hint: "Grande osso triangular na base da coluna.", 
+      landmark: "Acima do cóccix", 
+      quickTip: "Tem furinhos (forames)" 
+    },
+    options: ["Sacro", "Cóccix", "Vértebra Lombar", "Osso Ilíaco", "Ísquio"], correctAnswer: "Sacro",
+    explanation: { name: "Sacro", location: "Base da coluna, entre os ossos do quadril", function: "Transmite o peso do corpo para a pelve", characteristics: "Formado por 5 vértebras fundidas", relations: "L5, cóccix, osso ilíaco", memoryTips: "Um triângulo de osso no fim da coluna" }
+  },
+  {
+    id: 38, category: "coluna-torax", boneName: "Costelas",
+    visualReference: { image: "/assets/coluna-torax/costelas.jpg", view: "single", region: "tórax", hint: "Arcos ósseos do tórax.", marker: { x: 250, y: 250, r: 40 }, landmark: "Caixa torácica", quickTip: "Protegem os pulmões" },
+    options: ["Costelas", "Esterno", "Clavícula", "Fíbula", "Escápula"], correctAnswer: "Costelas",
+    explanation: { name: "Costelas", location: "Envolvem o tórax", function: "Protegem a cavidade torácica e auxiliam na respiração", characteristics: "12 pares (verdadeiras, falsas e flutuantes)", relations: "Articulam com as vértebras torácicas e o esterno", memoryTips: "A grade do peito" }
+  },
+  {
+    id: 39, category: "coluna-torax", boneName: "Vértebras Cervicais",
+    visualReference: { image: "/assets/coluna-torax/vertebras-cervicais.jpg", view: "single", region: "pescoço", hint: "Vértebras do pescoço.", marker: { x: 250, y: 250, r: 30 }, landmark: "Abaixo do crânio", quickTip: "Menores vértebras com forame no processo transverso" },
+    options: ["Vértebras Cervicais", "Vértebras Torácicas", "Vértebras Lombares", "Sacro", "Atlas e Áxis"], correctAnswer: "Vértebras Cervicais",
+    explanation: { name: "Vértebras Cervicais", location: "Região do pescoço", function: "Sustentam a cabeça e permitem rotação", characteristics: "7 vértebras (C1 a C7)", relations: "Crânio, torácicas", memoryTips: "Sustentam o crânio (cervical = pescoço)" }
+  },
+  {
+    id: 40, category: "coluna-torax", boneName: "Vértebras Torácicas",
+    visualReference: { image: "/assets/coluna-torax/vertebras-toracicas.jpg", view: "single", region: "meio das costas", hint: "Vértebras articuladas com as costelas.", marker: { x: 250, y: 250, r: 30 }, landmark: "Parte superior das costas", quickTip: "Tem processo espinhoso voltado para baixo" },
+    options: ["Vértebras Torácicas", "Vértebras Lombares", "Vértebras Cervicais", "Costelas", "Sacro"], correctAnswer: "Vértebras Torácicas",
+    explanation: { name: "Vértebras Torácicas", location: "Meio das costas", function: "Suporte e articulação com as costelas", characteristics: "12 vértebras (T1 a T12)", relations: "Costelas, cervical, lombar", memoryTips: "T1 a T12, como as 12 costelas" }
+  },
+  {
+    id: 41, category: "coluna-torax", boneName: "Vértebras Lombares",
+    visualReference: { image: "/assets/coluna-torax/vertebras-lombares.jpg", view: "single", region: "fundo das costas", hint: "As maiores vértebras da coluna.", marker: { x: 250, y: 250, r: 30 }, landmark: "Abaixo das costelas", quickTip: "Corpo vertebral grande e robusto" },
+    options: ["Vértebras Lombares", "Vértebras Torácicas", "Vértebras Cervicais", "Sacro", "Cóccix"], correctAnswer: "Vértebras Lombares",
+    explanation: { name: "Vértebras Lombares", location: "Parte inferior das costas", function: "Suportam o maior peso do corpo", characteristics: "5 vértebras grandes (L1 a L5)", relations: "Torácicas, sacro", memoryTips: "Lombar liga com lombalgia (dor no fundo das costas)" }
+  }
 ];
+
