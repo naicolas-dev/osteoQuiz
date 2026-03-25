@@ -1,3 +1,4 @@
+import { useState } from "react";
 import skeletonImage from "../assets/esqueleto.png";
 
 const MARKER_BASE = {
@@ -29,6 +30,7 @@ const VIEW_CONFIG = {
 function BoneVisual({ visualReference }) {
   const { hint, marker, view = "front", landmark, quickTip, image, images } = visualReference;
   const isMultiple = Array.isArray(images) && images.length > 0;
+  const [tipVisible, setTipVisible] = useState(false);
 
   const renderStage = (imgSrc, idx) => {
     const isSingle = view === "single" || !!imgSrc;
@@ -80,9 +82,21 @@ function BoneVisual({ visualReference }) {
           {landmark ? <span>Marco: {landmark}</span> : null}
         </p>
         {quickTip ? (
-          <p className="bone-visual-tip">
-            <strong>Dica:</strong> {quickTip}
-          </p>
+          <div className="bone-visual-tip-wrapper">
+            {tipVisible ? (
+              <p className="bone-visual-tip">
+                <strong>Dica:</strong> {quickTip}
+              </p>
+            ) : (
+              <button
+                className="hint-toggle-button"
+                type="button"
+                onClick={() => setTipVisible(true)}
+              >
+                Ver dica
+              </button>
+            )}
+          </div>
         ) : null}
       </div>
 

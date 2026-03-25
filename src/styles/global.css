@@ -446,6 +446,27 @@ p {
   color: var(--accent-soft);
 }
 
+.bone-visual-tip-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.hint-toggle-button {
+  background: transparent;
+  border: 1px dashed rgba(123, 198, 164, 0.45);
+  color: var(--accent-soft);
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.hint-toggle-button:hover {
+  background: rgba(123, 198, 164, 0.1);
+  border-color: var(--accent-soft);
+}
+
 .bone-visual-multiple-stage {
   display: flex;
   gap: 1rem;
