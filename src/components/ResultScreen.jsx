@@ -1,9 +1,10 @@
 import { useRef, useState } from "react";
-import { FaShareAlt, FaSpinner } from "react-icons/fa";
+import { FaShareAlt, FaSpinner, FaRedo } from "react-icons/fa";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Swal from "sweetalert2";
 import html2canvas from "html2canvas";
 
-function ResultScreen({ score, totalQuestions, onRestart }) {
+function ResultScreen({ score, totalQuestions, onRestart, onChooseRegion }) {
   const percentage = Math.round((score / totalQuestions) * 100);
   const shareCardRef = useRef(null);
   const [isSharing, setIsSharing] = useState(false);
@@ -100,9 +101,12 @@ function ResultScreen({ score, totalQuestions, onRestart }) {
         <p className="result-percentage">Aproveitamento: {percentage}%</p>
         <p className="result-message">{performanceMessage}</p>
 
-        <div className="result-actions">
+        <div className="result-actions" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
+          <button className="secondary-button" onClick={onChooseRegion} type="button" disabled={isSharing}>
+            <IoMdArrowRoundBack /> Voltar a tela de regiões
+          </button>
           <button className="primary-button" onClick={onRestart} type="button" disabled={isSharing}>
-            Reiniciar quiz
+            <FaRedo /> Reiniciar quiz
           </button>
           <button className="secondary-button share-button" onClick={handleShare} type="button" disabled={isSharing}>
             {isSharing ? <FaSpinner className="spin-icon" /> : <FaShareAlt />}

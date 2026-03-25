@@ -1344,3 +1344,150 @@ p {
   to { opacity: 1; }
 }
 
+/* =========================================
+   ESTILOS DO CHANGELOG
+========================================= */
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.changelog-container {
+  background-color: #1b2420; /* Cor de fundo adaptada do seu SweetAlert */
+  border: 1px solid #2a3832;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #eaf4ee;
+  text-align: left;
+}
+
+.changelog-title-wrapper {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.changelog-main-title {
+  font-size: 1.5rem;
+  color: #7bc6a4;
+  margin: 0 0 0.5rem 0;
+}
+
+.changelog-subtitle {
+  color: #b7c8be;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.changelog-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Linha vertical da timeline */
+.changelog-timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #2a3832;
+}
+
+.changelog-item {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.changelog-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.changelog-icon-wrapper {
+  position: absolute;
+  left: 6px;
+  background-color: #1b2420;
+  border: 2px solid #7bc6a4;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7bc6a4;
+}
+
+.changelog-date {
+  font-size: 0.85rem;
+  color: #b7c8be;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.changelog-title {
+  font-size: 1.1rem;
+  color: #eaf4ee;
+  margin: 0.25rem 0 0 0;
+}
+
+.changelog-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #b7c8be;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.changelog-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.changelog-content.expanded {
+  grid-template-rows: 1fr;
+}
+
+.changelog-content-inner {
+  overflow: hidden;
+}
+
+.changelog-chevron {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.changelog-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.changelog-list li {
+  margin-bottom: 0.5rem;
+}
+
+.changelog-list strong {
+  color: #eaf4ee;
+}
+
+.changelog-list code {
+  background-color: #2a3832;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  color: #7bc6a4;
+}
+
+@media (max-width: 600px) {
+  .changelog-container {
+    padding: 1.5rem;
+  }
+}

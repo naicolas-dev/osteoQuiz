@@ -2,111 +2,111 @@ export const bonesQuizData = [
   // --- CRÂNIO ---
   {
     id: 1, category: "cranio", boneName: "Frontal",
-    visualReference: { image: "/assets/cranio/frontal.jpg", view: "single", region: "abóbada anterior", hint: "Osso da testa.", marker: { x: 250, y: 150, r: 15 }, landmark: "Fronte", quickTip: "Região superior da face." },
+    visualReference: { image: "/assets/cranio/frontal.jpg", view: "single", region: "abóbada anterior", hint: "Osso ímpar que forma a testa e o teto das cavidades orbitárias.", landmark: "Fronte — da linha do cabelo até a margem supraorbital", quickTip: "Se você bater na testa, está batendo no osso frontal. Ele também forma o 'chão' onde o lobo frontal do cérebro repousa." },
     options: ["Frontal", "Parietal", "Occipital", "Maxila", "Mandíbula"], correctAnswer: "Frontal",
-    explanation: { name: "Frontal", location: "Fronte", function: "Protege o cérebro", characteristics: "Teto das órbitas", relations: "Parietais, esfenoide", memoryTips: "Testa = Frontal" }
+    explanation: { name: "Frontal", location: "Região anterior e superior do crânio, formando a testa e parte da cavidade orbitária.", function: "Protege os lobos frontais do cérebro e forma o teto das órbitas oculares. É onde se encontram os seios frontais (cavidades de ar que aliviam o peso do crânio).", characteristics: "Osso ímpar e mediano. Possui a glabela (ponto entre as sobrancelhas), os arcos superciliares e a margem supraorbital.", relations: "Articula-se com os parietais (sutura coronal), etmoide, esfenoide, nasais, lacrimais, maxilas e zigomáticos.", memoryTips: "Frontal = Fronte = Testa. Pense: 'o osso da FRENTE do crânio'. Lembre que na sutura coronal, o frontal encontra os parietais como uma coroa." }
   },
   {
     id: 2, category: "cranio", boneName: "Parietal",
     visualReference: {
       images: [
-        { image: "/assets/cranio/parietal1.jpg", marker: { x: 250, y: 250, r: 35 } },
-        { image: "/assets/cranio/parietal2.jpg", marker: { x: 250, y: 250, r: 35 } }
+        { image: "/assets/cranio/parietal1.jpg" },
+        { image: "/assets/cranio/parietal2.jpg" }
       ],
-      view: "single", region: "teto craniano", hint: "Osso superior e lateral do crânio.", landmark: "Topo e lados", quickTip: "Teto do crânio"
+      view: "single", region: "teto craniano", hint: "Par de ossos que forma a maior parte do teto e das paredes laterais superiores do crânio.", landmark: "Topo e laterais da cabeça — entre o frontal e o occipital", quickTip: "Coloque a mão aberta no alto da cabeça: você está tocando os parietais. São os maiores ossos planos do crânio."
     },
     options: ["Parietal", "Frontal", "Temporal", "Occipital", "Esfenoide"], correctAnswer: "Parietal",
-    explanation: { name: "Parietal", location: "Superior e lateral", function: "Protege o telencéfalo", characteristics: "Osso pareado grande", relations: "Suturas sagital, coronal e lambdoide", memoryTips: "Parede e teto protetor" }
+    explanation: { name: "Parietal", location: "Superolateral do crânio. São dois ossos (direito e esquerdo) que formam juntos a maior parte da calota craniana.", function: "Proteção mecânica dos lobos parietais do cérebro, onde se processa a sensibilidade corporal (tato, dor, temperatura).", characteristics: "Osso plano, quadrilátero. Suas bordas participam de 4 suturas importantes: coronal (com frontal), sagital (entre os 2 parietais), lambdoide (com occipital) e escamosa (com temporal).", relations: "Frontal, occipital, temporal, esfenoide e o parietal contralateral.", memoryTips: "Parietal vem de 'parede' (paries em latim). São as PAREDES do crânio. Lembre: 2 parietais = 2 paredes laterais." }
   },
   {
     id: 3, category: "cranio", boneName: "Temporal",
     visualReference: {
       images: [
-        { image: "/assets/cranio/temporal1.jpg", marker: { x: 250, y: 250, r: 35 } },
-        { image: "/assets/cranio/temporal2.jpg", marker: { x: 250, y: 250, r: 35 } }
+        { image: "/assets/cranio/temporal1.jpg" },
+        { image: "/assets/cranio/temporal2.jpg" }
       ],
-      view: "single", region: "perto da orelha", hint: "Abriga o canal do ouvido.", landmark: "Ao redor da orelha", quickTip: "Tem o canal auditivo"
+      view: "single", region: "lateral inferior do crânio", hint: "Osso par que abriga o ouvido e forma o arco zigomático junto com o zigomático.", landmark: "Região das têmporas — onde apoiamos os óculos de sol", quickTip: "Quando você sente dor de cabeça nas têmporas, é sobre o temporal. Dentro dele ficam os ossículos da audição (martelo, bigorna e estribo)."
     },
     options: ["Temporal", "Parietal", "Zigomático", "Occipital", "Esfenoide"], correctAnswer: "Temporal",
-    explanation: { name: "Temporal", location: "Inferolateral", function: "Audição", characteristics: "Meato acústico, arco temporal", relations: "Mandíbula, Parietal", memoryTips: "Tempo -> Têmporas -> Temporal" }
+    explanation: { name: "Temporal", location: "Porção inferolateral do crânio, na região das têmporas. É um dos ossos mais complexos do corpo.", function: "Abriga e protege o ouvido interno e médio (audição e equilíbrio). Contém a fossa mandibular onde a mandíbula se articula (ATM). O processo mastoide serve de ancoragem para músculos do pescoço.", characteristics: "Possui 4 partes: escamosa (fina e plana), petrosa (dura como pedra — 'petros'), timpânica (forma o canal auditivo) e mastoide (proeminência palpável atrás da orelha).", relations: "Parietal (sutura escamosa), occipital, esfenoide, zigomático e mandíbula (ATM).", memoryTips: "Temporal = Têmporas. O primeiro cabelo branco costuma aparecer nas têmporas! Lembre: 'temporal tem TEMPO e TEM o ouvido dentro'." }
   },
   {
     id: 4, category: "cranio", boneName: "Occipital",
-    visualReference: { image: "/assets/cranio/occipital.jpg", view: "single", region: "nuca reta/posterior", hint: "Grande osso da base traseira.", marker: { x: 250, y: 350, r: 20 }, landmark: "Parte de trás inferior", quickTip: "Domina a nuca" },
+    visualReference: { image: "/assets/cranio/occipital.jpg", view: "single", region: "posterior e base do crânio", hint: "Grande osso ímpar que forma toda a nuca e a parte posterior da base do crânio.", landmark: "Nuca — do topo posterior da cabeça até a base do crânio", quickTip: "Quando você deita a cabeça no travesseiro, o peso recai sobre o occipital. É nele que fica o forame magno, por onde passa a medula espinal." },
     options: ["Occipital", "Parietal", "Temporal", "Esfenoide", "Atlas"], correctAnswer: "Occipital",
-    explanation: { name: "Occipital", location: "Posterior e base", function: "Cerebelo e tronco", characteristics: "Forame magno", relations: "Parietal", memoryTips: "Cobre toda a nuca" }
+    explanation: { name: "Occipital", location: "Região posterior e inferior do crânio, formando a nuca e a parte posterior da base craniana.", function: "Protege o cerebelo e o tronco encefálico. Contém o forame magno, a maior abertura do crânio, por onde a medula espinal se conecta ao encéfalo. Os côndilos occipitais se articulam com o atlas (C1), permitindo o movimento de 'sim' com a cabeça.", characteristics: "Osso ímpar, curvado e espesso. Protuberância occipital externa (ponto palpável na nuca). Apresenta linhas nucais para inserção de músculos cervicais.", relations: "Parietais (sutura lambdoide), temporais, esfenoide e atlas (C1).", memoryTips: "Occipital = onde você 'encosta' a cabeça. Forame MAGNO = 'grande buraco', o maior do crânio. Se alguém te dá um tapa na nuca, bateu no occipital!" }
   },
   {
     id: 5, category: "cranio", boneName: "Esfenoide",
     visualReference: {
       images: [
-        { image: "/assets/cranio/esfenoide1.jpg", marker: { x: 250, y: 250, r: 35 } },
-        { image: "/assets/cranio/esfenoide2.jpg", marker: { x: 250, y: 250, r: 35 } }
+        { image: "/assets/cranio/esfenoide1.jpg" },
+        { image: "/assets/cranio/esfenoide2.jpg" }
       ],
-      view: "single", region: "centro da base", hint: "Parece uma borboleta ou morcego.", landmark: "Centro estrutural do crânio", quickTip: "Tem as 'asas'"
+      view: "single", region: "centro da base craniana", hint: "Osso ímpar em forma de borboleta ou morcego que se articula com quase todos os ossos do crânio.", landmark: "Centro da base do crânio — invisível externamente, mas essencial estruturalmente", quickTip: "É o 'osso-chave' do crânio: toque todos os outros ossos cranianos e o esfenoide provavelmente se articula com eles. Na sela turca dele repousa a hipófise (glândula mestra do corpo)."
     },
     options: ["Esfenoide", "Etmoide", "Vômer", "Occipital", "Temporal"], correctAnswer: "Esfenoide",
-    explanation: { name: "Esfenoide", location: "Base craniana", function: "Apoia glândula pituitária", characteristics: "Sela turca", relations: "Quase todos os ossos cranianos", memoryTips: "Borboleta central" }
+    explanation: { name: "Esfenoide", location: "Porção central da base do crânio. Quando visto de cima, lembra uma borboleta com asas abertas.", function: "Sustenta a hipófise (glândula pituitária) na sela turca. Suas asas maiores formam parte da fossa temporal e da órbita. Suas asas menores delimitam a fossa craniana anterior da média.", characteristics: "Possui corpo central (com sela turca e seio esfenoidal), asas maiores, asas menores e processos pterigoides. Apresenta diversos forames para nervos e vasos (redondo, oval, espinhoso).", relations: "Articula-se com TODOS os outros ossos do crânio: frontal, parietais, temporais, occipital, etmoide, zigomáticos, palatinos e vômer.", memoryTips: "Esfenoide = formato de esFEra + borboleta. Pense: 'a borboleta que segura a hipófise'. É o osso mais conectado do crânio — toca quase todos os outros!" }
   },
   {
     id: 6, category: "cranio", boneName: "Etmoide",
-    visualReference: { image: "/assets/cranio/etmoide.jpg", view: "single", region: "teto nasal", hint: "Osso profundo por onde entra o cheiro.", marker: { x: 250, y: 250, r: 25 }, landmark: "Topo interno do nariz", quickTip: "Como uma esponja" },
+    visualReference: { image: "/assets/cranio/etmoide.jpg", view: "single", region: "entre as órbitas e a cavidade nasal", hint: "Osso ímpar, leve e esponjoso, situado entre as órbitas. É a peça-chave do olfato.", landmark: "Profundamente entre as órbitas — no teto da cavidade nasal", quickTip: "Por ele passam os nervos olfatórios (I par craniano). Sua placa cribrosa é perfurada como uma peneira, permitindo que os cheiros cheguem ao cérebro." },
     options: ["Etmoide", "Esfenoide", "Vômer", "Nasal", "Frontal"], correctAnswer: "Etmoide",
-    explanation: { name: "Etmoide", location: "Caixa craniana/Fossa nasal", function: "Olfação", characteristics: "Placa cribrosa", relations: "Frontal, Esfenoide", memoryTips: "O filtro de odores" }
+    explanation: { name: "Etmoide", location: "Entre as cavidades orbitárias, formando o teto da cavidade nasal e parte da parede medial da órbita.", function: "Sustenta o sentido do olfato: a placa cribrosa é perfurada por filamentos do nervo olfatório (I). As conchas nasais superior e média (que são partes do etmoide) criam turbilhões de ar para aquecer e filtrar.", characteristics: "Osso ímpar e extremamente leve. Formado pela placa cribrosa (horizontal), crista gali (projeção superior onde se fixa a foice do cérebro), placa perpendicular (parte do septo nasal) e labirintos etmoidais (células aéreas).", relations: "Frontal (acima), esfenoide (atrás), nasais e maxilas (abaixo/lateralmente), vômer e conchas nasais inferiores.", memoryTips: "Etmoide vem de 'ethmos' = peneira em grego. Pense numa peneira cheia de furinhos por onde passam os fios do cheiro. Lembre: 'penEIRA = etmoidE'. Crista gali = crista de galo no topo." }
   },
   {
     id: 7, category: "cranio", boneName: "Maxila",
-    visualReference: { image: "/assets/cranio/maxila.jpg", view: "single", region: "centro da face", hint: "Arcada superior da boca.", marker: { x: 250, y: 250, r: 25 }, landmark: "Abaixo do nariz", quickTip: "Sustenta os dentes de cima" },
+    visualReference: { image: "/assets/cranio/maxila.jpg", view: "single", region: "centro da face", hint: "Osso par que forma a arcada dentária superior, o assoalho da órbita e parte do palato duro.", landmark: "Do assoalho do olho até os dentes de cima — centro da face", quickTip: "A maxila é como o 'esqueleto da face': se articula com quase todos os ossos faciais. É fixa (diferente da mandíbula que se move)." },
     options: ["Maxila", "Mandíbula", "Zigomático", "Frontal", "Nasal"], correctAnswer: "Maxila",
-    explanation: { name: "Maxila", location: "Centro da face", function: "Sustenta dentes superiores", characteristics: "Tem seio maxilar", relations: "Maioria dos ossos da face", memoryTips: "Sustenta lábio superior e dentes de cima" }
+    explanation: { name: "Maxila", location: "Porção central da face. Forma o assoalho da órbita, as paredes laterais do nariz, o palato duro (parte anterior) e aloja os dentes superiores.", function: "Sustenta a arcada dentária superior, participa da mastigação (base fixa), forma o assoalho orbital e abriga o seio maxilar (a maior cavidade paranasal — inflamado nas sinusites).", characteristics: "Osso par. Possui processo frontal (sobe), processo zigomático (lateral), processo palatino (forma o palato duro anterior) e processo alveolar (aloja os dentes). O seio maxilar ocupa grande parte do corpo da maxila.", relations: "Articula-se com frontal, nasal, lacrimal, etmoide, zigomático, palatino, vômer, concha nasal inferior e a maxila oposta.", memoryTips: "MaxiLAR = dentes de cima (FICA no LUGAR, não se mexe). É o oposto da mandíbula: a maxila é o 'fixo de cima' e a mandíbula é o 'móvel de baixo'. Sinusite? Culpe o seio maxilar!" }
   },
   {
     id: 8, category: "cranio", boneName: "Mandíbula",
-    visualReference: { image: "/assets/cranio/mandibula.jpg", view: "single", region: "face inferior", hint: "Queixo e dentes inferiores.", marker: { x: 250, y: 250, r: 25 }, landmark: "Arcada inferior", quickTip: "A mandíbula" },
+    visualReference: { image: "/assets/cranio/mandibula.jpg", view: "single", region: "face inferior", hint: "Único osso móvel da cabeça. Forma o queixo e a arcada dentária inferior.", landmark: "Queixo e toda a arcada inferior — o 'maxilar de baixo'", quickTip: "É o osso mais forte da face e o único que se movimenta no crânio. Sem ele, não haveria mastigação, fala nem bocejo." },
     options: ["Mandíbula", "Maxila", "Temporal", "Frontal", "Esfenoide"], correctAnswer: "Mandíbula",
-    explanation: { name: "Mandíbula", location: "Inferior da face", function: "Mastigação", characteristics: "Único osso móvel craniano", relations: "Articulação Temporomandibular", memoryTips: "O de baixo que se mexe" }
+    explanation: { name: "Mandíbula", location: "Porção inferior da face, formando o contorno do queixo e sustentando os dentes inferiores.", function: "Permite mastigação, fala, deglutição e expressões faciais. Articula-se com o temporal pela ATM (articulação temporomandibular), a única articulação sinovial móvel do crânio.", characteristics: "Maior e mais forte osso da face. Tem formato de ferradura com corpo (horizontal) e dois ramos (verticais). O ramo possui processo coronoide (inserção do temporal) e processo condilar (articula com a fossa mandibular do temporal = ATM). O forame mentual fica abaixo dos pré-molares.", relations: "Temporal (ATM), dentes inferiores. Não se articula com nenhum outro osso do crânio de forma fixa (somente via ATM).", memoryTips: "MandíBULA = 'manda na BULA' (comanda a boca). Único osso MÓVEL do crânio. Lembre: se abre e fecha a boca, é a mandíbula trabalhando. Processo condilar → côndilo → ATM." }
   },
   {
     id: 9, category: "cranio", boneName: "Zigomático",
-    visualReference: { image: "/assets/cranio/zigomatico.jpg", view: "single", region: "face lateral", hint: "Osso da maçã do rosto.", marker: { x: 250, y: 250, r: 20 }, landmark: "Bochecha alta", quickTip: "Forma um arco" },
+    visualReference: { image: "/assets/cranio/zigomatico.jpg", view: "single", region: "face lateral", hint: "Osso par que forma a proeminência da bochecha (maçã do rosto) e parte da parede lateral da órbita.", landmark: "Maçã do rosto — a parte mais saliente da bochecha", quickTip: "Quando alguém passa blush no rosto, está passando exatamente sobre o zigomático. Junto com o processo zigomático do temporal, ele forma o arco zigomático." },
     options: ["Zigomático", "Maxila", "Temporal", "Esfenoide", "Parietal"], correctAnswer: "Zigomático",
-    explanation: { name: "Zigomático", location: "Face lateral", function: "Maçã do rosto", characteristics: "Arco zigomático", relations: "Temporal, Maxila", memoryTips: "Osso do blush no rosto" }
+    explanation: { name: "Zigomático", location: "Porção lateral da face, formando a proeminência da bochecha e parte da parede lateral e do assoalho da órbita.", function: "Dá forma à maçã do rosto e absorve impactos na face lateral. O arco zigomático (zigomático + temporal) serve de origem para o músculo masseter, essencial na mastigação.", characteristics: "Osso par, losangular. Possui processos frontal, temporal e maxilar. É um dos ossos mais resistentes da face.", relations: "Temporal (arco zigomático), maxila, frontal e esfenoide.", memoryTips: "Zigomático = 'jugo' = junta. É a JUNTA entre a face lateral e a órbita. Pense: 'Zig-Zag na bochecha'. É onde você sente um soco na cara!" }
   },
   {
     id: 10, category: "cranio", boneName: "Nasal",
-    visualReference: { image: "/assets/cranio/nasal.jpg", view: "single", region: "face centro", hint: "Ponte superior do nariz.", marker: { x: 250, y: 250, r: 20 }, landmark: "Dorso do nariz", quickTip: "Entre os olhos" },
+    visualReference: { image: "/assets/cranio/nasal.jpg", view: "single", region: "ponte do nariz", hint: "Par de pequenos ossos retangulares que formam a ponte (dorso) do nariz.", landmark: "Dorso do nariz — entre os olhos e acima da cartilagem nasal", quickTip: "Quando você empurra a armação dos óculos para cima, ela desliza sobre os ossos nasais. A parte inferior do nariz é cartilagem, não osso!" },
     options: ["Nasal", "Maxila", "Lacrimal", "Vômer", "Etmoide"], correctAnswer: "Nasal",
-    explanation: { name: "Nasal", location: "Face central", function: "Ponte do nariz", characteristics: "Osso par", relations: "Frontal, Maxila", memoryTips: "Onde apoia o meio do óculos" }
+    explanation: { name: "Nasal", location: "Centro superior da face, formando a ponte (dorso) do nariz. Apenas a parte superior do nariz é óssea; a ponta e as asas são cartilaginosas.", function: "Dá suporte estrutural à porção superior do nariz e protege a entrada da cavidade nasal.", characteristics: "Osso par, pequeno e retangular. A fratura nasal é a fratura facial mais comum (pancada no nariz).", relations: "Frontal (acima), maxila (lateral), etmoide (posterior) e o nasal contralateral.", memoryTips: "Nasal = nariz. Simples! A parte de cima do nariz é osso, a ponta do nariz é cartilagem. Onde apoia o óculos = osso nasal." }
   },
   {
     id: 11, category: "cranio", boneName: "Lacrimal",
-    visualReference: { image: "/assets/cranio/lacrimal.jpg", view: "single", region: "órbita medial", hint: "Canalha da lágrima.", marker: { x: 250, y: 250, r: 15 }, landmark: "Dentro da órbita nasal", quickTip: "O menor osso" },
+    visualReference: { image: "/assets/cranio/lacrimal.jpg", view: "single", region: "parede medial da órbita", hint: "Menor osso da face, fino como uma unha, localizado na parede medial da cavidade orbitária.", landmark: "Canto interno do olho — entre a órbita e o nariz", quickTip: "Quando você chora, as lágrimas drenam pelo ducto nasolacrimal que passa por esse osso. Por isso quando choramos o nariz escorre junto!" },
     options: ["Lacrimal", "Nasal", "Vômer", "Etmoide", "Zigomático"], correctAnswer: "Lacrimal",
-    explanation: { name: "Lacrimal", location: "Órbita", function: "Canal da lágrima", characteristics: "Frágil e minúsculo", relations: "Maxila, Etmoide", memoryTips: "Por onde escorre a lágrima" }
+    explanation: { name: "Lacrimal", location: "Parede medial da órbita, no canto interno do olho. É o menor e mais frágil osso da face.", function: "Abriga a fossa do saco lacrimal e o início do ducto nasolacrimal, que drena as lágrimas do olho para a cavidade nasal.", characteristics: "Osso par, fino como a unha do dedo mindinho. Tem formato de lâmina com uma crista lacrimal posterior.", relations: "Maxila (lateral e inferior), frontal (superior), etmoide (posterior).", memoryTips: "Lacrimal = lágrima. Chora → a lágrima desce → passa pelo lacrimal → escorre para o nariz. Por isso chorar dá coriza!" }
   },
   {
     id: 12, category: "cranio", boneName: "Palatino",
-    visualReference: { image: "/assets/cranio/palatino.jpg", view: "single", region: "céu ba boca posterior", hint: "Duro lá trás no céu da boca.", marker: { x: 250, y: 250, r: 20 }, landmark: "Teto traseiro bocal", quickTip: "Formato em L" },
+    visualReference: { image: "/assets/cranio/palatino.jpg", view: "single", region: "parte posterior do palato duro", hint: "Osso par em forma de 'L' que forma a parte posterior do palato duro (céu da boca) e parte da cavidade nasal.", landmark: "Céu da boca (parte de trás) — passe a língua e sinta a transição do duro para o mole", quickTip: "O palato duro é formado pela maxila (frente) + palatino (trás). Se você passar a língua no céu da boca, a parte óssea dura que sente atrás é o palatino." },
     options: ["Palatino", "Maxila", "Vômer", "Esfenoide", "Mandíbula"], correctAnswer: "Palatino",
-    explanation: { name: "Palatino", location: "Palato duro (posterior)", function: "Eixo buco-nasal", characteristics: "Formato de um L", relations: "Maxila, Esfenoide", memoryTips: "Pálato = céu da boca" }
+    explanation: { name: "Palatino", location: "Porção posterior do palato duro e parte da parede lateral da cavidade nasal e do assoalho da órbita.", function: "Completa o palato duro (separação entre boca e nariz), essencial para mastigação e fala. Sem essa separação, o alimento subiria para o nariz.", characteristics: "Osso par em formato de 'L': lâmina horizontal (palato) + lâmina perpendicular (cavidade nasal). Pequeno mas funcional.", relations: "Maxila (anteriormente), esfenoide (posteriormente), vômer (medialmente) e etmoide.", memoryTips: "PaLATINO = PALATO. Lembre: 'o L do palatino fecha o céu da boca por trás'. Maxila = 2/3 anteriores do palato duro; Palatino = 1/3 posterior." }
   },
   {
     id: 13, category: "cranio", boneName: "Concha Nasal Inferior",
-    visualReference: { image: "/assets/cranio/concha-nasal-inferior.jpg", view: "single", region: "cavidade nasal lateral", hint: "Pedaços curvos frouxinhos dentro do nariz.", marker: { x: 250, y: 250, r: 20 }, landmark: "Laterais internas do nariz", quickTip: "São como conchinhas" },
+    visualReference: { image: "/assets/cranio/concha-nasal-inferior.jpg", view: "single", region: "parede lateral da cavidade nasal", hint: "Osso par e curvo nas paredes laterais do nariz que cria turbilhões de ar para aquecer e umidificar a respiração.", landmark: "Dentro do nariz, na parede lateral — as 'prateleiras' que organizam o ar", quickTip: "Diferente das conchas superior e média (que pertencem ao etmoide), a concha nasal inferior é um osso independente! Quando seu nariz está entupido, é porque as conchas estão inchadas." },
     options: ["Concha Nasal Inferior", "Vômer", "Etmoide", "Nasal", "Lacrimal"], correctAnswer: "Concha Nasal Inferior",
-    explanation: { name: "Concha Nasal Inferior", location: "Paredes nasais laterais", function: "Aquece o ar", characteristics: "Osso pareado curvo", relations: "Maxila", memoryTips: "As conchinhas de ar interno do nariz" }
+    explanation: { name: "Concha Nasal Inferior", location: "Parede lateral da cavidade nasal, abaixo da concha média (etmoide). É a maior das três conchas nasais.", function: "Aumenta a área de superfície da mucosa nasal, criando turbulência no ar inspirado para aquecê-lo, umidificá-lo e filtrá-lo antes de chegar aos pulmões. É fundamental na defesa respiratória.", characteristics: "É o único osso independente entre as conchas (as outras são partes do etmoide). Osso par, espiralado e coberto por mucosa vascular espessa que pode inchar (rinite, gripe).", relations: "Maxila, palatino, lacrimal e etmoide.", memoryTips: "É a 'conchinha' que incha quando ficamos gripados e entope o nariz! Lembre: conchas superior e média = parte do etmoide. Concha inferior = osso separado e independente." }
   },
   {
     id: 14, category: "cranio", boneName: "Vômer",
-    visualReference: { image: "/assets/cranio/vomer.jpg", view: "single", region: "cavidade nasal central", hint: "Septo interno inferior como uma faca.", marker: { x: 250, y: 250, r: 20 }, landmark: "Meio do nariz (base)", quickTip: "É como a ponta de um arado" },
+    visualReference: { image: "/assets/cranio/vomer.jpg", view: "single", region: "septo nasal inferior", hint: "Osso ímpar, fino e achatado que forma a parte posteroinferior do septo nasal, dividindo o nariz em duas metades.", landmark: "Divisória interna do nariz (parte de trás e de baixo)", quickTip: "O septo nasal é formado por 3 estruturas: a cartilagem do septo (frente), a placa perpendicular do etmoide (cima) e o vômer (baixo/trás). Desvio de septo pode envolver o vômer!" },
     options: ["Vômer", "Etmoide", "Nasal", "Lacrimal", "Concha Nasal Inferior"], correctAnswer: "Vômer",
-    explanation: { name: "Vômer", location: "Septo nasal inferior", function: "Divide o nariz medialmente", characteristics: "Ímpar e triangular", relations: "Etmoide, Maxila", memoryTips: "Lâmina medial inferior divisória do nariz" }
+    explanation: { name: "Vômer", location: "Porção posteroinferior do septo nasal, desde a base do crânio (esfenoide) até o palato duro.", function: "Divide a cavidade nasal em duas metades (narinas direita e esquerda). É essencial para direcionar o fluxo de ar igualmente.", characteristics: "Osso ímpar, plano e trapezoidal. 'Vomer' significa 'arado' em latim — sua forma lembra a lâmina de um arado. É um dos poucos ossos ímpares da face.", relations: "Esfenoide (superior), etmoide/placa perpendicular (superior), maxilas e palatinos (inferior), cartilagem do septo (anterior).", memoryTips: "Vômer = ARADO. O arado 'ara' dividindo a terra em dois lados, assim como o vômer divide o nariz em dois. Lembre: é ímpar e fica no MEIO do nariz." }
   },
   {
     id: 15, category: "cranio", boneName: "Osso Hióideo",
-    visualReference: { image: "/assets/cranio/osso-hióideo.jpg", view: "single", region: "pescoço", hint: "Osso em forma de U na base da língua.", marker: { x: 250, y: 250, r: 15 }, landmark: "Base do pescoço, laringe", quickTip: "Não possui articulações com outros ossos" },
+    visualReference: { image: "/assets/cranio/osso-hióideo.jpg", view: "single", region: "pescoço anterior", hint: "Único osso do corpo humano que não se articula diretamente com nenhum outro osso. Fica 'flutuando' na garganta, em forma de U.", landmark: "Garganta, acima da cartilagem tireoidea (pomo de Adão) — entre a mandíbula e a laringe", quickTip: "Segure delicadamente sua garganta logo acima do pomo de Adão e engula: você sentirá o hióideo se mover. Ele é essencial para engolir e falar." },
     options: ["Osso Hióideo", "Atlas", "Áxis", "Vértebra Cervical", "Mandíbula"], correctAnswer: "Osso Hióideo",
-    explanation: { name: "Osso Hióideo", location: "Pescoço", function: "Sustenta a língua deglutição", characteristics: "Formato de U, flutuante", relations: "Inserções musculares, sem articulação fixa", memoryTips: "A 'ferradura' solta no pescoço" }
+    explanation: { name: "Osso Hióideo", location: "Região anterior do pescoço, entre a mandíbula e a cartilagem tireoidea. Situa-se ao nível de C3.", function: "Serve de ancoragem para músculos da língua, faringe e laringe. É fundamental na deglutição (engolir), fonação (falar) e respiração. A língua se movimenta graças aos músculos presos ao hióideo.", characteristics: "Único osso 'flutuante' do corpo: não tem articulação direta com nenhum outro osso. Tem formato de U ou ferradura, com corpo, cornos maiores e cornos menores. É mantido no lugar por músculos e ligamentos.", relations: "Conecta-se por músculos à mandíbula (acima), ao esterno (abaixo), à escápula e à cartilagem tireoidea. Importante em medicina legal: fratura do hióideo pode sugerir estrangulamento.", memoryTips: "Hióideo = formato de U (como a letra grega 'upsilon'). É o osso SOLITÁRIO — não toca nenhum outro osso! Pense: 'o osso mais antissocial do corpo'. Ferradura flutuante na garganta." }
   },
 
   // --- COLUNA E TÓRAX ---
@@ -114,215 +114,179 @@ export const bonesQuizData = [
     id: 16, category: "coluna-torax", boneName: "Cóccix",
     visualReference: { 
       images: [
-        { image: "/assets/coluna-torax/coccix1.jpg", marker: { x: 250, y: 250, r: 25 } },
-        { image: "/assets/coluna-torax/coccix2.jpg", marker: { x: 250, y: 250, r: 25 } }
+        { image: "/assets/coluna-torax/coccix1.jpg" },
+        { image: "/assets/coluna-torax/coccix2.jpg" }
       ],
-      view: "single", 
-      region: "base da coluna", 
-      hint: "Porção terminal da coluna vertebral.", 
-      landmark: "Fim da coluna", 
-      quickTip: "Parece um bico de pássaro" 
+      view: "single", region: "extremidade inferior da coluna", hint: "Porção terminal da coluna vertebral, formada por 3 a 5 vértebras rudimentares fundidas. É o vestígio evolutivo de uma cauda.", landmark: "Ponta final da coluna — entre as nádegas, abaixo do sacro", quickTip: "Se você já caiu sentado e sentiu aquela dor intensa 'no final das costas', provavelmente foi no cóccix. Apesar de pequeno, serve de ancoragem para músculos do assoalho pélvico." 
     },
     options: ["Sacro", "Cóccix", "Ísquio", "Lombar", "Púbis"], correctAnswer: "Cóccix",
-    explanation: { name: "Cóccix", location: "Abaixo do sacro", function: "Inserção de ligamentos e músculos pélvicos", characteristics: "Composto por 3 a 5 pequenas vértebras fundidas", relations: "Articula-se superiormente com o sacro", memoryTips: "Osso do 'rabo'" }
+    explanation: { name: "Cóccix", location: "Extremidade inferior da coluna vertebral, articulado com o ápice do sacro.", function: "Ponto de inserção para ligamentos e músculos do assoalho pélvico (coccígeo, levantador do ânus). Ajuda a suportar peso quando sentamos e serve de tripé junto com as tuberosidades isquiáticas.", characteristics: "Formado por 3 a 5 vértebras rudimentares fundidas. É um vestígio evolutivo da cauda de nossos ancestrais. Muito pequeno mas frequentemente fraturado em quedas sentadas.", relations: "Articula-se superiormente com o sacro (articulação sacrococcígea). Músculos do assoalho pélvico e ligamento anococcígeo.", memoryTips: "Cóccix vem de 'cuco' (pássaro) em grego — parece um bico de cuco! Lembre: 'o rabinho do cuco'. É o 'osso do rabo' que dói quando caímos sentados." }
   },
   {
     id: 17, category: "coluna-torax", boneName: "Esterno",
     visualReference: { 
       images: [
-        { image: "/assets/coluna-torax/esterno1.jpg", marker: { x: 250, y: 250, r: 25 } },
-        { image: "/assets/coluna-torax/esterno2.jpg", marker: { x: 250, y: 250, r: 25 } }
+        { image: "/assets/coluna-torax/esterno1.jpg" },
+        { image: "/assets/coluna-torax/esterno2.jpg" }
       ],
-      view: "single", 
-      region: "tórax anterior", 
-      hint: "Osso central do peito.", 
-      landmark: "Meio do peito", 
-      quickTip: "Tem formato de gravata ou espada" 
+      view: "single", region: "centro do peito", hint: "Osso plano e alongado na linha média anterior do tórax, dividido em manúbrio, corpo e processo xifoide.", landmark: "Centro do peito — entre as clavículas e a boca do estômago", quickTip: "Na RCP (ressuscitação cardiopulmonar), as compressões torácicas são feitas sobre o corpo do esterno. O processo xifoide (ponta inferior) é um marco para não comprimir muito abaixo."
     },
     options: ["Esterno", "Escápula", "Manúbrio", "Clavícula", "Costela"], correctAnswer: "Esterno",
-    explanation: { name: "Esterno", location: "Linha média anterior do tórax", function: "Protege o coração e grandes tubos", characteristics: "Osso plano com manúbrio, corpo e processo xifoide", relations: "Costelas e clavículas", memoryTips: "Escudo do peito" }
+    explanation: { name: "Esterno", location: "Linha média anterior do tórax, da incisura jugular (base do pescoço) até o processo xifoide (boca do estômago).", function: "Protege o coração e grandes vasos (aorta, veias cavas). Recebe as cartilagens costais das 7 primeiras costelas. É utilizado para punção de medula óssea (mielograma) e é o osso cortado na cirurgia cardíaca (esternotomia).", characteristics: "Dividido em 3 partes: manúbrio (superior, em forma de gravata), corpo (maior porção central) e processo xifoide (ponta inferior cartilaginosa). O ângulo esternal (junção manúbrio-corpo) marca o nível da 2ª costela — referência clínica importante!", relations: "Clavículas (articulação esternoclavicular), cartilagens costais de C1 a C7, e músculos peitorais.", memoryTips: "Esterno = 'sternon' = peito em grego. Parece uma ESPADA: manúbrio = cabo, corpo = lâmina, xifoide = ponta. Pense: 'a espada que protege o coração'." }
   },
   {
     id: 18, category: "coluna-torax", boneName: "Sacro",
     visualReference: { 
       images: [
-        { image: "/assets/coluna-torax/sacro1.jpg", marker: { x: 250, y: 250, r: 35 } },
-        { image: "/assets/coluna-torax/sacro2.jpg", marker: { x: 250, y: 250, r: 35 } }
+        { image: "/assets/coluna-torax/sacro1.jpg" },
+        { image: "/assets/coluna-torax/sacro2.jpg" }
       ],
-      view: "single", 
-      region: "base da coluna", 
-      hint: "Grande osso triangular na base da coluna.", 
-      landmark: "Acima do cóccix", 
-      quickTip: "Tem furinhos (forames)" 
+      view: "single", region: "base da coluna vertebral", hint: "Grande osso triangular formado pela fusão de 5 vértebras, situado entre a coluna lombar e o cóccix.", landmark: "Entre os dois ossos do quadril — a 'pedra angular' da pelve", quickTip: "O sacro é o elo entre a coluna vertebral e a pelve. Todo o peso da parte superior do corpo passa por ele até as pernas. Seus forames sacros permitem a passagem dos nervos sacrais." 
     },
     options: ["Sacro", "Cóccix", "Vértebra Lombar", "Osso Ilíaco", "Ísquio"], correctAnswer: "Sacro",
-    explanation: { name: "Sacro", location: "Base da coluna, entre os ossos do quadril", function: "Transmite o peso do corpo para a pelve", characteristics: "Formado por 5 vértebras fundidas", relations: "L5, cóccix, osso ilíaco", memoryTips: "Um triângulo de osso no fim da coluna" }
+    explanation: { name: "Sacro", location: "Base da coluna vertebral, encaixado entre os dois ossos ilíacos. Forma a parede posterior da pelve.", function: "Transmite todo o peso do tronco para a cintura pélvica e daí para os membros inferiores. A articulação sacroilíaca é uma das mais fortes do corpo. É onde se aplica anestesia peridural/raquidiana.", characteristics: "Formado por 5 vértebras sacrais fundidas (S1-S5). Tem formato triangular com a base para cima. Possui forames sacrais anteriores e posteriores para nervos. O promontório sacral (borda anterior de S1) é referência obstétrica.", relations: "L5 (acima), cóccix (abaixo), ossos ilíacos bilateralmente (articulação sacroilíaca).", memoryTips: "Sacro = 'sagrado' (os antigos o consideravam um osso sagrado). Pense: 'o triângulo SAGRADO que segura a coluna na bacia'. 5 vértebras fundidas = um escudo triangular." }
   },
   {
     id: 19, category: "coluna-torax", boneName: "Costelas",
-    visualReference: { image: "/assets/coluna-torax/costelas.jpg", view: "single", region: "tórax", hint: "Arcos ósseos do tórax.", marker: { x: 250, y: 250, r: 40 }, landmark: "Caixa torácica", quickTip: "Protegem os pulmões" },
+    visualReference: { image: "/assets/coluna-torax/costelas.jpg", view: "single", region: "caixa torácica", hint: "Conjunto de 24 ossos curvos (12 pares) que formam a caixa torácica, protegendo coração e pulmões.", landmark: "Toda a circunferência do tórax — das vértebras ao esterno", quickTip: "São 12 pares: 7 verdadeiras (ligam direto ao esterno), 3 falsas (ligam via cartilagem da costela acima) e 2 flutuantes (não têm conexão anterior). A 1ª costela é a menor e mais curvada." },
     options: ["Costelas", "Esterno", "Clavícula", "Fíbula", "Escápula"], correctAnswer: "Costelas",
-    explanation: { name: "Costelas", location: "Envolvem o tórax", function: "Protegem a cavidade torácica e auxiliam na respiração", characteristics: "12 pares (verdadeiras, falsas e flutuantes)", relations: "Articulam com as vértebras torácicas e o esterno", memoryTips: "A grade do peito" }
+    explanation: { name: "Costelas", location: "Envolvem o tórax bilateralmente, articulando-se posteriormente com as vértebras torácicas e anteriormente com o esterno (via cartilagens costais).", function: "Protegem órgãos vitais (coração, pulmões, grandes vasos, fígado e baço). Participam ativamente da respiração: ao se elevarem, aumentam o volume torácico permitindo a inspiração.", characteristics: "12 pares totalizando 24 costelas. Verdadeiras (1ª a 7ª): cartilagem própria ao esterno. Falsas (8ª a 10ª): cartilagem se une à costela acima. Flutuantes (11ª e 12ª): extremidade anterior livre. Cada costela tem cabeça, colo, tubérculo e corpo com sulco costal (onde correm os vasos e nervos intercostais).", relations: "Vértebras torácicas (articulações costovertebrais e costotransversárias), cartilagens costais e esterno.", memoryTips: "7-3-2: 7 verdadeiras, 3 falsas, 2 flutuantes. Total = 12 pares = 24. Lembre: 'VeFaFlu' (Verdadeiras, Falsas, Flutuantes). As flutuantes 'flutuam' porque não se prendem na frente!" }
   },
   {
     id: 20, category: "coluna-torax", boneName: "Vértebras Cervicais",
-    visualReference: { image: "/assets/coluna-torax/vertebras-cervicais.jpg", view: "single", region: "pescoço", hint: "Vértebras do pescoço.", marker: { x: 250, y: 250, r: 30 }, landmark: "Abaixo do crânio", quickTip: "Menores vértebras com forame no processo transverso" },
+    visualReference: { image: "/assets/coluna-torax/vertebras-cervicais.jpg", view: "single", region: "pescoço", hint: "Sete vértebras (C1 a C7) que formam a região mais móvel da coluna, sustentando a cabeça.", landmark: "Do crânio até a base do pescoço — a parte mais flexível da coluna", quickTip: "Todos os mamíferos têm 7 vértebras cervicais — até a girafa! C1 (Atlas) sustenta o crânio, C2 (Áxis) permite rotação. C7 é a 'vértebra proeminente' que você sente ao inclinar o pescoço." },
     options: ["Vértebras Cervicais", "Vértebras Torácicas", "Vértebras Lombares", "Sacro", "Atlas e Áxis"], correctAnswer: "Vértebras Cervicais",
-    explanation: { name: "Vértebras Cervicais", location: "Região do pescoço", function: "Sustentam a cabeça e permitem rotação", characteristics: "7 vértebras (C1 a C7)", relations: "Crânio, torácicas", memoryTips: "Sustentam o crânio (cervical = pescoço)" }
+    explanation: { name: "Vértebras Cervicais", location: "Região do pescoço, de C1 (atlas) a C7 (proeminente). Formam a lordose cervical (curvatura côncava posterior).", function: "Sustentam e permitem movimento da cabeça (flexão, extensão, rotação e inclinação lateral). Protegem a medula espinal cervical e a artéria vertebral que passa pelos forames transversários.", characteristics: "7 vértebras, as menores da coluna. Possuem forame transversário exclusivo (para a artéria vertebral). C1 (Atlas): sem corpo — anel que sustenta o crânio como o titã Atlas sustentava o mundo. C2 (Áxis): tem o dente do áxis (processo odontoide) onde C1 gira. C7: processo espinhoso mais longo e palpável.", relations: "Occipital (acima de C1), vértebras torácicas (abaixo de C7), discos intervertebrais entre elas.", memoryTips: "7 cervicais como os 7 dias da semana. Atlas segura o mundo (C1 segura a cabeça). Áxis = eixo de rotação (C2 permite dizer 'não'). C7 = a que você palpa no pescoço ao abaixar a cabeça." }
   },
   {
     id: 21, category: "coluna-torax", boneName: "Vértebras Torácicas",
-    visualReference: { image: "/assets/coluna-torax/vertebras-toracicas.jpg", view: "single", region: "meio das costas", hint: "Vértebras articuladas com as costelas.", marker: { x: 250, y: 250, r: 30 }, landmark: "Parte superior das costas", quickTip: "Tem processo espinhoso voltado para baixo" },
+    visualReference: { image: "/assets/coluna-torax/vertebras-toracicas.jpg", view: "single", region: "meio das costas", hint: "Doze vértebras (T1 a T12) no meio das costas, cada uma articulada com um par de costelas.", landmark: "Parte média e posterior do tórax — das costas superiores até a cintura", quickTip: "São as únicas vértebras que se articulam com costelas! Por isso a região torácica é a menos móvel da coluna — as costelas limitam o movimento." },
     options: ["Vértebras Torácicas", "Vértebras Lombares", "Vértebras Cervicais", "Costelas", "Sacro"], correctAnswer: "Vértebras Torácicas",
-    explanation: { name: "Vértebras Torácicas", location: "Meio das costas", function: "Suporte e articulação com as costelas", characteristics: "12 vértebras (T1 a T12)", relations: "Costelas, cervical, lombar", memoryTips: "T1 a T12, como as 12 costelas" }
+    explanation: { name: "Vértebras Torácicas", location: "Região dorsal/torácica da coluna, de T1 a T12. Formam a cifose torácica (curvatura convexa posterior).", function: "Sustentam a caixa torácica e protegem a medula espinal torácica. Servem de pontos de articulação para as 12 costelas, fundamentais na respiração.", characteristics: "12 vértebras de tamanho intermediário. Possuem fóveas costais no corpo (para cabeça da costela) e nos processos transversos (para tubérculo da costela). Processos espinhosos longos e inclinados para baixo (imbricados como telhas).", relations: "C7 (acima), L1 (abaixo), costelas bilateralmente, discos intervertebrais.", memoryTips: "12 Torácicas = 12 costelas = 12 meses. T de Torácica = T de Tórax. São as vértebras 'abraçadas' pelas costelas. Processo espinhoso inclinado = 'cabecinha baixa'." }
   },
   {
     id: 22, category: "coluna-torax", boneName: "Vértebras Lombares",
-    visualReference: { image: "/assets/coluna-torax/vertebras-lombares.jpg", view: "single", region: "fundo das costas", hint: "As maiores vértebras da coluna.", marker: { x: 250, y: 250, r: 30 }, landmark: "Abaixo das costelas", quickTip: "Corpo vertebral grande e robusto" },
+    visualReference: { image: "/assets/coluna-torax/vertebras-lombares.jpg", view: "single", region: "parte inferior das costas", hint: "Cinco vértebras robustas (L1 a L5) na parte baixa das costas, as maiores da coluna.", landmark: "Região lombar — entre as últimas costelas e o sacro (onde doem as 'lombalgias')", quickTip: "São as maiores e mais fortes porque carregam todo o peso do tronco. A hérnia de disco lombar (especialmente L4-L5 e L5-S1) é uma das causas mais comuns de dor nas costas." },
     options: ["Vértebras Lombares", "Vértebras Torácicas", "Vértebras Cervicais", "Sacro", "Cóccix"], correctAnswer: "Vértebras Lombares",
-    explanation: { name: "Vértebras Lombares", location: "Parte inferior das costas", function: "Suportam o maior peso do corpo", characteristics: "5 vértebras grandes (L1 a L5)", relations: "Torácicas, sacro", memoryTips: "Lombar liga com lombalgia (dor no fundo das costas)" }
+    explanation: { name: "Vértebras Lombares", location: "Parte inferior das costas, de L1 a L5. Formam a lordose lombar (curvatura côncava posterior).", function: "Suportam a maior carga de peso de toda a coluna. Permitem flexão e extensão do tronco. A região entre L3-L5 é onde se realiza a punção lombar (coleta de líquor). A medula termina em L1-L2 (cone medular), abaixo disso há apenas nervos (cauda equina).", characteristics: "5 vértebras, as maiores e mais robustas. Corpo vertebral grande e em forma de rim. Processos espinhosos curtos e horizontais (quadrados). Não possuem fóveas costais nem forame transversário.", relations: "T12 (acima), sacro/S1 (abaixo), discos intervertebrais (especialmente vulneráveis a hérnias entre L4-L5).", memoryTips: "Lombar = lombalgia = dor nas costas. 5 vértebras GRANDONAS para aguentar o peso. Sem costelas e sem forame transversário — são 'simplonas mas fortes'. Pense: 'as vértebras do pedreiro'." }
   },
 
   // --- MEMBROS SUPERIORES ---
   {
     id: 23, category: "membros-superiores", boneName: "Clavícula",
-    visualReference: { image: "/assets/membros-superiores/clavicula.jpg", view: "single", region: "ombro", hint: "Osso longo em forma de 'S' na parte superior do peito.", marker: { x: 250, y: 250, r: 25 }, landmark: "Entre o esterno e o ombro", quickTip: "Pode ser sentida sob a pele na frente do pescoço" },
+    visualReference: { image: "/assets/membros-superiores/clavicula.jpg", view: "single", region: "ombro/peito superior", hint: "Osso longo, subcutâneo, em forma de 'S', que conecta o membro superior ao tronco. É o primeiro osso a ossificar no feto.", landmark: "Da base do pescoço até a ponta do ombro — facilmente palpável sob a pele", quickTip: "Coloque o dedo na base do pescoço e deslize até o ombro: você está percorrendo toda a clavícula. É o osso mais fraturado do corpo (quedas com braço estendido)." },
     options: ["Clavícula", "Escápula", "Rádio", "Úmero", "Ulna"], correctAnswer: "Clavícula",
-    explanation: { name: "Clavícula", location: "Cintura escapular, superior ao tórax", function: "Atua como suporte e fixa o membro superior no tronco", characteristics: "Único osso longo horizontal", relations: "Articula-se com o esterno e a escápula", memoryTips: "A ponte do peito pro ombro" }
+    explanation: { name: "Clavícula", location: "Cintura escapular, entre o manúbrio do esterno (medial) e o acrômio da escápula (lateral). Fica horizontalmente na base do pescoço.", function: "Transmite forças do membro superior para o esqueleto axial. Mantém o ombro afastado do tronco, permitindo amplitude de movimento. Protege o feixe neurovascular (artéria subclávia, veia subclávia e plexo braquial) que passa por baixo dela.", characteristics: "Único osso longo horizontal do corpo. Tem dupla curvatura em 'S'. Primeiro osso a começar a ossificação (5ª semana embrionária) e último a completá-la (~25 anos). É o osso mais fraturado do corpo humano.", relations: "Esterno (articulação esternoclavicular — a única articulação do membro superior com o tronco) e escápula (articulação acromioclavicular).", memoryTips: "Clavícula = 'clavícula' vem de 'clavicula' = chavezinha em latim. É a CHAVE que conecta o braço ao corpo. Formato em S = 'S de Sustenta o ombro'." }
   },
   {
     id: 24, category: "membros-superiores", boneName: "Escápula",
-    visualReference: { image: "/assets/membros-superiores/escapula.jpg", view: "single", region: "costas", hint: "Osso plano triangular nas costas.", marker: { x: 250, y: 250, r: 35 }, landmark: "Omoplata", quickTip: "Move-se quando você gira os ombros" },
+    visualReference: { image: "/assets/membros-superiores/escapula.jpg", view: "single", region: "costas superiores", hint: "Osso plano, triangular e largo, situado na parte posterolateral do tórax. Popularmente chamado de 'omoplata'.", landmark: "Costas superiores — entre a 2ª e a 7ª costela. Mova o braço e sinta ela deslizar", quickTip: "A escápula é como uma plataforma flutuante: não está presa ao tronco por nenhuma articulação direta com costelas! É mantida no lugar apenas por músculos. A cavidade glenoidal dela recebe o úmero formando o ombro." },
     options: ["Escápula", "Esterno", "Clavícula", "Ílio", "Úmero"], correctAnswer: "Escápula",
-    explanation: { name: "Escápula", location: "Parte posterior e superior do tórax", function: "Ancoragem de muitos músculos do ombro", characteristics: "Plana e triangular, forma a articulação do ombro com o úmero", relations: "Úmero, clavícula", memoryTips: "A 'asa' nas suas costas" }
+    explanation: { name: "Escápula", location: "Face posterolateral do tórax, entre T2 e T7. Desliza sobre a parede torácica com grande mobilidade.", function: "Serve de ancoragem para 17 músculos diferentes! A cavidade glenoidal forma a articulação do ombro (glenoumeral), a mais móvel do corpo. O acrômio protege a articulação por cima. O processo coracoide serve de inserção para bíceps e outros.", characteristics: "Osso plano e triangular com 3 bordas e 3 ângulos. Possui espinha da escápula (crista posterior), acrômio (ponta lateral superior), processo coracoide (gancho anterior) e cavidade glenoidal (rasa — por isso o ombro é fácil de luxar).", relations: "Clavícula (art. acromioclavicular), úmero (art. glenoumeral). Conecta-se ao tronco apenas via clavícula e músculos (serrátil anterior, trapézio, romboides, elevador da escápula).", memoryTips: "Escápula = 'escapar'. A escápula ESCAPA do tórax pois não se articula com ele diretamente — só flutua sobre músculos! O ombro luxa fácil porque a glenoide é rasa como um pires." }
   },
   {
     id: 25, category: "membros-superiores", boneName: "Úmero",
     visualReference: { 
       images: [
-        { image: "/assets/membros-superiores/umero1.jpg", marker: { x: 250, y: 250, r: 30 } },
-        { image: "/assets/membros-superiores/umero2.jpg", marker: { x: 250, y: 250, r: 30 } }
+        { image: "/assets/membros-superiores/umero1.jpg" },
+        { image: "/assets/membros-superiores/umero2.jpg" }
       ],
-      view: "single", region: "braço", hint: "O maior osso do membro superior.", landmark: "Do ombro ao cotovelo", quickTip: "A 'cabeça' dele encaixa na escápula"
+      view: "single", region: "braço", hint: "Único osso longo do braço, articulando ombro e cotovelo. É o maior osso do membro superior.", landmark: "Do ombro ao cotovelo — o osso solitário do braço", quickTip: "Braço tem UM osso (úmero), antebraço tem DOIS (rádio e ulna). No cotovelo, quando você bate o 'nervo do cotovelo' (sensação de choque), está comprimindo o nervo ulnar contra o epicôndilo medial do úmero."
     },
     options: ["Úmero", "Rádio", "Ulna", "Fêmur", "Tíbia"], correctAnswer: "Úmero",
-    explanation: { name: "Úmero", location: "Braço", function: "Sustentação do braço e inserção muscular de ombro e antebraço", characteristics: "Osso longo padrão", relations: "Escápula (acima), Rádio e Ulna (abaixo)", memoryTips: "Lembra humor, dor no 'nervinho' do cotovelo irrita o úmero" }
+    explanation: { name: "Úmero", location: "Braço (região entre ombro e cotovelo). Articula-se proximalmente com a escápula e distalmente com rádio e ulna.", function: "Fornece estrutura ao braço e serve de alavanca para movimentos potentes. A cabeça umeral se encaixa na cavidade glenoidal da escápula. Distalmente, a tróclea articula com a ulna e o capítulo com o rádio.", characteristics: "Maior osso do membro superior. Proximalmente: cabeça, colo anatômico, tubérculos maior e menor, sulco intertubercular (passa o bíceps). Distalmente: epicôndilos medial (nervo ulnar!) e lateral, tróclea, capítulo, fossas olecraniana e coronoide.", relations: "Escápula (ombro), ulna e rádio (cotovelo). O sulco do nervo radial circunda a diáfise — fraturas podem lesar o nervo radial (mão caída).", memoryTips: "Braço = UM osso = ÚMERO. Humor + Úmero: bater o 'nervinho' não tem graça nenhuma! Pense: 'UM osso no braço, DOIS no antebraço'." }
   },
   {
     id: 26, category: "membros-superiores", boneName: "Rádio",
-    visualReference: { image: "/assets/membros-superiores/radio.jpg", view: "single", region: "antebraço", hint: "Osso lateral do antebraço.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado do polegar", quickTip: "Fique na posição anatômica, é o osso de fora" },
+    visualReference: { image: "/assets/membros-superiores/radio.jpg", view: "single", region: "antebraço lateral", hint: "Osso lateral do antebraço (lado do polegar em posição anatômica). Mais grosso perto do punho.", landmark: "Lado do polegar — o osso 'de fora' do antebraço quando a palma está virada para frente", quickTip: "O rádio GIRA sobre a ulna como uma roda (por isso se chama rádio — referência a raio de roda). Quando você vira a palma para baixo (pronação), o rádio cruza por cima da ulna." },
     options: ["Rádio", "Ulna", "Fíbula", "Tíbia", "Carpo"], correctAnswer: "Rádio",
-    explanation: { name: "Rádio", location: "Antebraço (lado lateral)", function: "Permite as rotações da mão (pronação e supinação)", characteristics: "Mais curto e espesso perto da mão", relations: "Úmero, Ulna, Carpo", memoryTips: "A antena do rádio é o polegar" }
+    explanation: { name: "Rádio", location: "Antebraço, lado lateral (lado do polegar em posição anatômica). Mais estreito proximalmente e mais largo distalmente.", function: "Principal responsável pelos movimentos de pronação e supinação (girar a palma para cima e para baixo). Transmite a maior parte da força da mão ao cotovelo. A extremidade distal forma a principal articulação com o punho.", characteristics: "Cabeça radial (proximal, em forma de disco — gira sobre o capítulo do úmero). Tuberosidade radial (inserção do bíceps). Processo estiloide radial (ponta palpável no punho, lado do polegar). Fratura de Colles (fratura distal do rádio por queda com mão estendida) é muito comum.", relations: "Úmero (cotovelo), ulna (articulações radioulnar proximal e distal), escafoide e semilunar (punho).", memoryTips: "'Rádio' = raio = gira! O rádio gira em torno da ulna. O polegar aponta pro RÁDIO. Lembre: Rádio = lado do polegar = Radio (como a antena). Fratura de Colles = cair com mão aberta = rádio quebra." }
   },
   {
     id: 27, category: "membros-superiores", boneName: "Ulna",
-    visualReference: { image: "/assets/membros-superiores/ulna.jpg", view: "single", region: "antebraço", hint: "Osso medial do antebraço.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado do dedo mindinho", quickTip: "Forma a ponta do cotovelo" },
+    visualReference: { image: "/assets/membros-superiores/ulna.jpg", view: "single", region: "antebraço medial", hint: "Osso medial do antebraço (lado do mindinho). Mais grosso perto do cotovelo — forma a ponta do cotovelo.", landmark: "Ponte do cotovelo até o lado do mindinho no punho — o osso 'de dentro'", quickTip: "A ponta do cotovelo que você sente ao apoiar o braço na mesa é o olécrano da ulna. Diferente do rádio, a ulna é mais estável e fica 'parada' enquanto o rádio gira ao redor dela." },
     options: ["Ulna", "Rádio", "Fêmur", "Fíbula", "Metacarpo"], correctAnswer: "Ulna",
-    explanation: { name: "Ulna", location: "Antebraço (lado medial)", function: "Estabiliza o antebraço", characteristics: "Mais grossa perto do cotovelo", relations: "Úmero, Rádio", memoryTips: "Ulna rima com mindinho (mentira, mas acompanham a mesma linha medial)" }
+    explanation: { name: "Ulna", location: "Antebraço, lado medial (lado do mindinho). Mais robusta proximalmente (cotovelo) e mais fina distalmente (punho).", function: "Principal osso de articulação do cotovelo (a tróclea do úmero encaixa perfeitamente na incisura troclear da ulna como uma dobradiça). Serve de eixo fixo ao redor do qual o rádio gira.", characteristics: "Olécrano (ponta do cotovelo — inserção do tríceps). Processo coronoide (frente, limita extensão). Incisura troclear (se encaixa na tróclea do úmero). Processo estiloide ulnar (ponta palpável no punho, lado do mindinho). A cabeça da ulna é distal (ao contrário de outros ossos longos).", relations: "Úmero (articulação do cotovelo), rádio (articulações radioulnares), disco articular e ossos do carpo.", memoryTips: "ULNA = cotovelo firme. O olécrano é a 'fivela' que tranca o cotovelo. Pense: 'a Ulna é Única no cotovelo — ela não gira, ela é o eixo'. Mindinho → medial → ulna." }
   },
   {
     id: 28, category: "membros-superiores", boneName: "Ossos do Carpo",
-    visualReference: { image: "/assets/membros-superiores/ossos-carpo.png", view: "single", region: "punho", hint: "Grupo de 8 pequenos ossos no pulso.", marker: { x: 250, y: 250, r: 40 }, landmark: "Punho", quickTip: "Enfileirados em duas fileiras de quatro" },
+    visualReference: { image: "/assets/membros-superiores/ossos-carpo.png", view: "single", region: "punho", hint: "Conjunto de 8 pequenos ossos irregulares dispostos em duas fileiras que formam o punho (carpo).", landmark: "Punho — entre o antebraço e a palma da mão", quickTip: "São 8 ossinhos organizados em 2 fileiras de 4. A fileira proximal (mais perto do braço): Escafoide, Semilunar, Piramidal e Pisiforme. A distal: Trapézio, Trapezoide, Capitato e Hamato." },
     options: ["Ossos do Carpo", "Ossos do Tarso", "Metacarpos", "Falanges", "Patela"], correctAnswer: "Ossos do Carpo",
-    explanation: { name: "Ossos do Carpo", location: "Punho", function: "Permitem os movimentos complexos e articulação do punho", characteristics: "Escafoide, Semilunar, Piramidal, Pisiforme, Trapézio, Trapezoide, Capitato e Hamato", relations: "Rádio, Ulna, Metacarpos", memoryTips: "Carpo = mão (tarso = pé)" }
+    explanation: { name: "Ossos do Carpo", location: "Punho, entre o rádio/ulna e os metacarpos. Organizados em fileira proximal e fileira distal.", function: "Permitem a grande mobilidade e flexibilidade do punho (flexão, extensão, desvios radial e ulnar). Formam o túnel do carpo, por onde passam tendões e o nervo mediano (compressão = síndrome do túnel do carpo).", characteristics: "8 ossos em 2 fileiras. Proximal (lateral→medial): Escafoide (o mais fraturado!), Semilunar, Piramidal, Pisiforme (sesamoide). Distal: Trapézio (polegar), Trapezoide, Capitato (o maior), Hamato (tem gancho).", relations: "Rádio (principalmente) e ulna (via disco), metacarpos distalmente.", memoryTips: "Mnemônico para fileira proximal: 'Ela Sente Pontadas Por' (Escafoide, Semilunar, Piramidal, Pisiforme). Distal: 'Ter Tipo Capitão Herói' (Trapézio, Trapezoide, Capitato, Hamato). Total: 8 carpos na mão, 7 tarsos no pé." }
   },
   {
     id: 29, category: "membros-superiores", boneName: "Metacarpo",
-    visualReference: { image: "/assets/membros-superiores/metacarpo.jpg", view: "single", region: "mão", hint: "Cinco ossos que formam a palma da mão.", marker: { x: 250, y: 250, r: 35 }, landmark: "Palma e dorso da mão", quickTip: "Numerados de I a V, do polegar ao dedinho" },
+    visualReference: { image: "/assets/membros-superiores/metacarpo.jpg", view: "single", region: "palma da mão", hint: "Cinco ossos longos miniaturizados (I a V) que formam a estrutura da palma da mão, entre o punho e os dedos.", landmark: "Palma e dorso da mão — os ossos que você sente ao apertar o dorso da mão", quickTip: "Cada metacarpo tem base (se articula com o carpo), corpo (diáfise) e cabeça (forma a 'junta' dos dedos — os nós dos dedos que ficam redondos ao cerrar o punho)." },
     options: ["Metacarpo", "Metatarso", "Falanges", "Carpo", "Ulna"], correctAnswer: "Metacarpo",
-    explanation: { name: "Osso Metacárpico", location: "Eixo principal da mão", function: "Apoio e estrutura para os dedos", characteristics: "Ossos longos miniaturizados em formato de ponte", relations: "Carpo e falanges", memoryTips: "'Meta' está além. Além do carpo." }
+    explanation: { name: "Metacarpo", location: "Palma da mão, entre os ossos do carpo (punho) e as falanges (dedos). São numerados de I (polegar) a V (mindinho).", function: "Formam o esqueleto da palma. Servem de alavanca para a preensão. A cabeça do metacarpo forma a articulação metacarpofalangeana (os 'nós' dos dedos). O 1º metacarpo (polegar) tem grande mobilidade e permite a oposição do polegar.", characteristics: "5 ossos longos em miniatura. Base (proximal), corpo (diáfise) e cabeça (distal). O 1º é o mais curto e móvel. O 5º metacarpo é o mais fraturado em socos (fratura do boxeador).", relations: "Ossos do carpo (proximalmente) e falanges proximais (distalmente).", memoryTips: "META = além. Metacarpo = além do carpo. Os 'nós' dos dedos quando você fecha o punho são as CABEÇAS dos metacarpos. Fratura do boxeador = 5º metacarpo." }
   },
   {
     id: 30, category: "membros-superiores", boneName: "Falanges (Mão)",
-    visualReference: { image: "/assets/membros-superiores/falanges-mao.jpg", view: "single", region: "dedos da mão", hint: "Os ossinhos que formam os dedos.", marker: { x: 250, y: 250, r: 40 }, landmark: "Dedos da mão", quickTip: "Cada dedo tem três, exceto o polegar (que tem a proximal e distal)" },
+    visualReference: { image: "/assets/membros-superiores/falanges-mao.jpg", view: "single", region: "dedos da mão", hint: "14 pequenos ossos que formam os dedos da mão. Cada dedo tem 3 falanges, exceto o polegar que tem apenas 2.", landmark: "Dedos da mão — do nó do dedo até a ponta", quickTip: "3 falanges por dedo: proximal (mais perto da palma), média e distal (ponta do dedo). O polegar só tem 2: proximal e distal. Total = 14 falanges por mão." },
     options: ["Falanges", "Metacarpos", "Carpos", "Sesamoides", "Tubérculos"], correctAnswer: "Falanges",
-    explanation: { name: "Falanges da Mão", location: "Ponta dos dedos", function: "Movimentação fina e pegada", characteristics: "Proximais, médias e distais", relations: "Metacarpo", memoryTips: "Falam muito com a mão -> Falanges" }
+    explanation: { name: "Falanges da Mão", location: "Dedos da mão. Do indicador ao mindinho: falange proximal, média e distal. Polegar: apenas proximal e distal.", function: "Permitem movimentos finos e precisos de preensão, manipulação e tato. As articulações interfalangeanas funcionam como dobradiças (flexão e extensão). A falange distal tem a tuberosidade ungueal que sustenta a unha.", characteristics: "14 por mão (2 no polegar + 3 em cada um dos 4 dedos). São os menores ossos longos do corpo. As falanges distais são achatadas e em forma de espátula.", relations: "Metacarpos (proximalmente). Tendões flexores e extensores dos dedos.", memoryTips: "FALANGEs = dedos que FALAM (gesticulam). 2-3-3-3-3 = polegar tem 2, resto tem 3. Total = 14 por mão, 28 nas duas mãos. Mnemônico: 'o polegar é diferentão — só aceita 2'." }
   },
 
   // --- MEMBROS INFERIORES ---
   {
-    id: 31, category: "membros-inferiores", boneName: "Ílio",
-    visualReference: { 
-      images: [
-        { image: "/assets/membros-inferiores/ilio1.jpg" },
-        { image: "/assets/membros-inferiores/ilio2.jpg" }
-      ],
-      view: "single", region: "pelve superior", hint: "A parte mais alta e larga do osso do quadril.", landmark: "Asa do quadril", quickTip: "Forma a 'crista' onde você apoia as mãos na cintura"
-    },
+    id: 31, category: "membros-inferiores", boneName: "Fêmur",
+    visualReference: { images: [{ image: "/assets/membros-inferiores/femur1.jpg" }, { image: "/assets/membros-inferiores/femur2.jpg" }], view: "single", region: "coxa", hint: "O maior, mais longo e mais forte osso do corpo humano. Forma a coxa, do quadril ao joelho.", landmark: "Da virilha ao joelho — o osso gigante da coxa", quickTip: "O fêmur suporta até 30x o peso corporal durante corrida! A fratura do colo do fêmur é extremamente comum em idosos com osteoporose após quedas." },
+    options: ["Fêmur", "Tíbia", "Fíbula", "Úmero", "Patela"], correctAnswer: "Fêmur",
+    explanation: { name: "Fêmur", location: "Coxa, entre o quadril e o joelho. Oblíquo (inclinado de lateral-superior para medial-inferior).", function: "Sustenta o peso do corpo na posição ereta e na marcha. A cabeça femoral se encaixa no acetábulo do quadril. Distalmente, os côndilos femorais formam o joelho com a tíbia. É o principal osso para bipedação.", characteristics: "Maior osso do corpo (~1/4 da altura). Proximalmente: cabeça (esférica, com fóvea para o ligamento da cabeça), colo (local comum de fraturas!), trocanter maior e menor (inserções musculares). Distalmente: côndilos medial e lateral, superfície patelar.", relations: "Osso do quadril/acetábulo (art. coxofemoral), tíbia e patela (art. do joelho).", memoryTips: "Fêmur = o CAMPEÃO dos ossos (maior e mais forte). Lembre: 'FÊMUR = FEMORAL = artéria da coxa'. Colo do fêmur = o 'calcanhar de Aquiles' dos idosos (fratura mais temida na osteoporose)." }
+  },
+  {
+    id: 32, category: "membros-inferiores", boneName: "Patela",
+    visualReference: { image: "/assets/membros-inferiores/patela.jpeg", view: "single", region: "joelho anterior", hint: "O maior osso sesamoide do corpo. Fica inserido no tendão do quadríceps, na frente do joelho.", landmark: "Frente do joelho — a 'rodela do joelho' que desliza quando você flexiona e estende a perna", quickTip: "A patela funciona como uma polia: aumenta em até 50% a eficiência do músculo quadríceps ao estender o joelho. Sem ela, teríamos muito menos força para subir escadas." },
+    options: ["Patela", "Calcâneo", "Fêmur", "Tíbia", "Fíbula"], correctAnswer: "Patela",
+    explanation: { name: "Patela", location: "Face anterior do joelho, envolta pelo tendão do quadríceps (acima) e ligamento patelar (abaixo).", function: "Protege a frente da articulação do joelho. Funciona como polia biomecânica, aumentando o braço de alavanca do quadríceps para extensão do joelho. Essencial para caminhar, subir escadas e levantar.", characteristics: "Maior osso sesamoide do corpo (osso que se desenvolve dentro de um tendão). Tem forma triangular com vértice inferior. A face posterior é articular (coberta pela cartilagem mais espessa do corpo).", relations: "Fêmur (superfície patelar dos côndilos), tendão do quadríceps (acima) e ligamento patelar (abaixo, que se insere na tuberosidade da tíbia).", memoryTips: "Patela = 'patella' = pratinho em latim. É o 'pratinho do joelho'! Antigamente chamada de 'rótula'. Pense: 'o escudo do joelho que dá FORÇA ao quadríceps'." }
+  },
+  {
+    id: 33, category: "membros-inferiores", boneName: "Tíbia",
+    visualReference: { image: "/assets/membros-inferiores/tibia.jpg", view: "single", region: "perna medial", hint: "Osso principal e mais espesso da perna. Medial, palpável em toda a extensão da canela.", landmark: "Canela — do joelho ao tornozelo, lado de dentro", quickTip: "A famosa 'canelada' dói tanto porque a tíbia é subcutânea (a pele fica logo sobre o osso, sem músculo para proteger). É o segundo maior osso do corpo." },
+    options: ["Tíbia", "Fíbula", "Fêmur", "Rádio", "Ulna"], correctAnswer: "Tíbia",
+    explanation: { name: "Tíbia", location: "Perna, lado medial (interno). Da tuberosidade tibial (joelho) ao maléolo medial (tornozelo interno). É o 2º maior osso do corpo.", function: "Principal osso de sustentação de peso na perna. Articula-se com o fêmur acima (joelho — platôs tibiais) e com o tálus abaixo (tornozelo). A tuberosidade tibial é onde se insere o ligamento patelar.", characteristics: "Osso longo, triangular em corte transversal. Borda anterior (crista tibial = canela) subcutânea e palpável. Platô tibial (superfície articular superior com meniscos). Maléolo medial (tornozelo interno palpável).", relations: "Fêmur (joelho), fíbula (articulações tibiofibulares proximal e distal), tálus (tornozelo).", memoryTips: "Tíbia = canela. A canela dói porque não tem proteção (subcutânea). Na perna: tíbia = o grosso (sustenta peso), fíbula = o fino (estabiliza). Análogo ao antebraço: tíbia ≈ ulna, fíbula ≈ rádio." }
+  },
+  {
+    id: 34, category: "membros-inferiores", boneName: "Fíbula",
+    visualReference: { image: "/assets/membros-inferiores/fibula.jpg", view: "single", region: "perna lateral", hint: "Osso longo e fino na face lateral da perna, paralelo à tíbia. Não sustenta peso, mas é vital para o tornozelo.", landmark: "Lado de fora da perna — palpável no tornozelo externo (maléolo lateral)", quickTip: "A fíbula é tão fina que pode ser usada como enxerto ósseo em cirurgias sem prejudicar a marcha! O maléolo lateral (tornozelo externo) é a parte mais palpável." },
+    options: ["Fíbula", "Tíbia", "Rádio", "Ulna", "Fêmur"], correctAnswer: "Fíbula",
+    explanation: { name: "Fíbula", location: "Lateral da perna, paralela à tíbia. Da cabeça da fíbula (abaixo do joelho lateral) ao maléolo lateral (tornozelo externo).", function: "NÃO sustenta peso corporal significativo. Serve de ponto de inserção para músculos e ligamentos. O maléolo lateral forma a pinça do tornozelo junto com o maléolo medial da tíbia, estabilizando a articulação.", characteristics: "Longa e filiforme (a mais fina dos ossos longos). Cabeça da fíbula (palpável, nervo fibular comum passa por trás!). Maléolo lateral desce mais que o medial — por isso o pé 'vira' mais para dentro.", relations: "Tíbia (articulações tibiofibulares), tálus (articulação do tornozelo indiretamente).", memoryTips: "FíBULA = FIVELA. A fíbula é fina como uma fivela. Pense: 'fina, fina, fíbula'. No antebraço → rádio+ulna. Na perna → fíbula+tíbia. Fíbula = a fininha lateral." }
+  },
+  {
+    id: 35, category: "membros-inferiores", boneName: "Ossos do Tarso",
+    visualReference: { image: "/assets/membros-inferiores/ossos-tarso.jpg", view: "single", region: "tornozelo e retropé", hint: "Conjunto de 7 ossos irregulares que formam o tornozelo e a parte posterior do pé (tarso).", landmark: "Tornozelo e calcanhar — toda a região posterior e média do pé", quickTip: "São 7 ossos: Tálus (articula com a perna), Calcâneo (osso do calcanhar — o maior do pé), Navicular, Cuboide e 3 Cuneiformes (medial, intermédio e lateral)." },
+    options: ["Ossos do Tarso", "Ossos do Carpo", "Metatarsos", "Falanges do Pé", "Patela"], correctAnswer: "Ossos do Tarso",
+    explanation: { name: "Ossos do Tarso", location: "Região posterior e média do pé. Organizados em 3 fileiras: posterior (tálus e calcâneo), média (navicular) e anterior (cuboide e 3 cuneiformes).", function: "Suportam e distribuem o peso corporal. O tálus recebe todo o peso da tíbia e distribui para calcâneo e arco do pé. O calcâneo absorve o impacto do calcanhar no solo.", characteristics: "7 ossos (vs. 8 carpos na mão). Tálus: único osso do tarso sem inserção muscular. Calcâneo: maior osso do pé, recebe o tendão de Aquiles. Navicular: formato de barco. 3 Cuneiformes: formato de cunha.", relations: "Tíbia e fíbula (articulação do tornozelo via tálus), metatarsos (distalmente).", memoryTips: "Tarso = 7, Carpo = 8. O 'TCC' do tarso: Tálus, Calcâneo, Cuboide, Cuneiformes (3) e Navicular. Calcâneo = calcanhar = onde dói a fascite plantar." }
+  },
+  {
+    id: 36, category: "membros-inferiores", boneName: "Metatarso",
+    visualReference: { image: "/assets/membros-inferiores/metatarso.jpg", view: "single", region: "peito do pé", hint: "Cinco ossos longos (I a V) que formam o 'peito do pé', entre o tarso e os dedos.", landmark: "Peito do pé — os ossos que você sente no dorso entre o tornozelo e os dedos", quickTip: "Equivalentes aos metacarpos da mão. A cabeça do 1º metatarso (dedão) recebe grande parte do peso na fase de impulso da marcha." },
+    options: ["Metatarso", "Metacarpo", "Falanges", "Tarso", "Calcâneo"], correctAnswer: "Metatarso",
+    explanation: { name: "Metatarso", location: "Peito do pé, entre os ossos do tarso e as falanges dos dedos. Numerados de I (dedão) a V (mindinho).", function: "Formam os arcos transverso e longitudinal do pé. Transmitem a força de propulsão na marcha. O 1º metatarso é o mais curto e robusto (sustenta mais peso).", characteristics: "5 ossos longos semelhantes aos metacarpos. Base (proximal), corpo e cabeça (distal). As cabeças formam a 'bolinha' que você pisa na frente do pé descalço.", relations: "Tarsos (proximalmente), falanges proximais (distalmente).", memoryTips: "MetaTARSO = além do TARSO (no pé). MetaCARPO = além do CARPO (na mão). Mesmo padrão! As 'bolinhas' que você pisa descalço = cabeças dos metatarsos." }
+  },
+  {
+    id: 37, category: "membros-inferiores", boneName: "Falanges do Pé",
+    visualReference: { image: "/assets/membros-inferiores/falanges-pe.jpg", view: "single", region: "dedos do pé", hint: "14 ossos que formam os dedos do pé. Mesma organização da mão: 3 por dedo, exceto o hálux (dedão) que tem 2.", landmark: "Dedos do pé — da base do dedo à ponta", quickTip: "O hálux (dedão) tem apenas 2 falanges (como o polegar). Os outros 4 dedos têm 3 cada. As falanges distais do pé são bem menores que as da mão." },
+    options: ["Falanges do Pé", "Metatarsos", "Tarsos", "Sesamoides", "Calcâneo"], correctAnswer: "Falanges do Pé",
+    explanation: { name: "Falanges do Pé", location: "Dedos do pé. Hálux: proximal e distal. 2º ao 5º dedos: proximal, média e distal.", function: "Auxiliam no equilíbrio e na fase de impulso da marcha. O hálux é crucial na estabilidade e propulsão ao caminhar.", characteristics: "14 por pé (2 no hálux + 3 × 4 = 12 nos outros). São mais curtas e robustas que as da mão.", relations: "Metatarsos (proximalmente), articulações interfalangeanas.", memoryTips: "Mesmo esquema da mão: 2-3-3-3-3 = 14 falanges. Hálux = grande dedo do pé = 2 falanges (como o polegar!). Pé e mão têm o mesmo 'esqueleto digital'." }
+  },
+  {
+    id: 38, category: "membros-inferiores", boneName: "Ílio",
+    visualReference: { images: [{ image: "/assets/membros-inferiores/ilio1.jpg" }, { image: "/assets/membros-inferiores/ilio2.jpg" }], view: "single", region: "quadril superior e lateral", hint: "A maior das 3 partes do osso do quadril (ilíaco). Forma a 'asa' larga e achatada que você sente ao colocar as mãos na cintura.", landmark: "A 'crista do quadril' — passe a mão na cintura e sinta a borda óssea superior", quickTip: "A crista ilíaca (borda superior do ílio) é o local clássico para biópsia de medula óssea e aspiração de enxerto ósseo. É onde apoiamos a mão na cintura." },
     options: ["Ílio", "Ísquio", "Púbis", "Sacro", "Fêmur"], correctAnswer: "Ílio",
-    explanation: { name: "Ílio", location: "Porção superior do osso do quadril", function: "Suporte principal da pelve e fixação de músculos abdominais e da perna", characteristics: "Possui a crista ilíaca facilmente palpável", relations: "Sacro, Ísquio, Púbis, Fêmur", memoryTips: "A grande asa lateral do quadril" }
+    explanation: { name: "Ílio", location: "Porção superior e maior do osso do quadril. A asa ilíaca se expande lateral e superiormente.", function: "Sustenta o peso do tronco na posição ereta e o transfere para o fêmur via acetábulo. A crista ilíaca serve de ponto de inserção para músculos abdominais e glúteos.", characteristics: "Osso plano e largo. Crista ilíaca (borda superior palpável). Espinhas ilíacas: anterossuperior (EIAS — referência clínica importantíssima!), anteroinferior, posterossuperior e posteroinferior.", relations: "Sacro (articulação sacroilíaca), ísquio e púbis (fusionam-se no acetábulo), fêmur (via acetábulo).", memoryTips: "ÍLIO = parte ILUMINADA (a maior, que se vê, o topo). Crista ilíaca = onde apoia a mão na cintura. EIAS = 'Espinha Ilíaca Ântero-Superior' — decorar essa é obrigatório em anatomia!" }
   },
   {
-    id: 32, category: "membros-inferiores", boneName: "Ísquio",
-    visualReference: { 
-      images: [
-        { image: "/assets/membros-inferiores/isquio1.jpg" },
-        { image: "/assets/membros-inferiores/isquio2.jpg" }
-      ],
-      view: "single", region: "pelve posterior", hint: "A parte inferior e posterior do quadril.", landmark: "Base da pelve", quickTip: "É o osso forte sobre o qual sentamos"
-    },
-    options: ["Ísquio", "Ílio", "Púbis", "Cóccix", "Fêmur"], correctAnswer: "Ísquio",
-    explanation: { name: "Ísquio", location: "Porção posteroinferior do osso do quadril", function: "Suporta o peso do corpo quando estamos sentados", characteristics: "Apresenta a tuberosidade isquiática, bem robusta", relations: "Ílio, Púbis", memoryTips: "O 'osso duro' do bumbum" }
+    id: 39, category: "membros-inferiores", boneName: "Ísquio",
+    visualReference: { images: [{ image: "/assets/membros-inferiores/isquio1.jpg" }, { image: "/assets/membros-inferiores/isquio2.jpg" }], view: "single", region: "quadril inferior e posterior", hint: "Porção posteroinferior do osso do quadril. Inclui a tuberosidade isquiática, os 'ossos de sentar'.", landmark: "Parte inferior traseira da pelve — o osso que você sente quando senta numa superfície dura", quickTip: "As tuberosidades isquiáticas são os 'ossos de sentar'. Quando você anda de bicicleta por muito tempo e sente dor, é porque está comprimindo as tuberosidades isquiáticas contra o selim." },
+    options: ["Ísquio", "Ílio", "Púbis", "Sacro", "Cóccix"], correctAnswer: "Ísquio",
+    explanation: { name: "Ísquio", location: "Porção posteroinferior do osso do quadril. Forma a parte inferior da parede posterior da pelve e contribui para o acetábulo.", function: "As tuberosidades isquiáticas sustentam o peso corporal na posição sentada. A espinha isquiática é referência obstétrica importante.", characteristics: "Corpo (contribui ao acetábulo), ramo do ísquio (se funde com o ramo inferior do púbis), tuberosidade isquiática (grande proeminência rugosa — inserção dos isquiotibiais!) e espinha isquiática.", relations: "Ílio (superior), púbis (anterior), fêmur (via acetábulo), sacro (via ligamentos sacrotuberoso e sacroespinhal).", memoryTips: "ÍSQUIO = 'eu me SENTO'. As tuberosidades isquiáticas = onde sentamos. Lembre: ISQUIotibiais nascem no ÍSQUIO. Pense: 'sentou no duro, doem os ísquios'." }
   },
   {
-    id: 33, category: "membros-inferiores", boneName: "Púbis",
-    visualReference: { 
-      images: [
-        { image: "/assets/membros-inferiores/pubis1.jpg" },
-        { image: "/assets/membros-inferiores/pubis2.jpg" }
-      ],
-      view: "single", region: "pelve anterior", hint: "A parte inferior e frontal do osso do quadril.", landmark: "Frente baixa do quadril", quickTip: "Se encontram no meio na sínfise púbica"
-    },
-    options: ["Púbis", "Ílio", "Ísquio", "Sacro", "Fêmur"], correctAnswer: "Púbis",
-    explanation: { name: "Púbis", location: "Porção anteroinferior do osso do quadril", function: "Protege bexiga e órgãos inferiores, formando arco", characteristics: "Forma os ramos púbicos que abraçam o forame obturado", relations: "Ílio, Ísquio e púbis oposto", memoryTips: "A ponte frontal da bacia" }
-  },
-  {
-    id: 34, category: "membros-inferiores", boneName: "Fêmur",
-    visualReference: { 
-      images: [
-        { image: "/assets/membros-inferiores/femur1.jpg", marker: { x: 250, y: 250, r: 35 } },
-        { image: "/assets/membros-inferiores/femur2.jpg", marker: { x: 250, y: 250, r: 35 } }
-      ],
-      view: "single", region: "coxa", hint: "O osso mais longo, mais forte e mais pesado do corpo humano.", landmark: "Coxa", quickTip: "Sua 'cabeça' encaixa no quadril"
-    },
-    options: ["Fêmur", "Tíbia", "Fíbula", "Úmero", "Rádio"], correctAnswer: "Fêmur",
-    explanation: { name: "Fêmur", location: "Coxa", function: "Sustenta grande parte do peso corporal e permite a locomoção", characteristics: "Maior e mais forte osso longo do corpo", relations: "Pelve (acima), Tíbia e Patela (abaixo)", memoryTips: "O gigante da coxa" }
-  },
-  {
-    id: 35, category: "membros-inferiores", boneName: "Patela",
-    visualReference: { image: "/assets/membros-inferiores/patela.jpeg", view: "single", region: "joelho", hint: "Osso pequeno e grosso localizado na frente da articulação do joelho.", marker: { x: 250, y: 250, r: 25 }, landmark: "Rótula do joelho", quickTip: "Também conhecida antigamente como rótula" },
-    options: ["Patela", "Tíbia", "Fíbula", "Carpal", "Falange"], correctAnswer: "Patela",
-    explanation: { name: "Patela", location: "Articulação do joelho (anterior)", function: "Aumenta a alavanca do tendão do quádriceps e protege o joelho", characteristics: "Maior osso sesamoide do corpo", relations: "Fêmur", memoryTips: "O 'escudinho' do joelho" }
-  },
-  {
-    id: 36, category: "membros-inferiores", boneName: "Tíbia",
-    visualReference: { image: "/assets/membros-inferiores/tibia.jpg", view: "single", region: "perna", hint: "O osso maior e mais medial da perna.", marker: { x: 250, y: 250, r: 30 }, landmark: "Canela", quickTip: "Segundo maior osso do corpo" },
-    options: ["Tíbia", "Fíbula", "Úmero", "Ulna", "Fêmur"], correctAnswer: "Tíbia",
-    explanation: { name: "Tíbia", location: "Perna (medial a anterior)", function: "Sustentação principal do peso na perna inferior", characteristics: "Osso longo, forma a 'canela'", relations: "Fêmur, Fíbula, Tálus", memoryTips: "A 'canela' que sofre jogando futebol" }
-  },
-  {
-    id: 37, category: "membros-inferiores", boneName: "Fíbula",
-    visualReference: { image: "/assets/membros-inferiores/fibula.jpg", view: "single", region: "perna", hint: "O osso longo e fino situado na parte lateral da perna.", marker: { x: 250, y: 250, r: 25 }, landmark: "Lado externo da perna", quickTip: "Não suporta o peso do corpo" },
-    options: ["Fíbula", "Tíbia", "Úmero", "Rádio", "Ulna"], correctAnswer: "Fíbula",
-    explanation: { name: "Fíbula", location: "Perna (lateral)", function: "Fixação muscular e estabilização do tornozelo", characteristics: "Osso longo e esbelto", relations: "Tíbia, Tálus", memoryTips: "Fina como a Fíbula" }
-  },
-  {
-    id: 38, category: "membros-inferiores", boneName: "Ossos do Tarso",
-    visualReference: { image: "/assets/membros-inferiores/ossos-tarso.jpg", view: "single", region: "tornozelo", hint: "Grupo de 7 ossos na região posterior do pé/tornozelo.", marker: { x: 250, y: 250, r: 35 }, landmark: "Tornozelo e calcanhar", quickTip: "Inclui o Calcâneo, o osso do calcanhar" },
-    options: ["Ossos do Tarso", "Ossos do Carpo", "Metatarsos", "Falanges", "Patela"], correctAnswer: "Ossos do Tarso",
-    explanation: { name: "Ossos do Tarso", location: "Tornozelo e parte posterior do pé", function: "Suporte de peso e flexibilidade do pé", characteristics: "Sete ossos irregulares robustos", relations: "Tíbia, Fíbula, Metatarsos", memoryTips: "Tarso = do pé (você pisava num 'tarsinho' ou 'toquinho' de chão)" }
-  },
-  {
-    id: 39, category: "membros-inferiores", boneName: "Metatarso",
-    visualReference: { image: "/assets/membros-inferiores/metatarso.jpg", view: "single", region: "pé", hint: "Grupo de cinco ossos compridos no pé.", marker: { x: 250, y: 250, r: 35 }, landmark: "Peito do pé", quickTip: "Numerados de I a V, começando pelo dedão" },
-    options: ["Metatarso", "Metacarpo", "Tarso", "Carpo", "Ulna"], correctAnswer: "Metatarso",
-    explanation: { name: "Metatarso", location: "Peito do pé", function: "Suporte e propulsão na marcha", characteristics: "Cinco ossos longos miniatura", relations: "Tarso e Falanges", memoryTips: "O 'caminho' até os dedos do pé" }
-  },
-  {
-    id: 40, category: "membros-inferiores", boneName: "Falanges (Pé)",
-    visualReference: { image: "/assets/membros-inferiores/falanges-pe.jpg", view: "single", region: "dedos do pé", hint: "Ossos que formam os dedos dos pés.", marker: { x: 250, y: 250, r: 30 }, landmark: "Dedos do pé", quickTip: "O dedão tem duas, os outros têm três" },
-    options: ["Falanges", "Metatarsos", "Tarsos", "Carpos", "Rádio"], correctAnswer: "Falanges",
-    explanation: { name: "Falanges do Pé", location: "Ponta dos dedos do pé", function: "Equilíbrio, aderência e flexibilidade", characteristics: "Proximais, médias e distais", relations: "Metatarso", memoryTips: "As mesmas dos dedos da mão, só que no pé" }
+    id: 40, category: "membros-inferiores", boneName: "Púbis",
+    visualReference: { images: [{ image: "/assets/membros-inferiores/pubis1.jpg" }, { image: "/assets/membros-inferiores/pubis2.jpg" }], view: "single", region: "quadril anterior", hint: "Porção anterior e inferior do osso do quadril, que se une ao púbis contralateral pela sínfise púbica.", landmark: "Região anterior baixa da pelve — logo acima da região genital", quickTip: "Os dois púbis se encontram na linha média formando a sínfise púbica, uma articulação cartilaginosa. Na gravidez, o hormônio relaxina amolece essa sínfise para alargar a pelve no parto." },
+    options: ["Púbis", "Ísquio", "Ílio", "Sacro", "Fêmur"], correctAnswer: "Púbis",
+    explanation: { name: "Púbis", location: "Porção anteroinferior do osso do quadril. Os dois púbis se unem na sínfise púbica na linha média anterior.", function: "Forma a parede anterior da pelve. A sínfise púbica estabiliza a pelve anteriormente. Serve de inserção para músculos adutores da coxa e abdominais inferiores.", characteristics: "Corpo (contribui para o acetábulo), ramo superior (forma parte da borda do forame obturado) e ramo inferior (funde-se com o ramo do ísquio). O tubérculo púbico é palpável.", relations: "Ílio (superolateral), ísquio (posteroinferior), púbis contralateral (sínfise púbica), fêmur (via acetábulo).", memoryTips: "PÚBIS = PÚBLICO = frente. É a parte da frente da pelve! Sínfise púbica = onde os dois púbis se 'beijam' na frente. Lembre: 'na FRENTE é PÚBIS, ATRÁS é ÍSQUIO, em CIMA é ÍLIO'." }
   }
 ];
 

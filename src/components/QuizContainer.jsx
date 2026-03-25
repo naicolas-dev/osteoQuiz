@@ -9,7 +9,7 @@ import ScoreBoard from "./ScoreBoard";
 import Swal from "sweetalert2";
 import { IoArrowBack } from "react-icons/io5";
 
-function QuizContainer({ quizMode, onRestartApp }) {
+function QuizContainer({ quizMode, onRestartApp, onChooseRegion }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
@@ -180,6 +180,7 @@ function QuizContainer({ quizMode, onRestartApp }) {
         score={score}
         totalQuestions={totalQuestions}
         onRestart={handleRestart}
+        onChooseRegion={onChooseRegion}
       />
     );
   }

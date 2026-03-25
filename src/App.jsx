@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import QuizContainer from "./components/QuizContainer";
 import RegionSelectionScreen from "./components/RegionSelectionScreen";
+import Changelog from "./components/Changelog"; // <-- Importação do Changelog
 
 function App() {
-  const [appState, setAppState] = useState("welcome"); // "welcome" | "region-selection" | "quiz"
-  const [quizMode, setQuizMode] = useState("all"); // "all" | "cranio"
+  const [appState, setAppState] = useState("welcome");
+  const [quizMode, setQuizMode] = useState("all");
 
   const isDesktop = () => window.matchMedia("(pointer: fine)").matches;
 
@@ -51,25 +52,30 @@ function App() {
 
       <main>
         {appState === "welcome" && (
-          <section className="welcome-screen">
-            <h2>Pronto para testar seus conhecimentos?</h2>
-            <p>
-              Você verá imagens reais do esqueleto com marcações indicando ossos
-              específicos. Escolha a alternativa correta e aprenda com as
-              explicações detalhadas.
-            </p>
-            <button
-              className="primary-button start-button"
-              onClick={handleStartQuiz}
-              type="button"
-            >
-              Iniciar
-            </button>
-            <div className="hotkey-hint">
-              <kbd>Enter</kbd>
-              <span>para iniciar</span>
-            </div>
-          </section>
+          <div className="welcome-wrapper">
+            <section className="welcome-screen">
+              <h2>Pronto para testar seus conhecimentos?</h2>
+              <p>
+                Você verá imagens reais do esqueleto com marcações indicando ossos
+                específicos. Escolha a alternativa correta e aprenda com as
+                explicações detalhadas.
+              </p>
+              <button
+                className="primary-button start-button"
+                onClick={handleStartQuiz}
+                type="button"
+              >
+                Iniciar
+              </button>
+              <div className="hotkey-hint">
+                <kbd>Enter</kbd>
+                <span>para iniciar</span>
+              </div>
+            </section>
+            
+            {/* Componente Changelog adicionado aqui */}
+            <Changelog />
+          </div>
         )}
 
         {appState === "region-selection" && (
@@ -77,7 +83,11 @@ function App() {
         )}
 
         {appState === "quiz" && (
-          <QuizContainer quizMode={quizMode} onRestartApp={() => setAppState("welcome")} />
+          <QuizContainer 
+            quizMode={quizMode} 
+            onRestartApp={() => setAppState("welcome")} 
+            onChooseRegion={() => setAppState("region-selection")}
+          />
         )}
       </main>
 
