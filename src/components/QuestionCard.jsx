@@ -24,7 +24,7 @@ function QuestionCard({
         </p>
       </div>
 
-      <BoneVisual visualReference={question.visualReference} />
+      <BoneVisual key={question.id} visualReference={question.visualReference} />
 
       <div className="options-grid" role="radiogroup" aria-label="Alternativas">
         {shuffledOptions.map((option, index) => {
