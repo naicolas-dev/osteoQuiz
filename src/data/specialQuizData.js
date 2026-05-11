@@ -2,7 +2,7 @@ export const specialQuizData = [
   {
     id: "sp-1", category: "geral", boneName: "Conceito de Articulação",
     questionText: "O que são articulações?",
-    visualReference: { view: "text", hint: "São estruturas formadas por dois ou mais ossos, também chamadas de junturas.", quickTip: "Articulação = encontro entre ossos." },
+    visualReference: { view: "text", hint: "Pense no local onde diferentes partes rígidas do esqueleto se encontram para permitir estabilidade ou movimento.", quickTip: "Ponto de contato no esqueleto." },
     options: [
       "Estruturas formadas apenas por músculos",
       "Estruturas formadas por dois ou mais ossos",
@@ -23,7 +23,7 @@ export const specialQuizData = [
   {
     id: "sp-2", category: "geral", boneName: "Sinartrose",
     questionText: "Qual tipo de articulação não possui mobilidade?",
-    visualReference: { view: "text", hint: "Sinartrose: articulações que não possuem mobilidade.", quickTip: "Sinartrose = sem movimento." },
+    visualReference: { view: "text", hint: "Lembre-se do prefixo que indica negação ou ausência para descrever essa falta de movimento.", quickTip: "Pense em uma junção completamente rígida." },
     options: [
       "Sinartrose",
       "Anfiartrose",
@@ -44,7 +44,7 @@ export const specialQuizData = [
   {
     id: "sp-3", category: "geral", boneName: "Anfiartrose",
     questionText: "Qual tipo de articulação é semimóvel?",
-    visualReference: { view: "text", hint: "Anfiartroses: são articulações semimóveis.", quickTip: "Anfiartrose = movimento intermediário." },
+    visualReference: { view: "text", hint: "Lembre-se do prefixo que indica 'ambos os lados' ou 'intermediário'.", quickTip: "Possui uma pequena margem para se mexer." },
     options: [
       "Sinartrose",
       "Anfiartrose",
@@ -65,7 +65,7 @@ export const specialQuizData = [
   {
     id: "sp-4", category: "geral", boneName: "Diartrose",
     questionText: "Qual tipo de articulação possui muita mobilidade?",
-    visualReference: { view: "text", hint: "Diartroses: possuem muita mobilidade.", quickTip: "Diartrose = articulação que mexe bastante." },
+    visualReference: { view: "text", hint: "É a articulação predominante nos membros, garantindo liberdade de ação.", quickTip: "Ampla capacidade de movimento." },
     options: [
       "Sinartrose",
       "Sutura",
@@ -86,7 +86,7 @@ export const specialQuizData = [
   {
     id: "sp-5", category: "geral", boneName: "Sutura",
     questionText: "Qual articulação une os ossos do crânio e não tem movimento?",
-    visualReference: { view: "text", hint: "Sutura: não tem movimento. Exemplo: ossos do crânio.", quickTip: "Sutura parece uma “costura” entre os ossos do crânio." },
+    visualReference: { view: "text", hint: "O nome dessa articulação lembra o termo médico para dar pontos em um ferimento.", quickTip: "Lembra uma 'costura' unindo os ossos." },
     options: [
       "Gonfose",
       "Sutura",
@@ -107,7 +107,7 @@ export const specialQuizData = [
   {
     id: "sp-6", category: "geral", boneName: "Gonfose",
     questionText: "Qual articulação prende o dente ao osso?",
-    visualReference: { view: "text", hint: "Gonfose: dente e mandíbula/maxilares.", quickTip: "Gonfose = dente encaixado no osso." },
+    visualReference: { view: "text", hint: "É uma articulação fibrosa específica que lembra um pino sendo encaixado num buraco.", quickTip: "A fixação de um pino." },
     options: [
       "Sutura",
       "Sindesmose",
@@ -128,7 +128,7 @@ export const specialQuizData = [
   {
     id: "sp-7", category: "geral", boneName: "Membrana sinovial",
     questionText: "Qual estrutura produz o líquido sinovial?",
-    visualReference: { view: "text", hint: "Membrana sinovial e líquido sinovial.", quickTip: "Membrana sinovial → líquido sinovial." },
+    visualReference: { view: "text", hint: "É uma fina camada de tecido conjuntivo que reveste a cápsula articular internamente.", quickTip: "O próprio nome do líquido dá a dica." },
     options: [
       "Ligamento",
       "Tendão",
@@ -149,7 +149,7 @@ export const specialQuizData = [
   {
     id: "sp-8", category: "geral", boneName: "Líquido sinovial",
     questionText: "Qual é a principal função do líquido sinovial?",
-    visualReference: { view: "text", hint: "Líquido sinovial: serve para lubrificar.", quickTip: "Líquido sinovial = “óleo” da articulação." },
+    visualReference: { view: "text", hint: "Pense no que um fluido viscoso faz entre duas superfícies que se movem constantemente para evitar o desgaste.", quickTip: "Funciona como um 'óleo' mecânico." },
     options: [
       "Lubrificar a articulação",
       "Prender o dente ao osso",
@@ -170,7 +170,7 @@ export const specialQuizData = [
   {
     id: "sp-9", category: "geral", boneName: "Ligamento",
     questionText: "Qual estrutura estabiliza a articulação ligando osso a osso?",
-    visualReference: { view: "text", hint: "Ligamentos: estabilizam a articulação.", quickTip: "Ligamento liga osso com osso." },
+    visualReference: { view: "text", hint: "São cordões fibrosos fortes que conectam as partes rígidas do esqueleto entre si.", quickTip: "A palavra raiz significa 'conectar'." },
     options: [
       "Tendão",
       "Ligamento",
@@ -191,7 +191,7 @@ export const specialQuizData = [
   {
     id: "sp-10", category: "geral", boneName: "Esferoidal",
     questionText: "Qual tipo de articulação sinovial é chamada de “bola de soquete”?",
-    visualReference: { view: "text", hint: "Esferoidal: articulação sinovial em formato de bola de soquete.", quickTip: "Esferoidal lembra esfera, ou seja, bola." },
+    visualReference: { view: "text", hint: "O nome faz referência direta a uma forma geométrica redonda tridimensional.", quickTip: "Lembra uma bola (esfera)." },
     options: [
       "Gínglimo",
       "Plana",
@@ -212,7 +212,7 @@ export const specialQuizData = [
   {
     id: "sp-11", category: "geral", boneName: "Exemplos de articulação esferoidal",
     questionText: "Quais articulações são exemplos de articulação esferoidal?",
-    visualReference: { view: "text", hint: "Ombro/glenoumeral e quadril/coxofemoral.", quickTip: "Ombro e quadril são articulações de grande mobilidade." },
+    visualReference: { view: "text", hint: "São as duas articulações que ligam os membros superiores e inferiores ao tronco, permitindo movimentos amplos.", quickTip: "Raiz dos braços e das pernas." },
     options: [
       "Crânio e dente",
       "Ombro e quadril",
@@ -233,7 +233,7 @@ export const specialQuizData = [
   {
     id: "sp-12", category: "geral", boneName: "Gínglimo",
     questionText: "Qual tipo de articulação funciona como uma dobradiça?",
-    visualReference: { view: "text", hint: "Gínglimo: também chamada de dobradiça.", quickTip: "Gínglimo = dobradiça." },
+    visualReference: { view: "text", hint: "É um termo técnico menos comum para dobradiça que começa com a letra G.", quickTip: "Movimento em apenas um eixo, como uma porta." },
     options: [
       "Gínglimo",
       "Esferoidal",
@@ -254,7 +254,7 @@ export const specialQuizData = [
   {
     id: "sp-13", category: "geral", boneName: "Exemplos de gínglimo",
     questionText: "Quais são exemplos de articulação gínglimo?",
-    visualReference: { view: "text", hint: "Gínglimo: cotovelo e joelho.", quickTip: "Cotovelo e joelho dobram como dobradiça." },
+    visualReference: { view: "text", hint: "Pense nas articulações principais no meio do seu braço e da sua perna que permitem que eles se dobrem.", quickTip: "Fazem flexão e extensão simples nos membros." },
     options: [
       "Ombro e quadril",
       "Cotovelo e joelho",
@@ -275,7 +275,7 @@ export const specialQuizData = [
   {
     id: "sp-14", category: "geral", boneName: "Trocoide",
     questionText: "Qual articulação permite principalmente rotação?",
-    visualReference: { view: "text", hint: "Trocoide/pivô: rotação. Exemplo: entre atlas e áxis.", quickTip: "Pivô = girar." },
+    visualReference: { view: "text", hint: "Também é conhecida como articulação em pivô, e o seu nome técnico começa com a letra T.", quickTip: "Permite girar como um eixo." },
     options: [
       "Trocoide",
       "Gínglimo",
@@ -296,7 +296,7 @@ export const specialQuizData = [
   {
     id: "sp-15", category: "geral", boneName: "Flexão",
     questionText: "Qual movimento diminui o ângulo entre partes do corpo?",
-    visualReference: { view: "text", hint: "Flexão: diminuição do ângulo.", quickTip: "Flexionar = dobrar." },
+    visualReference: { view: "text", hint: "É a ação que você faz quando dobra o braço para contrair o bíceps.", quickTip: "Ato de dobrar." },
     options: [
       "Extensão",
       "Flexão",
@@ -317,7 +317,7 @@ export const specialQuizData = [
   {
     id: "sp-16", category: "geral", boneName: "Extensão",
     questionText: "Qual movimento aumenta o ângulo entre partes do corpo?",
-    visualReference: { view: "text", hint: "Extensão: aumenta o ângulo.", quickTip: "Extensão = esticar." },
+    visualReference: { view: "text", hint: "É a ação oposta a dobrar uma articulação, devolvendo-a à sua posição reta.", quickTip: "Ato de esticar." },
     options: [
       "Flexão",
       "Extensão",
@@ -338,7 +338,7 @@ export const specialQuizData = [
   {
     id: "sp-17", category: "geral", boneName: "Abdução",
     questionText: "Qual movimento afasta uma parte do corpo da linha média?",
-    visualReference: { view: "text", hint: "Abdução: afastamento da linha média.", quickTip: "Abdução = abrir para longe do centro." },
+    visualReference: { view: "text", hint: "O nome lembra um termo frequentemente usado para descrever o ato de ser levado para longe por extraterrestres.", quickTip: "Abrir ou afastar." },
     options: [
       "Adução",
       "Abdução",
@@ -359,7 +359,7 @@ export const specialQuizData = [
   {
     id: "sp-18", category: "geral", boneName: "Adução",
     questionText: "Qual movimento aproxima uma parte do corpo da linha média?",
-    visualReference: { view: "text", hint: "Adução: aproximação da linha média.", quickTip: "Adução = adicionar ao centro." },
+    visualReference: { view: "text", hint: "O nome se assemelha a uma operação matemática usada para somar ou juntar coisas.", quickTip: "Aproximar ou adicionar." },
     options: [
       "Abdução",
       "Adução",
@@ -380,7 +380,7 @@ export const specialQuizData = [
   {
     id: "sp-19", category: "geral", boneName: "Masseter",
     questionText: "Qual músculo da mastigação eleva a mandíbula?",
-    visualReference: { view: "text", hint: "Masseter: elevação da mandíbula.", quickTip: "Masseter = força da mordida." },
+    visualReference: { view: "text", hint: "É um músculo muito forte localizado na lateral do rosto, cujo nome remete ao próprio ato de mastigar.", quickTip: "Músculo da mordida." },
     options: [
       "Masseter",
       "Esternocleidomastoideo",
@@ -401,7 +401,7 @@ export const specialQuizData = [
   {
     id: "sp-20", category: "geral", boneName: "Esternocleidomastoideo",
     questionText: "Qual músculo faz flexão do pescoço quando os dois lados contraem juntos?",
-    visualReference: { view: "text", hint: "Esternocleidomastoideo: contração bilateral faz flexão do pescoço.", quickTip: "Dois lados juntos puxam a cabeça para frente." },
+    visualReference: { view: "text", hint: "Seu nome longo e complicado é a junção das partes onde ele se prende: externo, clavícula e processo mastoide.", quickTip: "Músculo do pescoço de nome gigante." },
     options: [
       "Masseter",
       "Temporal",
@@ -422,7 +422,7 @@ export const specialQuizData = [
   {
     id: "sp-21", category: "geral", boneName: "Músculo voluntário",
     questionText: "Qual tipo de músculo é voluntário?",
-    visualReference: { view: "text", hint: "Músculo estriado esquelético: voluntário.", quickTip: "Esquelético move o corpo quando você quer." },
+    visualReference: { view: "text", hint: "É o tipo de tecido muscular que está diretamente ancorado aos ossos do seu corpo.", quickTip: "Refere-se ao esqueleto." },
     options: [
       "Músculo estriado esquelético",
       "Músculo estriado cardíaco",
@@ -443,7 +443,7 @@ export const specialQuizData = [
   {
     id: "sp-22", category: "geral", boneName: "Músculo estriado cardíaco",
     questionText: "Qual tipo de músculo é encontrado no coração?",
-    visualReference: { view: "text", hint: "Músculo estriado cardíaco.", quickTip: "Cardíaco = coração." },
+    visualReference: { view: "text", hint: "O nome desse tipo de músculo inclui a palavra técnica e médica que significa 'relativo ao coração'.", quickTip: "Relacionado ao coração." },
     options: [
       "Músculo liso",
       "Músculo estriado cardíaco",
@@ -464,7 +464,7 @@ export const specialQuizData = [
   {
     id: "sp-23", category: "geral", boneName: "Músculo liso",
     questionText: "Qual tipo de músculo aparece em órgãos como estômago e útero?",
-    visualReference: { view: "text", hint: "Músculo liso: estômago e útero.", quickTip: "Liso = órgãos internos." },
+    visualReference: { view: "text", hint: "É o músculo que não possui 'listras' ou estrias quando visto no microscópio, tendo uma aparência contínua.", quickTip: "Oposto de estriado/áspero." },
     options: [
       "Músculo liso",
       "Músculo estriado cardíaco",
@@ -485,7 +485,7 @@ export const specialQuizData = [
   {
     id: "sp-24", category: "geral", boneName: "Classificação por mobilidade",
     questionText: "Qual alternativa resume corretamente a classificação por mobilidade?",
-    visualReference: { view: "text", hint: "Sinartrose: sem mobilidade. Anfiartrose: semimóvel. Diartrose: muita mobilidade.", quickTip: "Sem, semi, muito: sinartrose, anfiartrose, diartrose." },
+    visualReference: { view: "text", hint: "Lembre-se da progressão em ordem crescente de mobilidade: primeiro 'sem', depois 'semi' (um pouco), e por fim 'muita'.", quickTip: "Siga a ordem crescente de liberdade." },
     options: [
       "Sinartrose sem mobilidade, anfiartrose semimóvel, diartrose muito móvel",
       "Sinartrose muito móvel, anfiartrose imóvel, diartrose semimóvel",
