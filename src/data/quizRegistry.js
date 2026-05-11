@@ -1,6 +1,7 @@
 import { bonesQuizData } from './bonesQuizData';
 import { articulacoesQuizData } from './articulacoesQuizData';
 import { musculosQuizData } from './musculosQuizData';
+import { specialQuizData } from './specialQuizData';
 
 // Registra os diferentes tipos de quiz disponíveis
 export const quizRegistry = {
@@ -24,6 +25,13 @@ export const quizRegistry = {
     data: musculosQuizData,
     icon: '💪',
     description: 'Explore o sistema muscular e suas funções'
+  },
+  especial: {
+    id: 'especial',
+    label: 'Quiz Especial',
+    data: specialQuizData,
+    icon: '⭐',
+    description: 'Quiz especial'
   }
 };
 
@@ -44,6 +52,9 @@ export const quizCategories = {
   ],
   musculos: [
     { id: 'face', label: 'Face' },
+  ],
+  especial: [
+    { id: 'geral', label: 'Quiz Completo' }
   ]
 };
 

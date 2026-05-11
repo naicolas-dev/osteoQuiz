@@ -17,6 +17,7 @@ function QuestionCard({
 }) {
 
   const getQuestionTitle = () => {
+    if (question.questionText) return question.questionText;
     switch (quizType) {
       case "ossos": return "Qual osso é este?";
       case "articulacoes": return "Qual articulação é esta?";
@@ -45,7 +46,9 @@ function QuestionCard({
         </div>
         <h2>{getQuestionTitle()}</h2>
         <p className="question-helper">
-          Observe a referência visual e escolha apenas uma alternativa.
+          {question.visualReference?.view === "text" 
+            ? "Leia a referência e escolha a alternativa correta."
+            : "Observe a referência visual e escolha apenas uma alternativa."}
         </p>
       </div>
 
