@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { bonesQuizData } from "../data/bonesQuizData";
+import { getQuizData } from "../data/quizRegistry";
 import { shuffleArray } from "../utils/shuffle";
 import FeedbackPanel from "./FeedbackPanel";
 import ProgressBar from "./ProgressBar";
@@ -9,7 +9,7 @@ import ScoreBoard from "./ScoreBoard";
 import Swal from "sweetalert2";
 import { IoArrowBack } from "react-icons/io5";
 
-function QuizContainer({ quizMode, onRestartApp, onChooseRegion }) {
+function QuizContainer({ quizType, quizMode, onRestartApp, onChooseRegion }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [hasAnswered, setHasAnswered] = useState(false);
@@ -19,10 +19,7 @@ function QuizContainer({ quizMode, onRestartApp, onChooseRegion }) {
   const [showDevMenu, setShowDevMenu] = useState(false);
 
   const getQuestionsByMode = () => {
-    if (quizMode === "all") {
-      return bonesQuizData;
-    }
-    return bonesQuizData.filter((bone) => bone.category === quizMode);
+    return getQuizData(quizType, quizMode);
   };
 
   const [questions, setQuestions] = useState(() => shuffleArray([...getQuestionsByMode()]));
@@ -231,6 +228,8 @@ function QuizContainer({ quizMode, onRestartApp, onChooseRegion }) {
       </div>
 
       <QuestionCard
+        quizType={quizType}
+        quizMode={quizMode}
         question={currentQuestion}
         questionNumber={currentIndex + 1}
         totalQuestions={totalQuestions}

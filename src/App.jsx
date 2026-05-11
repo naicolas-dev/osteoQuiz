@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import QuizContainer from "./components/QuizContainer";
 import RegionSelectionScreen from "./components/RegionSelectionScreen";
-import Changelog from "./components/Changelog"; // <-- Importação do Changelog
+import TypeSelectionScreen from "./components/TypeSelectionScreen";
+import Changelog from "./components/Changelog";
 
 function App() {
-  const [appState, setAppState] = useState("welcome");
+  const [appState, setAppState] = useState("welcome"); // welcome | type-selection | region-selection | quiz
+  const [quizType, setQuizType] = useState("ossos"); // ossos | articulacoes | musculos
   const [quizMode, setQuizMode] = useState("all");
 
   const isDesktop = () => window.matchMedia("(pointer: fine)").matches;
 
   const handleStartQuiz = () => {
+    setAppState("type-selection");
+  };
+
+  const handleTypeSelection = (typeId) => {
+    setQuizType(typeId);
     setAppState("region-selection");
   };
 
@@ -26,13 +33,8 @@ function App() {
 
       if (appState === "welcome" && e.key === "Enter") {
         handleStartQuiz();
-      } else if (appState === "region-selection") {
-        if (e.key === "1") handleModeSelection("cranio");
-        if (e.key === "2") handleModeSelection("coluna-torax");
-        if (e.key === "3") handleModeSelection("membros-superiores");
-        if (e.key === "4") handleModeSelection("membros-inferiores");
-        if (e.key === "5") handleModeSelection("all");
       }
+      // O TypeSelectionScreen e o RegionSelectionScreen agora devem lidar com seus próprios atalhos se desejarem.
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -45,8 +47,7 @@ function App() {
         <p className="eyebrow">OsteoQuiz</p>
         <h1>Anatomia Interativa</h1>
         <p className="subtitle">
-          Identifique o osso destacado, receba feedback imediato e revise os
-          pontos mais importantes para memorização.
+          Identifique estruturas anatômicas, receba feedback imediato e revise os pontos mais importantes para memorização.
         </p>
       </header>
 
@@ -56,9 +57,7 @@ function App() {
             <section className="welcome-screen">
               <h2>Pronto para testar seus conhecimentos?</h2>
               <p>
-                Você verá imagens reais do esqueleto com marcações indicando ossos
-                específicos. Escolha a alternativa correta e aprenda com as
-                explicações detalhadas.
+                Você verá questões práticas sobre diferentes estruturas do corpo humano. Escolha a alternativa correta e aprenda com explicações detalhadas.
               </p>
               <button
                 className="primary-button start-button"
@@ -72,18 +71,28 @@ function App() {
                 <span>para iniciar</span>
               </div>
             </section>
-            
-            {/* Componente Changelog adicionado aqui */}
             <Changelog />
           </div>
         )}
 
+        {appState === "type-selection" && (
+          <TypeSelectionScreen 
+            onSelectType={handleTypeSelection} 
+            onBack={() => setAppState("welcome")}
+          />
+        )}
+
         {appState === "region-selection" && (
-          <RegionSelectionScreen onSelectMode={handleModeSelection} />
+          <RegionSelectionScreen 
+            selectedType={quizType}
+            onSelectMode={handleModeSelection} 
+            onBack={() => setAppState("type-selection")}
+          />
         )}
 
         {appState === "quiz" && (
           <QuizContainer 
+            quizType={quizType}
             quizMode={quizMode} 
             onRestartApp={() => setAppState("welcome")} 
             onChooseRegion={() => setAppState("region-selection")}

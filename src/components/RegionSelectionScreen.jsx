@@ -1,61 +1,64 @@
-import React from "react";
-import { FaSkull, FaBone } from "react-icons/fa";
-import { GiSkeleton } from "react-icons/gi";
-import { GiRaiseSkeleton } from "react-icons/gi";
-import { GiMorgueFeet } from "react-icons/gi";
+import React, { useEffect } from "react";
+import { quizCategories, quizRegistry } from "../data/quizRegistry";
 
-function RegionSelectionScreen({ onSelectMode }) {
+function RegionSelectionScreen({ onSelectMode, onBack, selectedType }) {
+  const typeInfo = quizRegistry[selectedType];
+  const categories = quizCategories[selectedType] || [];
+
+  // Suporte a teclado para navegação rápida
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      const key = e.key;
+      // 1 até o número de categorias
+      if (key >= '1' && key <= String(categories.length)) {
+        const index = parseInt(key) - 1;
+        if (categories[index]) {
+          onSelectMode(categories[index].id);
+        }
+      }
+      // A última opção + 1 para "Todas as regiões"
+      if (key === String(categories.length + 1)) {
+        onSelectMode("all");
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [categories, onSelectMode]);
+
   return (
     <section className="welcome-screen">
-      <h2>Escolha a Região</h2>
+      <h2>{typeInfo?.label || "Escolha a Região"}</h2>
       <p>
-        Foque seus estudos na anatomia craniana e da garganta ou teste seus conhecimentos no esqueleto inteiro.
+        Foque seus estudos ou teste seus conhecimentos no conteúdo completo.
       </p>
       <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginTop: "2rem" }}>
-        <button
-          className="primary-button region-btn"
-          onClick={() => onSelectMode("cranio")}
-          type="button"
-        >
-          <kbd className="btn-keybadge">1</kbd>
-          <FaSkull size={20} />
-          Crânio e Garganta
-        </button>
-        <button
-          className="primary-button region-btn"
-          onClick={() => onSelectMode("coluna-torax")}
-          type="button"
-        >
-          <kbd className="btn-keybadge">2</kbd>
-          <FaBone size={20} />
-          Coluna e Tórax
-        </button>
-        <button
-          className="primary-button region-btn"
-          onClick={() => onSelectMode("membros-superiores")}
-          type="button"
-        >
-          <kbd className="btn-keybadge">3</kbd>
-          <GiRaiseSkeleton size={20} />
-          Membros Superiores
-        </button>
-        <button
-          className="primary-button region-btn"
-          onClick={() => onSelectMode("membros-inferiores")}
-          type="button"
-        >
-          <kbd className="btn-keybadge">4</kbd>
-          <GiMorgueFeet size={20} />
-          Membros Inferiores
-        </button>
+        
+        {categories.map((category, index) => (
+          <button
+            key={category.id}
+            className="primary-button region-btn"
+            onClick={() => onSelectMode(category.id)}
+            type="button"
+          >
+            <kbd className="btn-keybadge">{index + 1}</kbd>
+            {category.label}
+          </button>
+        ))}
+
         <button
           className="primary-button region-btn"
           onClick={() => onSelectMode("all")}
           type="button"
         >
-          <kbd className="btn-keybadge">5</kbd>
-          <GiSkeleton size={20} />
+          <kbd className="btn-keybadge">{categories.length + 1}</kbd>
           Todas as regiões
+        </button>
+      </div>
+      
+      <div style={{ marginTop: "2rem", textAlign: "center" }}>
+        <button className="secondary-button" onClick={onBack}>
+          Voltar
         </button>
       </div>
     </section>

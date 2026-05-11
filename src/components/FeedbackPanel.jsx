@@ -18,7 +18,7 @@ function FeedbackPanel({ question, selectedOption, isCorrect }) {
       <div className="explanation-block">
         <h3>Explicação didática</h3>
         <p>
-          <strong>Nome do osso:</strong> {explanation.name}
+          <strong>Estrutura:</strong> {explanation.name}
         </p>
         <p>
           <strong>Localização anatômica:</strong> {explanation.location}

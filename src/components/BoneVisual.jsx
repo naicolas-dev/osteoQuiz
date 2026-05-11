@@ -31,17 +31,20 @@ function BoneVisual({ visualReference }) {
   const { hint, marker, view = "front", landmark, quickTip, image, images } = visualReference;
   const isMultiple = Array.isArray(images) && images.length > 0;
   const [tipVisible, setTipVisible] = useState(false);
+  const isTextOnly = view === "text";
 
   const renderStage = (imgSrc, idx) => {
+    if (isTextOnly) return null; // Não renderiza o card de imagem para questões em modo texto
+
     const isSingle = view === "single" || !!imgSrc;
     const activeView = isSingle ? null : (VIEW_CONFIG[view] ?? VIEW_CONFIG.front);
 
     return (
-      <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com osso em destaque" key={idx || imgSrc}>
+      <div className="bone-visual-stage" role="img" aria-label="Esqueleto humano real com estrutura em destaque" key={idx || imgSrc}>
         <img
           className="bone-visual-image"
           src={isSingle ? imgSrc : skeletonImage}
-          alt="Esqueleto anatômico"
+          alt="Anatomia"
           loading="lazy"
         />
         {!isSingle && activeView && (
@@ -73,13 +76,13 @@ function BoneVisual({ visualReference }) {
   return (
     <section className="bone-visual-card">
       <div className="bone-visual-header">
-        <h3>Referência visual</h3>
+        <h3>{isTextOnly ? "Contexto" : "Referência visual"}</h3>
         <p>{hint}</p>
         <p className="bone-visual-meta">
-          {!isMultiple && (view === "front" || view === "back" || view === "side") && !image && (
+          {!isMultiple && !isTextOnly && (view === "front" || view === "back" || view === "side") && !image && (
              <span className="bone-view-badge">Vista: {VIEW_CONFIG[view]?.label}</span>
           )}
-          {landmark ? <span>Marco: {landmark}</span> : null}
+          {landmark ? <span>Marco anatômico: {landmark}</span> : null}
         </p>
         {quickTip ? (
           <div className="bone-visual-tip-wrapper">
@@ -100,12 +103,14 @@ function BoneVisual({ visualReference }) {
         ) : null}
       </div>
 
-      {isMultiple ? (
-        <div className="bone-visual-multiple-stage">
-          {images.map((imgData, i) => renderStage(imgData.image, i))}
-        </div>
-      ) : (
-        renderStage(image, "single")
+      {!isTextOnly && (
+        isMultiple ? (
+          <div className="bone-visual-multiple-stage">
+            {images.map((imgData, i) => renderStage(imgData.image, i))}
+          </div>
+        ) : (
+          renderStage(image, "single")
+        )
       )}
     </section>
   );

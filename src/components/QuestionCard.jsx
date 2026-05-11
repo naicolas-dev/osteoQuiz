@@ -1,9 +1,12 @@
 import BoneVisual from "./BoneVisual";
 import OptionButton from "./OptionButton";
+import { quizRegistry, quizCategories } from "../data/quizRegistry";
 
 const OPTION_LABELS = ["A", "B", "C", "D", "E"];
 
 function QuestionCard({
+  quizType,
+  quizMode,
   question,
   questionNumber,
   totalQuestions,
@@ -12,13 +15,35 @@ function QuestionCard({
   hasAnswered,
   onSelectOption,
 }) {
+
+  const getQuestionTitle = () => {
+    switch (quizType) {
+      case "ossos": return "Qual osso é este?";
+      case "articulacoes": return "Qual articulação é esta?";
+      case "musculos": return "Qual músculo é este?";
+      default: return "Qual estrutura anatômica é esta?";
+    }
+  };
+
+  const typeLabel = quizRegistry[quizType]?.label || "Quiz";
+  const categoryLabel = quizMode === "all" 
+    ? "Todas as regiões" 
+    : quizCategories[quizType]?.find(c => c.id === quizMode)?.label || quizMode;
+
+  const quizContextLabel = `${typeLabel} - ${categoryLabel}`;
+
   return (
     <article className="question-card">
       <div className="question-header">
-        <span className="chip">
-          Questão {questionNumber}/{totalQuestions}
-        </span>
-        <h2>Qual osso está destacado?</h2>
+        <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+          <span className="chip" style={{ background: 'rgba(255, 255, 255, 0.05)', color: '#b7c8be' }}>
+            {quizContextLabel}
+          </span>
+          <span className="chip">
+            Questão {questionNumber}/{totalQuestions}
+          </span>
+        </div>
+        <h2>{getQuestionTitle()}</h2>
         <p className="question-helper">
           Observe a referência visual e escolha apenas uma alternativa.
         </p>

@@ -1,7 +1,20 @@
 import React, { useState } from "react";
-import { IoRocket, IoSparkles, IoLeaf, IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { IoRocket, IoSparkles, IoLeaf, IoChevronDown, IoChevronUp, IoLayers, IoImage } from "react-icons/io5";
 
 const changelogData = [
+  {
+    date: "10 de Maio de 2026",
+    title: "Expansão de Sistemas e Conteúdos",
+    icon: IoLayers,
+    items: [
+      { text: "Aviso Importante", desc: "Na próxima atualização, todas as novas questões de Articulações e Músculos (que atualmente estão apenas em modo texto) receberão suas respectivas imagens e diagramas anatômicos para tornar o estudo ainda mais completo!" },
+      { text: "Novos Sistemas Anatômicos", desc: "O quiz não se limita mais apenas a ossos! Foram adicionadas as seções completas de Articulações e Músculos." },
+      { text: "Seleção Dinâmica", desc: "Uma nova tela inicial foi criada para você escolher qual sistema quer estudar antes de selecionar a região do corpo." },
+      { text: "Base de Dados Expansível", desc: "O sistema agora suporta questões baseadas apenas em contexto textual para estruturas que ainda não possuem fotografias." },
+      { text: "Interface Inteligente", desc: "Os títulos e mensagens de feedback do painel agora se adaptam dinamicamente ao tipo de estrutura (ex: 'Qual músculo é este?' ou 'Qual articulação?')." },
+      { text: "Design Consistente", desc: "Utilização de novos atalhos de teclado inteligentes e ícones vetoriais em todas as telas para uma experiência coesa e imersiva." },
+    ]
+  },
   {
     date: "25 de Março de 2026",
     title: "A Grande Atualização do Esqueleto",
